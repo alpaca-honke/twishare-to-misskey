@@ -1,12 +1,12 @@
 {
 	"manifest_version": 3,
 	"name":"Twishare to io",
-	"version":"0.0.0",
+	"version":"0.0.1",
 	"description":"Twitter のシェアボタンから Misskey.io シェアすることができるようにします。",
 	"icons":{
-		"16":"16.png", 
-		"48":"48.png",
-		"128":"128.png"
+		"16":"icons/16.png", 
+		"48":"icons/48.png",
+		"128":"icons/128.png"
 	},
 	"content_scripts":[
 		{
@@ -16,5 +16,5 @@
 		}
 	],
 	"author":"Alkappa/alpaca-honke",
-	"homepage_url":"https://alpaca-honke.github.io/"
+	"homepage_url":"https://github.com/alpaca-honke/twishare-to-io/"
 }

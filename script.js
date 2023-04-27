@@ -24,8 +24,9 @@ if (result) {
 	if (text){
 		if (hashtags){
 			share_text = text + '\n' + hashtags;
+		}else{
+			share_text = text;
 		}
-		share_text = text;
 		io_url.searchParams.set('text',share_text);
 	}else if (hashtags){
 		share_text = hashtags;
