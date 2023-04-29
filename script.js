@@ -1,4 +1,4 @@
-const result = window.confirm('Twitter へのシェアリンクを確認しました。この内容を Misskey.io にシェアしますか？(拡張機能 Twitter to io より)')
+const result = window.confirm('Twitter へのシェアリンクを確認しました。この内容を Misskey.io にシェアしますか？(拡張機能 Twishare to io より)')
 
 if (result) {
 	let tw_url = new URL(window.location.href);
@@ -23,15 +23,16 @@ if (result) {
 
 	if (text){
 		if (hashtags){
-			share_text = text + '\n' + hashtags;
+			tagged_hashtags = '#' + hashtags.replace(/\,/g, ' #');
+			share_text = text + '\n' + tagged_hashtags;
 		}else{
 			share_text = text;
 		}
-		io_url.searchParams.set('text',share_text);
 	}else if (hashtags){
-		share_text = hashtags;
-		io_url.searchParams.set('text',share_text);
+		tagged_hashtags = ' #' + hashtags.replace(/\,/g, ' #');
+		share_text = encodeURIComponent(tagged_hashtags);
 	}
+	io_url.searchParams.set('text',share_text);
 	
 	if (url) {
 		share_url = url;
