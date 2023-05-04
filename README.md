@@ -6,41 +6,23 @@
 
 ## インストール
 
-### PC
+### Chrome 互換ブラウザ
 
-1. [リポジトリページ](https://github.com/alpaca-honke/twishare-to-io/) の右上の 「< >Code」 ボタンを押し、Localタブの一番下、「Download Zip」を押して、ファイルをダウンロード  
-1. ダウンロードしたファイルを適当な場所に展開  
-1. Chrome や互換ブラウザを開く  
-※Firefox などのブラウザでは動作対象外となりますが、多分動きます（未確認）。「Firefox Chrome拡張」などで検索してください。  
-1. 拡張機能の設定画面を開いて、右上の「デベロッパーモード」をオンにする  
-![developer.png](images/developer.png)
-1. 右上の「パッケージ化されていない拡張機能を読み込む」を押して、先程ファイルを展開したフォルダを選択  
-![loadext.png](images/loadext.png)
+（Chrome, Chromium, Edge, Vivaldi, Brave など）  
+Android スマートフォンでは Kiwi Browser などで使用ができます。iOS は、聞いたことはありませんが、もしかしたら使えるブラウザがあるかもしれません。  
 
-### Android スマートフォン
+[拡張機能 公開ページ](https://chrome.google.com/webstore/detail/twishare-to-io/fbaifpppndnlbbjcbjdfgbdkoibnipjb)にアクセスしてインストールしてください。  
 
-※iPhone でも、拡張機能やアドオンが入るブラウザがあればできるんじゃないかと思います（動作対象外）。  
+### その他のブラウザ
 
-1. [Kiwi Browser](https://kiwibrowser.com/)などの、Chrome 拡張機能が使用できるブラウザを準備する。（ここでは Kiwi Browser を使うものとして説明します）  
-1. 左上の︙を押して、「PC 版サイト」のチェックを入れる  
-1. [リポジトリページ](https://github.com/alpaca-honke/twishare-to-io/) の右上の Code ボタンを押し、Localタブの一番下、「Download Zip」を押して、ファイルをダウンロード  
-1. ダウンロードしたファイルを適当なところに置く（展開の必要はありません）  
-1. 左上の︙から拡張機能の設定画面を開いて、右上の「デベロッパーモード」をオンにする（デフォルトでオンになってるかも）  
-1. 「 + from ( .zip/.crx/ user.js)」を押して、ダウンロードした zip ファイルを選択  
-![kiwi.jpg](images/kiwi.jpg)
-
-※起動するごとに 5 番作業を行ってください。  
+動作対象外になりますが、動く可能性は高いです。  
+[v0.0.2のリリースページ](https://github.com/alpaca-honke/twishare-to-io/releases/tag/0.0.2)から「Source Code (zip)」をダウンロードしてから、一時的なアドオン（Firefoxの場合）からインストールしてください。  
+詳しくは各自で検索するようお願いします。  
 
 ## 使い方
 
 Twitter シェアボタンを押して、ページ遷移する際に、Misskey.io にシェアするか聞かれますので、 OK を押すと、 Misskey.io にシェアされます。  
 ![popup.png](images/popup.png)
-
-## アップデート方法
-
-拡張機能の設定画面から、以下の拡張機能を探して、記載されているバージョン番号と「0.0.2」があっているかを確認してください。  
-![twishare-to-io.png](images/twishare-to-io.png)  
-あっていない場合、ファイルを前回と同じ場所に 展開 /ダウンロード していただき、画像右下の更新ボタンと同じマークを押してください。  
 
 ## よくある質問
 
