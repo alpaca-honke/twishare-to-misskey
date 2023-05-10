@@ -2,13 +2,17 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" href="options.css"/>
 	</head>
 	<body>
 		<div>
-			<p>共有先のサーバー名</p>
+			<h1>Twishare to io</h1>
+			<p>共有先のサーバー名を設定してください。</p>
 			<p>(URLのhttps://の後に続く文字列)</p>
+			<p>デフォルト値はMisskey.ioです</p>
 			<input type="textbox" id="instance_name" />
 			<button id="save_button">保存</button>
+			<p id="save_status"></p>
 		</div>
 
 		<script src="options.js"></script>
