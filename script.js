@@ -2,7 +2,7 @@ chrome.storage.sync.get("instance_name", function (items) {
 	const instance_name = items.instance_name || "Misskey.io";
 
 	const result = window.confirm(
-		`Twitter へのシェアリンクを確認しました。この内容を ${instance_name} にシェアしますか？(拡張機能 Twishare to io より)`
+		`Twitter へのシェアリンクを確認しました。この内容を ${instance_name} にシェアしますか？(拡張機能 Twishare to Misskey より)`
 	);
 
 	if (result) {
