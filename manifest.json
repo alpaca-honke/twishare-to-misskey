@@ -1,8 +1,15 @@
 {
+<<<<<<< HEAD
 	"manifest_version": 2,
 	"name":"Twishare to io for Firefox",
 	"version":"0.0.2",
 	"description":"Twitter のシェアボタンから Misskey.io シェアすることができるようにします。",
+=======
+	"manifest_version": 3,
+	"name":"Twishare to Misskey",
+	"version":"0.1.0",
+	"description":"Twitter のシェアボタンから Misskey にシェアすることができるようにします。",
+>>>>>>> 0e73d70 (v0.1.0 のリリース)
 	"icons":{
 		"16":"icons/16.png", 
 		"48":"icons/48.png",
