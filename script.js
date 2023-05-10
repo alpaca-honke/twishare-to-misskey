@@ -33,11 +33,12 @@ chrome.storage.sync.get("instance_name", function (items) {
 			} else {
 				share_text = text;
 			}
+			instance_url.searchParams.set("text", share_text);
 		} else if (hashtags) {
 			tagged_hashtags = " #" + hashtags.replace(/\,/g, " #");
 			share_text = encodeURIComponent(tagged_hashtags);
+			instance_url.searchParams.set("text", share_text);
 		}
-		instance_url.searchParams.set("text", share_text);
 
 		if (url) {
 			share_url = url;
