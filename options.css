@@ -1,0 +1,23 @@
+h1{
+	color: #3492cc;
+}
+#instance_name{
+	outline: none;
+	margin: 5px;
+	height: 20px;
+	border: 1px solid #000000;
+	border-radius: 10px;
+}
+#save_button{
+	color: #ffffff;
+	background-color: #56b4ee;
+	margin: 5px;
+	height: 20px;
+	width: 50px;
+	border: 0;
+	border-radius: 10px;
+}
+#save_status{
+	color: #55c500;
+	font-weight: bold;
+}
