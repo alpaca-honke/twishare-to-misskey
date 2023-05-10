@@ -21,7 +21,7 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 
 ## 使い方
 
-1. 左上の拡張機能の一覧から、Twishare to io （鳥のアイコン）をクリックすると、シェア先のサーバーを保存する画面がひらくので、入力・保存してください。（Misskey.io にシェアする場合と二回目以降は不要です。）
+1. 左上の拡張機能の一覧から、Twishare to Misskey （鳥のアイコン）をクリックすると、シェア先のサーバーを保存する画面がひらくので、入力・保存してください。（Misskey.io にシェアする場合と二回目以降は不要です。）
 ![option_ui.png](images/option_ui.png)
 1. Twitter シェアボタンを押して、ページ遷移する際に、Misskey にシェアするか聞かれますので、 OK を押すと、 Misskey にシェアされます。  
 ![popup.png](images/popup.png)
