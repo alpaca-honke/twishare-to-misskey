@@ -5,7 +5,7 @@
 	"description":"Twitter のシェアボタンから Misskey にシェアすることができるようにします。",
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "twishare-to-misskey-for-firefox@alpaca-honke"
+			"id": "twishare-to-misskey-for-firefox@alpaca-honke.example.com"
 		}
 	},
 	"icons":{
