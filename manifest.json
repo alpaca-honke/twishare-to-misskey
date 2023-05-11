@@ -3,7 +3,7 @@
 	"name":"Twishare to Misskey for Firefox",
 	"version":"0.1.0",
 	"description":"Twitter のシェアボタンから Misskey.io シェアすることができるようにします。",
-	"applications": {
+	"browser_specific_settings": {
 		"gecko": {
 			"id": "alpaca-honke@example.com"
 		}
