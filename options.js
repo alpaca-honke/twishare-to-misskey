@@ -8,7 +8,9 @@ function Save() {
                 .replace(/^https?:\/\//, "")
                 .replace(/\/(.*)$/, ""),
 		}
-	).then(Load());
+	).then(
+		SucceedSave()
+	);
 }
 
 function Load() {
@@ -18,11 +20,23 @@ function Load() {
     });
 }
 
+function SucceedSave() {
+	save_status = document.getElementById("save_status");
+	save_status.innerHTML = "保存されました！";
+	save_status.style.color = "#55c500"
+	Load();
+}
+
+function FailedSave() {
+	save_status = document.getElementById("save_status");
+	save_status.innerHTML = "保存できませんでした";
+	save_status.style.color = "#ff0000";
+}
+
 document.addEventListener("DOMContentLoaded", Load);
 document.getElementById("instance_name").onkeydown = (e) => {
 	if(e.key == "Enter"){
 		Save();
-		document.getElementById("save_status").innerHTML = "保存されました！"
 	}
 };
 document.getElementById("save_button").addEventListener("click", Save);
