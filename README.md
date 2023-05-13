@@ -13,12 +13,11 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 
 [Chrome ウェブストア](https://chrome.google.com/webstore/detail/twishare-to-misskey/fbaifpppndnlbbjcbjdfgbdkoibnipjb)にアクセスしてインストールしてください。  
 
-### その他のブラウザ
+### Firefox 互換ブラウザ  
 
-バージョン 0.1.0 から、 Chrome 互換ブラウザ以外で動作しなくなりました。バージョン 0.0.2 をご利用ください。（0.0.2 は Misskey.io のみの対応となります。）  
-[v0.0.2のリリースページ](https://github.com/alpaca-honke/twishare-to-io/releases/tag/0.0.2)から「Source Code (zip)」をダウンロードしてから、手動インストールを行ってください。  
-Firefox の場合、[v0.0.2-fx](https://github.com/alpaca-honke/twishare-to-io/releases/tag/0.0.2-fx)をご利用ください。（通常の v0.0.2 はインストールできません。）
-詳しくは各自で検索（「Firefox 一時的なアドオン」など）するようお願いします。  
+（Firefox, Firefox for Android など）  
+
+[Firefox Addons](https://addons.firefox.org/ja/firefox/addon/twishare-to-misskey/)からインストールしてください。  
 
 ## 使い方
 
