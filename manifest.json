@@ -12,7 +12,12 @@
 		{
 			"run_at":"document_start",
 			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*"],
-			"js":["script.js"]
+			"js":["on_twitter_intent.js"]
+		},
+		{
+			"run_at":"document_start",
+			"matches": ["<all_urls>"],
+			"js":["allpage.js"]
 		}
 	],
 	"action": {
