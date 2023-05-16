@@ -1,4 +1,4 @@
-# Twishare to Misskey v0.1.0  
+# Twishare to Misskey v0.1.1  
 
 ## 概要
 
@@ -15,13 +15,13 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 
 ### Firefox 互換ブラウザ  
 
-（Firefox, Firefox for Android など）  
+（Firefox など）  
 
 [Firefox Addons](https://addons.firefox.org/ja/firefox/addon/twishare-to-misskey/)からインストールしてください。  
 
 ## 使い方
 
-1. 左上の拡張機能の一覧から、Twishare to Misskey （鳥のアイコン）をクリックすると、シェア先のサーバーを保存する画面がひらくので、入力・保存してください。（Misskey.io にシェアする場合と二回目以降は不要です。）
+1. 左上の拡張機能の一覧から、Twishare to Misskey のアイコンをクリックすると、シェア先のサーバーを保存する画面がひらくので、入力・保存してください。（Misskey.io にシェアする場合と二回目以降は不要です。）  
 ![option_ui.png](images/option_ui.png)
 1. Twitter シェアボタンを押して、ページ遷移する際に、Misskey にシェアするか聞かれますので、 OK を押すと、 Misskey にシェアされます。  
 ![popup.png](images/popup.png)
@@ -29,7 +29,7 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 
 ## よくある質問
 
-[Wiki ページ](https://github.com/alpaca-honke/twishare-to-io/wiki/よくある質問)をご覧ください。  
+[Wiki ページ](https://github.com/alpaca-honke/twishare-to-misskey/wiki/よくある質問)をご覧ください。  
 
 ## 連絡先
 
@@ -46,8 +46,15 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 ## Contribution
 
 機能の追加、修正を行ってくれる方は大歓迎です。develop ブランチにプルリクエストをしていただけるとありがたいです。  
-その際、issue などで作業に取り掛かることを宣言していただけるとありがたいです。（直接連絡を頂いても構いません。）  
+その際、新規 issue を作成してから、作業に取り掛かることを宣言してください。  
+また、すでに同様の issue が作成されていないか確認して、作成されていたらその issue のコメントにて宣言してください。
+他の人が取り掛かっている作業と重複しないよう注意してください。（多分そんなことないけど）  
+なお、基本的にこちらからは issue のアサインはしません。  
+
+## Contributors
+
+- [@emtkmkk](https://github.com/emtkmkk)さん
 
 ## License
 
-この拡張機能は、 Mit License で頒布されています。詳しくは、[LICENSE](LICENSE) をご覧ください。  
+この拡張機能は、 MIT ライセンスで頒布されています。詳しくは、[LICENSE](LICENSE) をご覧ください。  
