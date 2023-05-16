@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name":"Twishare to Misskey for Firefox",
-	"version":"0.1.0",
+	"version":"0.1.1",
 	"description":"Twitter のシェアボタンから Misskey にシェアすることができるようにします。",
 	"browser_specific_settings": {
 		"gecko": {
@@ -38,5 +38,5 @@
 	},
 	"permissions": ["storage"],
 	"author":"Alkappa/alpaca-honke",
-	"homepage_url":"https://github.com/alpaca-honke/twishare-to-io/"
+	"homepage_url":"https://github.com/alpaca-honke/twishare-to-misskey/"
 }
