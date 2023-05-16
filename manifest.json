@@ -18,14 +18,13 @@
 			"run_at":"document_start",
 			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*"],
 			"js":["on_twitter_intent.js"]
-		},
-		{
-			"run_at":"document_start",
-			"matches": ["<all_urls>"],
-			"js":["allpage.js"]
 		}
 	],
-	"page_action": {
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": true
+	},
+	"action": {
 		"default_icon": {
 			"16": "icons/16.png",
 			"48": "icons/48.png",
