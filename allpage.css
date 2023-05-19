@@ -1,0 +1,11 @@
+#_twishare_to_misskey_share{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	margin: 10px;
+	height: 3em;
+	width: 3em;
+	background-color: #44b400;
+	border-radius: 1.5em;
+	border: none;
+}
