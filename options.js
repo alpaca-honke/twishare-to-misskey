@@ -28,7 +28,7 @@ function SucceedSave() {
 }
 
 function FailedSave() {
-	save_status = document.getElementById("save_status");
+	const save_status = document.getElementById("save_status");
 	save_status.innerHTML = "保存できませんでした";
 	save_status.style.color = "#ff0000";
 }
