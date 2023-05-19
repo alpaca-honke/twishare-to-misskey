@@ -1,6 +1,6 @@
 function Save() {
     const instance_name =
-        document.getElementById("instance_name").value || "Misskey.io";
+        document.getElementById("instance_name").value || "misskey.io";
     // 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視して保存する
     chrome.storage.sync.set(
         {
@@ -16,7 +16,7 @@ function Save() {
 function Load() {
 	chrome.storage.sync.get("instance_name").then((items) => {
         document.getElementById("instance_name").value =
-            items.instance_name || "Misskey.io";
+            items.instance_name || "misskey.io";
     });
 }
 
