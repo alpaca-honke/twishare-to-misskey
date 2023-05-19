@@ -45,6 +45,6 @@ chrome.storage.sync.get("instance_name", function (items) {
 			instance_url.searchParams.set("url", share_url);
 		}
 
-		location.href = instance_url;
+		location.href = instance_url.href;
 	}
 });
