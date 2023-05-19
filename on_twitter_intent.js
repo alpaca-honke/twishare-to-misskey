@@ -28,14 +28,14 @@ chrome.storage.sync.get("instance_name", function (items) {
 
 		if (text) {
 			if (hashtags) {
-				tagged_hashtags = "#" + hashtags.replace(/\,/g, " #");
+				const tagged_hashtags = "#" + hashtags.replace(/,/g, " #");
 				share_text = text + "\n" + tagged_hashtags;
 			} else {
 				share_text = text;
 			}
 			instance_url.searchParams.set("text", share_text);
 		} else if (hashtags) {
-			tagged_hashtags = " #" + hashtags.replace(/\,/g, " #");
+			const tagged_hashtags = " #" + hashtags.replace(/,/g, " #");
 			share_text = encodeURIComponent(tagged_hashtags);
 			instance_url.searchParams.set("text", share_text);
 		}
