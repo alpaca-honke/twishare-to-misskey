@@ -1,7 +1,7 @@
 
 function Save() {
     const instance_name =
-        document.getElementById("instance_name").value || "Misskey.io";
+        document.getElementById("instance_name").value || "misskey.io";
 	const button_visibility = document.getElementById("button_visibility").checked;
     browser.storage.sync.set(
     // 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視して保存する
@@ -19,7 +19,7 @@ function Save() {
 function Load() {
 	browser.storage.sync.get("instance_name").then((items) => {
         document.getElementById("instance_name").value =
-            items.instance_name || "Misskey.io";
+            items.instance_name || "misskey.io";
     });
 	browser.storage.sync.get("button_visibility").then((items) => {
 		if (items.button_visibility !== false){
