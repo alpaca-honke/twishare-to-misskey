@@ -21,14 +21,14 @@ function Load() {
 }
 
 function SucceedSave() {
-	save_status = document.getElementById("save_status");
+	const save_status = document.getElementById("save_status");
 	save_status.innerHTML = "保存されました！";
 	save_status.style.color = "#55c500"
 	Load();
 }
 
 function FailedSave() {
-	save_status = document.getElementById("save_status");
+	const save_status = document.getElementById("save_status");
 	save_status.innerHTML = "保存できませんでした";
 	save_status.style.color = "#ff0000";
 }
