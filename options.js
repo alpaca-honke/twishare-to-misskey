@@ -35,7 +35,7 @@ function FailedSave() {
 
 document.addEventListener("DOMContentLoaded", Load);
 document.getElementById("instance_name").onkeydown = (e) => {
-	if(e.key == "Enter"){
+	if(e.key === "Enter"){
 		Save();
 	}
 };
