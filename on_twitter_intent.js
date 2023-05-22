@@ -1,4 +1,4 @@
-browser.storage.sync.get("instance_name", function (items) {
+browser.storage.sync.get("instance_name").then((items) => {
 	const instance_name = items.instance_name || "Misskey.io";
 
 	const result = window.confirm(

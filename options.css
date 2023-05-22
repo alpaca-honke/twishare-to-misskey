@@ -8,6 +8,9 @@ h1{
 	border: 1px solid #000000;
 	border-radius: 10px;
 }
+#checkbox{
+	display: flex;
+}
 #save_button{
 	color: #ffffff;
 	background-color: #56b4ee;
