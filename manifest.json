@@ -17,8 +17,8 @@
 		{
 			"run_at": "document_end",
 			"matches": ["<all_urls>"],
-			"js": ["allpage.js"],
-			"css": ["allpage.css"]
+			"js": ["allpages.js"],
+			"css": ["allpages.css"]
 		}
 	],
 	"background": {
@@ -36,6 +36,12 @@
 	"options_ui": {
 		"page": "options.html"
 	},
+	"web_accessible_resources": [
+		{
+			"resources": ["assets/share.png"],
+			"matches": ["<all_urls>"]
+		}
+	],
 	"permissions": ["storage"],
 	"author":"Alkappa/alpaca-honke",
 	"homepage_url":"https://github.com/alpaca-honke/twishare-to-misskey/"

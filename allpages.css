@@ -3,9 +3,15 @@
 	right: 0;
 	bottom: 0;
 	margin: 10px;
+	padding: 0;
 	height: 3em;
 	width: 3em;
-	background-color: #44b400;
+	background-color: #33a300;
+	text-align: center;
 	border-radius: 1.5em;
 	border: none;
+	z-index: 10000;
+}
+#_twishare_to_misskey_share_img{
+	height: 100%;
 }
