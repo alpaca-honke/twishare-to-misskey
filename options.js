@@ -21,7 +21,7 @@ function Load() {
         document.getElementById("instance_name").value =
             items.instance_name || "Misskey.io";
     });
-	chrome.storage.sync.get("button_visibility").then((items) => {
+	browser.storage.sync.get("button_visibility").then((items) => {
 		if (items.button_visibility !== false){
 			document.getElementById('button_visibility').checked = true;
 		}
