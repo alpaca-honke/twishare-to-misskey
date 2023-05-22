@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name":"Twishare to Misskey",
-	"version":"0.1.1",
+	"version":"0.2.0",
 	"description":"Twitter のシェアボタンから Misskey にシェアすることができるようにします。",
 	"icons":{
 		"16":"icons/16.png", 
