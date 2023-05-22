@@ -18,6 +18,12 @@
 			"run_at":"document_start",
 			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*"],
 			"js":["on_twitter_intent.js"]
+		},
+		{
+			"run_at": "document_end",
+			"matches": ["<all_urls>"],
+			"js": ["allpages.js"],
+			"css": ["allpages.css"]
 		}
 	],
 	"background": {
@@ -36,6 +42,12 @@
 	"options_ui": {
 		"page": "options.html"
 	},
+	"web_accessible_resources": [
+		{
+			"resources": ["assets/share.png"],
+			"matches": ["<all_urls>"]
+		}
+	],
 	"permissions": ["storage"],
 	"author":"Alkappa/alpaca-honke",
 	"homepage_url":"https://github.com/alpaca-honke/twishare-to-misskey/"
