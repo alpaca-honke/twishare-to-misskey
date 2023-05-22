@@ -36,6 +36,7 @@ function SucceedSave() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function FailedSave() {
 	const save_status = document.getElementById("save_status");
 	save_status.innerHTML = "保存できませんでした";
@@ -44,6 +45,8 @@ function FailedSave() {
 
 =======
 >>>>>>> 4f45fa5 (tterシェアボタンがないページでもシェアできるようにボタンの挙動を追加)
+=======
+>>>>>>> bc4221b (Merge branch 'feature/floating_share_button' into develop)
 document.addEventListener("DOMContentLoaded", Load);
 document.getElementById("instance_name").onkeydown = (e) => {
 	if(e.key === "Enter"){
