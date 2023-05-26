@@ -60,7 +60,7 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 ## Contributors
 
 - [@emtkmkk](https://github.com/emtkmkk)さん
-- [@massongit](https://hithub.com/massongit)さん
+- [@massongit](https://github.com/massongit)さん
 
 ## License
 
