@@ -29,7 +29,7 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 1. Twitter シェアボタンを押して、ページ遷移する際に、Misskey にシェアするか聞かれますので、 OK を押すと、 Misskey にシェアされます。  
 ![popup.png](images/popup.png)
 ![share.png](images/share.png)
-1. 最初にチェックボックスにチェックを入れた場合は、歯面の左下に緑のシェアボタンが出てきます。これを使えば、Twitterのシェアボタンがないページもシェアできます。  
+1. 最初にチェックボックスにチェックを入れた場合は、画面の左下に緑のシェアボタンが出てきます。これを使えば、Twitterのシェアボタンがないページもシェアできます。  
 ![floating.png](images/floationg.png)
 
 ## よくある質問
