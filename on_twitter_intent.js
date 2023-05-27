@@ -1,4 +1,4 @@
-chrome.storage.sync.get("instance_name", function (items) {
+chrome.storage.sync.get("instance_name").then((items) => {
 	const instance_name = items.instance_name || "misskey.io";
 
 	const result = window.confirm(
@@ -45,6 +45,6 @@ chrome.storage.sync.get("instance_name", function (items) {
 			instance_url.searchParams.set("url", share_url);
 		}
 
-		location.href = instance_url;
+		location.href = instance_url.href;
 	}
 });
