@@ -9,9 +9,15 @@
 			<h1>Twishare to Misskey</h1>
 			<p>共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey.ioです。</p>
 			<input type="textbox" id="instance_name" />
-			<div id="checkbox">
-				<input type="checkbox" id="button_visibility" />
-				<label for="floating_button_visibility">画面右下にシェアボタンを表示</label>
+			<div id="checkboxes">
+				<div>
+					<input type="checkbox" id="button_visibility" />
+					<label for="button_visibility">Misskey/Calckey以外のページで画面右下にシェアボタンを表示</label>
+				</div>
+				<div>
+					<input type="checkbox" id="button_visibility_on_misskey" />
+					<label for="button_visibility_on_misskey">Misskey/Calckey上で右下にボタン表示</label>
+				</div>
 			</div>
 			<button id="save_button">保存</button>
 			<p id="save_status"></p>

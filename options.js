@@ -3,13 +3,15 @@ function Save() {
     const instance_name =
         document.getElementById("instance_name").value || "misskey.io";
 	const button_visibility = document.getElementById("button_visibility").checked;
-    browser.storage.sync.set(
+	const button_visibility_on_misskey = document.getElementById("button_visibility_on_misskey").checked;
+    chrome.storage.sync.set(
     // 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視して保存する
         {
             instance_name: instance_name
                 .replace(/^https?:\/\//, "")
                 .replace(/\/(.*)$/, ""),
-			button_visibility: button_visibility
+			button_visibility: button_visibility,
+			button_visibility_on_misskey: button_visibility_on_misskey
 		}
 	).then(
 		SucceedSave()
@@ -21,9 +23,14 @@ function Load() {
         document.getElementById("instance_name").value =
             items.instance_name || "misskey.io";
     });
-	browser.storage.sync.get("button_visibility").then((items) => {
+	chrome.storage.sync.get("button_visibility").then((items) => {
 		if (items.button_visibility !== false){
 			document.getElementById('button_visibility').checked = true;
+		}
+	});
+	chrome.storage.sync.get("button_visibility_on_misskey").then((items) => {
+		if (items.button_visibility_on_misskey !== false){
+			document.getElementById('button_visibility_on_misskey').checked = true;
 		}
 	});
 }
