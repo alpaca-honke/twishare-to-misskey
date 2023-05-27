@@ -1,5 +1,5 @@
 chrome.storage.sync.get("instance_name").then((items) => {
-	const instance_name = items.instance_name || "Misskey.io";
+	const instance_name = items.instance_name || "misskey.io";
 
 	const result = window.confirm(
 		`Twitter へのシェアリンクを確認しました。この内容を ${instance_name} にシェアしますか？(拡張機能 Twishare to Misskey より)`

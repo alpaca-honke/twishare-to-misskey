@@ -1,7 +1,7 @@
 
 function Save() {
     const instance_name =
-        document.getElementById("instance_name").value || "Misskey.io";
+        document.getElementById("instance_name").value || "misskey.io";
 	const button_visibility = document.getElementById("button_visibility").checked;
 	const button_visibility_on_misskey = document.getElementById("button_visibility_on_misskey").checked;
     chrome.storage.sync.set(
@@ -21,7 +21,7 @@ function Save() {
 function Load() {
 	chrome.storage.sync.get("instance_name").then((items) => {
         document.getElementById("instance_name").value =
-            items.instance_name || "Misskey.io";
+            items.instance_name || "misskey.io";
     });
 	chrome.storage.sync.get("button_visibility").then((items) => {
 		if (items.button_visibility !== false){
