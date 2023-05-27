@@ -1,5 +1,30 @@
-chrome.storage.sync.get("button_visibility").then((items) => {
-	button_visibility = items.button_visibility;
+let metatags = document.getElementsByTagName('meta');
+let is_misskey_or_calckey = false;
+for (let i = 0; i < metatags.length; i++){
+	var metatag = metatags[i];
+	if (
+		metatag.getAttribute('name') === 'application-name' &&
+		(metatag.getAttribute('content') === 'Misskey' || metatag.getAttribute('content') === 'Calckey')
+	){
+		is_misskey_or_calckey = true;
+		break;
+	}
+}
+
+if (is_misskey_or_calckey === true){
+	chrome.storage.sync.get("button_visibility_on_misskey").then((items) => {
+		let button_visibility = items.button_visibility_on_misskey;
+		setButton(button_visibility);
+	});
+} else {
+	chrome.storage.sync.get("button_visibility").then((items) => {
+		let button_visibility = items.button_visibility;
+		setButton(button_visibility);
+	});
+
+}
+
+function setButton(button_visibility){
 	if (button_visibility !== false){
 		const body = document.body;
 		const button = document.createElement('button');
@@ -24,5 +49,4 @@ chrome.storage.sync.get("button_visibility").then((items) => {
 			});
 		});
 	}
-});
-
+}
