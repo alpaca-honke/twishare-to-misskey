@@ -12,17 +12,17 @@
 		{
 			"run_at":"document_start",
 			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*"],
-			"js":["on_twitter_intent.js"]
+			"js":["js_and_css/on_twitter_intent.js"]
 		},
 		{
 			"run_at": "document_end",
 			"matches": ["<all_urls>"],
-			"js": ["allpages.js"],
-			"css": ["allpages.css"]
+			"js": ["js_and_css/allpages.js"],
+			"css": ["js_and_css/allpages.css"]
 		}
 	],
 	"background": {
-		"service_worker": "background.js"
+		"service_worker": "js_and_css/background.js"
 	},
 	"action": {
 		"default_icon": {
@@ -31,10 +31,10 @@
 			"128": "icons/128.png"
 		},
 		"default_title": "共有先のサーバー名の設定",
-		"default_popup": "options.html"
+		"default_popup": "options/options.html"
 	},
 	"options_ui": {
-		"page": "options.html"
+		"page": "options/options.html"
 	},
 	"web_accessible_resources": [
 		{
