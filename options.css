@@ -1,28 +1,90 @@
+body{
+	background-color: #f2f2f2;
+	text-align: center;
+	box-sizing: border-box;
+}
 h1{
-	color: #3492cc;
+	margin: 10px;
+	padding: 0;
+}
+#icon{
+	height: 5em;
+}
+.description{
+	color: #666;
 }
 #instance_name{
 	outline: none;
+	padding: 10px;
 	margin: 5px;
-	height: 20px;
-	border: 1px solid #000000;
-	border-radius: 10px;
+	width: 300px;
+	border: 2px solid #ccc;
+	border-radius: 18px;
+	font-size: 16px;
 }
-#checkbox{
-	display: flex;
+#checkboxes{
+	margin-top: 15px;
+}
+
+/*楕円*/
+input[type="checkbox"]{
+	position: relative;
+	top: 8px;/*そのまんまだと上に8pxずれちゃうので直す*/
+	margin-right: 10px;
+	appearance: none;
+	background-color: #0c0c0d1a;
+	border-radius: 8px;
+	height: 16px;
+	width: 32px;
+}
+input[type="checkbox"]:hover{
+	background-color: #0c0c0d33;
+	border-color: #0c0c0d7f;
+}
+input[type="checkbox"]:active{
+	background-color: #0c0c0d4d;
+}
+input[type="checkbox"]:checked{
+	background-color: #55c500;
+	border-color: #55c500;
+}
+input[type="checkbox"]:checked:hover{
+	background-color: #44b400;
+}
+
+/*丸*/
+input[type="checkbox"]::before {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px #ccc;
+  content: "";
+  display: inline-block;
+  height: 24px;
+  margin-left: -4px;/*はみ出す*/
+  margin-top: -4px;
+  transition: margin-left .2s cubic-bezier(.07, .95, 0, 1);
+  width: 24px;
+}
+input[type="checkbox"]:checked::before {
+  background-color: #ffffff;
+  margin-left: 13px;
+}
+
+label{
+	color: #333;
+	font-size: 14px;
 }
 #save_button{
 	color: #ffffff;
-	background-color: #56b4ee;
+	background-color: #4169e1;
 	margin: 5px;
-	height: 20px;
-	width: 50px;
+	height: 40px;
+	width: 100px;
 	border: 0;
-	border-radius: 10px;
-	transition: 500ms;
+	border-radius: 25px;
 }
 #save_button:hover{
-	background-color: #34a2cc;
+	background-color: #3058d0;
 }
 #save_status{
 	font-weight: bold;

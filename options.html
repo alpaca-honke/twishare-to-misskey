@@ -6,17 +6,21 @@
 	</head>
 	<body>
 		<div>
-			<h1>Twishare to Misskey</h1>
-			<p>共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey.ioです。</p>
-			<input type="textbox" id="instance_name" />
+			<h1><img src="assets/icon.png" id="icon" /></h1>
+			<p class="description">共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey.ioです。</p>
+			<input type="textbox" placeholder="共有先のサーバーのURLを入力" id="instance_name" />
 			<div id="checkboxes">
 				<div>
-					<input type="checkbox" id="button_visibility" />
-					<label for="button_visibility">Misskey/Calckey以外のページで画面右下にシェアボタンを表示</label>
+					<label for="button_visibility">
+						<input type="checkbox" id="button_visibility" class="check" />
+						Misskey/Calckey以外のページで画面右下にシェアボタンを表示
+					</label>
 				</div>
 				<div>
-					<input type="checkbox" id="button_visibility_on_misskey" />
-					<label for="button_visibility_on_misskey">Misskey/Calckey上で右下にボタン表示</label>
+					<label for="button_visibility_on_misskey">
+						<input type="checkbox" id="button_visibility_on_misskey" class="check" />
+						Misskey/Calckey上で右下にシェアボタン表示
+					</label>
 				</div>
 			</div>
 			<button id="save_button">保存</button>
