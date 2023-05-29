@@ -61,7 +61,7 @@ function setButton(button_visibility){
 		body.appendChild(button);
 		button.addEventListener('click', () => {
 			chrome.storage.sync.get("instance_name").then((items) => {
-				const instance_name = items.instance_name || "Misskey.io";
+				const instance_name = items.instance_name || "misskey.io";
 				const now_url = location.href;
 				const now_title = document.title;
 
