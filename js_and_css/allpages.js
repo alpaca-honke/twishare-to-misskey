@@ -1,27 +1,52 @@
-let metatags = document.getElementsByTagName('meta');
-let is_misskey_or_calckey = false;
-for (let i = 0; i < metatags.length; i++){
-	var metatag = metatags[i];
-	if (
-		metatag.getAttribute('name') === 'application-name' &&
-		(metatag.getAttribute('content') === 'Misskey' || metatag.getAttribute('content') === 'Calckey')
-	){
-		is_misskey_or_calckey = true;
-		break;
-	}
+if (whetherSetButton()) {
+	setButton();
 }
 
-if (is_misskey_or_calckey === true){
-	chrome.storage.sync.get("button_visibility_on_misskey").then((items) => {
-		let button_visibility = items.button_visibility_on_misskey;
-		setButton(button_visibility);
+function whetherSetButton() {
+		// sites_to_hide_buttonはisSiteToHideButtonで読むのでここでは読まない
+	chrome.storage.sync.get(["button_visibility_on_misskey", "button_visibility"]).then((items) => {
+		if (isSiteToHideButton()) {
+			return false;
+		}
+		if (items.button_visibility_on_misskey === false) {
+			// Misskey上でボタンを表示させない設定のとき、Misskeyにアクセスしてたらfalse
+			if (isMisskey()) {
+				return false;
+			}
+		}
+		if (items.button_visibility === false) {
+			return false;
+		}
+		return true;
 	});
-} else {
-	chrome.storage.sync.get("button_visibility").then((items) => {
-		let button_visibility = items.button_visibility;
-		setButton(button_visibility);
-	});
+}
 
+function isMisskey() {
+	// MisskeyやCalckeyでは、metaタグのname="application-name"にcontent="Misskey"とか"Calckey"がついてる
+	let metatags = document.getElementsByTagName('meta');
+	for (let i = 0; i < metatags.length; i++){
+		var metatag = metatags[i];
+		if (
+			metatag.getAttribute('name') === 'application-name' &&
+			(metatag.getAttribute('content') === 'Misskey' || metatag.getAttribute('content') === 'Calckey')
+		){
+			return true;
+		}
+	}
+	return false;
+}
+function isSiteToHideButton() {
+	chrome.storage.sync.get("sites_to_hide_button").then((items) => {
+		// 区切りのスペースごと保存してあるので展開
+		let sites = items.sites_to_hide_button.split(' ');
+		sites.some((value) => {
+			return value
+				// 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視して保存する
+                .replace(/^https?:\/\//, "")
+                .replace(/\/(.*)$/, "")
+				=== location.hostname;
+		});
+	});
 }
 
 function setButton(button_visibility){
