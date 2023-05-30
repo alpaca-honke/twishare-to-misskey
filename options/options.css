@@ -13,7 +13,7 @@ h1{
 .description{
 	color: #666;
 }
-#instance_name{
+input[type="text"]{
 	outline: none;
 	padding: 10px;
 	margin: 5px;
