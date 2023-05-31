@@ -27,7 +27,7 @@
 		}
 	],
 	"background": {
-		"scripts": ["background.js"],
+		"scripts": ["js_and_css/background.js"],
 		"persistent": true
 	},
 	"page_action": {
