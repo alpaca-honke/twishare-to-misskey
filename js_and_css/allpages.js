@@ -79,7 +79,7 @@ function setButton(){
 				instance_url.searchParams.set("text", now_title);
 			}
 			instance_url.searchParams.set("url", now_url);
-			location.href = instance_url.href;
+			window.open(instance_url.href);
 		});
 	});
 }
