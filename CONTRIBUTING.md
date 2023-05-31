@@ -29,7 +29,7 @@ Issueを開いてから作業を行ってください。（僕とかと同じ作
 基本的にChrome向けに修正、追加を行ってください。（Firefoxのみで発生している不具合の修正などはその限りではない）ただ、Firefoxに適用する際に留意すべき点がある際には、コード内にコメントを残しておいてください。
 Firefoxに適用ができない（Chrome独自の機能など。`chrome` ネームスペースを `browser` に置き換えるだけで済むものは除く）コミットは二行目以降にその旨を書いてください。
 
-README.mdを編集する際は、コードの編集とコミットを分けてください。また、README.mdを編集したコミットメッセージの二行目（またはそれ以降）に、その旨を書いてください。
+README.mdやimagesディレクトリ配下を編集する際は、コードの編集とコミットを分けてください。また、そのコミットメッセージの二行目（またはそれ以降）に、その旨を書いてください。
 
 ### Pull Request
 
@@ -49,18 +49,23 @@ Firefox向けにPRを作成する際は、`develop_firefox` ブランチに行�
 |    |- 48.png
 |    |- 128.png
 |
-|- CONTRIBUTING.md この文書
 |- images/ README内で使用する画像（以下省略）
+|
+|- js_and_css/ content_scriptsとbackground(worker)に関するファイル
+|    |- allpages.css 全ページに適用するCSS
+|    |- allpages.js 全ページに適用するJavaScript
+|    |- background.js Workerとしてバックグラウンドで動作するJavaScript
+|    |- on_twitter_intent.js https://twitter.com/intent/tweetで動作するJavaScript
+|
+|- options/ option_uiとpopupに関するファイル
+|    |- options.css オプション画面のCSS
+|    |- options.html オプション画面のHTML
+|    |- options.js オプション画面のJavaScript
+
+|- CONTRIBUTING.md この文書
 |- LICENSE MITライセンス
 |- README.md 説明
-|- allpages.css 全ページに適用するCSS
-|- allpages.js 全ページに適用するJavaScript
-|- background.js Workerとしてバックグラウンドで動作するJavaScript
 |- manifest.json マニフェストファイル
-|- on_twitter_intent.js https://twitter.com/intent/tweetで動作するJavaScript
-|- options.css オプション画面のCSS
-|- options.html オプション画面のHTML
-|-  options.js オプション画面のJavaScript
 ```
 
 ## ブランチ構造
