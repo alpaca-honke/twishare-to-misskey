@@ -10,7 +10,7 @@
 	text-align: center;
 	border-radius: 1.5em;
 	border: none;
-	z-index: 10000;
+	z-index: 2147483647;
 }
 #_twishare_to_misskey_share_img{
 	height: 100%;
