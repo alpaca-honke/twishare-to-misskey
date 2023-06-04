@@ -3,6 +3,14 @@
 	"name":"Twishare to Misskey",
 	"version":"0.2.1",
 	"description":"Twitter のシェアボタンから Misskey にシェアすることができるようにします。",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "twishare-to-misskey@alpaca-honke.github.io"
+		},
+		"gecko_android": {
+			"id": "twishare-to-misskey@alpaca-honke.github.io"
+		}
+	},
 	"icons":{
 		"16":"icons/16.png", 
 		"48":"icons/48.png",
