@@ -30,7 +30,8 @@
 		}
 	],
 	"background": {
-		"service_worker": "js_and_css/background.js"
+		"scripts": ["js_and_css/background.js"],
+		"persistent": false
 	},
 	"action": {
 		"default_icon": {
