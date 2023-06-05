@@ -1,5 +1,10 @@
 # Twishare to Misskey v0.2.1  
 
+<div style="text-align: center;">
+    <img src="assets/icon.png" style="height: 15em;">
+</div>
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/alpaca-honke/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fbaifpppndnlbbjcbjdfgbdkoibnipjb?style=flat-square) ![Mozilla Add-on](https://img.shields.io/amo/v/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=users%20count%20%28chrome%20web%20store%29&style=flat-square) ![GitHub](https://img.shields.io/github/license/alpaca-honke/twishare-to-misskey?style=flat-square)
 ## 概要
 
 [Twitter](https://twitter.com/) のシェアボタンから Misskey （またはその派生 SNS）にシェアできるようになる Chrome拡張 です。  

@@ -27,8 +27,9 @@ Issueを開いてから作業を行ってください。（僕とかと同じ作
 ### 作業中
 
 基本的にChrome向けに修正、追加を行ってください。（Firefoxのみで発生している不具合の修正などはその限りではない）ただ、Firefoxに適用する際に留意すべき点がある際には、コード内にコメントを残しておいてください。
-Firefoxに適用ができない（Chrome独自の機能など。`chrome` ネームスペースを `browser` に置き換えるだけで済むものは除く）コミットは二行目以降にその旨を書いてください。
+Firefoxに適用ができない（Chrome独自の機能など。`chrome` ネームスペースを `browser` に置き換えるだけで済むものは除く）コミットはコミットメッセージの二行目以降にその旨を書いてください。
 
+なお、README.mdとimagesディレクトリ配下、及びCONTRIBUTING.mdはウェブストアに提出するパッケージやリリースパッケージには含まれません。
 README.mdやimagesディレクトリ配下を編集する際は、コードの編集とコミットを分けてください。また、そのコミットメッセージの二行目（またはそれ以降）に、その旨を書いてください。
 
 ### Pull Request
@@ -43,6 +44,7 @@ Firefox向けにPRを作成する際は、`develop_firefox` ブランチに行�
 /
 |- assets/ 拡張機能内部で使用するファイルを格納
 |    |- share.png 右下のフローティングシェアボタンの画像
+|    |- icon.png 高画質のTwishare to Misskeyのアイコン（画質がいいとは言ってない）
 |
 |- icons/ 拡張機能のアイコン
 |    |- 16.png
@@ -61,7 +63,7 @@ Firefox向けにPRを作成する際は、`develop_firefox` ブランチに行�
 |    |- options.css オプション画面のCSS
 |    |- options.html オプション画面のHTML
 |    |- options.js オプション画面のJavaScript
-
+|
 |- CONTRIBUTING.md この文書
 |- LICENSE MITライセンス
 |- README.md 説明

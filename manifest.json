@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name":"Twishare to Misskey",
-	"version":"0.2.1",
+	"version":"0.2.2",
 	"description":"Twitter のシェアボタンから Misskey にシェアすることができるようにします。",
 	"icons":{
 		"16":"icons/16.png", 
@@ -30,7 +30,7 @@
 			"48": "icons/48.png",
 			"128": "icons/128.png"
 		},
-		"default_title": "共有先のサーバー名の設定",
+		"default_title": "Twishare to Misskeyの設定",
 		"default_popup": "options/options.html"
 	},
 	"options_ui": {
