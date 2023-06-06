@@ -7,7 +7,8 @@
 ## お知らせ（必ずお読みください）
 
 - 【 **仕様変更** 】Firefox版の拡張機能の最新版は、Firefox109以降でのみ動作するようになりました。つまり、 **2023年秋ごろまではFirefox ESRでは使用できません。**
-それに伴って、 **<span style="color:red;height:1.5em;">Firefoxでご利用の方は、再度インストールをしてください。以前までのものは今後更新されなくなります。</span>**
+それに伴って、 **<span style="color:red;font-size:1.5em;">Firefoxでご利用の方は、再度インストールをしてください。以前までのものは今後更新されなくなります。</span>**  
+※旧版でないものが未公開の場合はちょっと待ってね。もし公開されたら[@alpaca_honke@misskey.io](https://misskey.io/@alpaca_honke)や[@alpaca_honke@mkkey.net](https://mkkey.net/@alpaca_honke)でお知らせします。
 
 - 【 **デッキUIでの挙動について** 】現在のMisskey/Calckyだと、 **デッキUIに設定されていて、「メイン」カラムが存在しないとシェア画面が表示されない** という問題が発生します。
 Misskeyにおいては、 **13.13.0で修正が適用される** と見られます。Calckyはわかりません。サーバーのMisskeyバージョンをご確認ください。
