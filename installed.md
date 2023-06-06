@@ -76,7 +76,8 @@ Misskeyにおいては、 **13.13.0で修正が適用される** と見られま
 
 ## 連絡先
 
-- Misskey [@alpaca_honke@misskey.io](https://misskey.io/@alpaca_honke)  
+- Misskey.io [@alpaca_honke@misskey.io](https://misskey.io/@alpaca_honke)  
+- mkkey.net [@alpaca-honke@mkkey.net](https://mkkey.net/@alpaca_honke)
 - Twitter [@alpaca_honke](https://twitter.com/alpaca_honke)  
 - メール（Googleフォームからご連絡ください） [GoogleForms](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)  
 - ホームページ的ななにか [https://alpaca-honke.github.io/](https://alpaca-hoke.github.io/)  
