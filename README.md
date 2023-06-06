@@ -1,4 +1,4 @@
-# Twishare to Misskey v0.2.1  
+# Twishare to Misskey v0.2.2  
 
 <div style="text-align: center;">
     <img src="assets/icon.png" style="height: 15em;">
