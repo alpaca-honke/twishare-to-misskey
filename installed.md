@@ -11,8 +11,8 @@
 
 - 【 **類似サービスについて** 】先日、未来情報産業㈱[@miraicorp@misskey.io](https://misskey.io/@miraicorp)さんから、 **[Misskeyに直接シェアできるシェアボタン（Misskey Share）](https://misskeyshare.link) が公開されました！** ご自身のウェブサイトやブログをお持ちの方は是非ご利用ください！
 
-- 【 **デッキUIでの挙動について** 】現在のMisskey/Calckyだと、 **デッキUIに設定されていて、「メイン」カラムが存在しないとシェア画面が表示されない** という問題が発生します。
-Misskeyにおいては、 **13.13.0で修正が適用される** と見られます。Calckyはわかりません。サーバーのMisskeyバージョンをご確認ください。
+- 【 **デッキUIでの挙動について** 】13.12.x以前のMisskeyだと、 **デッキUIに設定されていて、「メイン」カラムが存在しないとシェア画面が表示されない** という問題が発生します。
+Misskeyにおいては、 **13.13.0で修正が適用されました** 。サーバーのMisskeyバージョンをご確認ください。
 なお、メインカラムが存在しなかったことによりシェア画面が表示されなかった場合、 **そのままページ遷移せずにメインカラムを追加すれば出てきます。**
 
 ## 更新履歴
@@ -79,6 +79,7 @@ Misskeyにおいては、 **13.13.0で修正が適用される** と見られま
 
 - Misskey.io [@alpaca_honke@misskey.io](https://misskey.io/@alpaca_honke)  
 - mkkey.net [@alpaca-honke@mkkey.net](https://mkkey.net/@alpaca_honke)
+- misskey.noellab.jp [@alpaca_honke@misskey.noellab.jp](https://misskey.noellab.jp/@alpaca_honke)
 - Twitter [@alpaca_honke](https://twitter.com/alpaca_honke)  
 - メール（Googleフォームからご連絡ください） [GoogleForms](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)  
 - ホームページ的ななにか [https://alpaca-honke.github.io/](https://alpaca-hoke.github.io/)  
