@@ -4,11 +4,11 @@
 	bottom: 0;
 	margin: 10px;
 	padding: 0;
-	height: 3em;
-	width: 3em;
+	height: 40px;
+	width: 40px;
 	background-color: #33a300;
 	text-align: center;
-	border-radius: 1.5em;
+	border-radius: 20em;
 	border: none;
 	z-index: 2147483647;
 }
