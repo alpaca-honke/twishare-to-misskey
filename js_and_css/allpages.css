@@ -13,5 +13,8 @@
 	z-index: 2147483647;
 }
 #_twishare_to_misskey_share_img{
+	position: absolute;
+	top: 0;
+	right: 0;
 	height: 100%;
 }
