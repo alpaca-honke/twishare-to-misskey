@@ -71,14 +71,18 @@ function setButton(){
 	button.addEventListener('click', () => {
 		chrome.storage.sync.get("instance_name").then((items) => {
 			const instance_name = items.instance_name || "misskey.io";
+			//JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
 			const now_url = location.href;
 			const now_title = document.title;
 
 			const instance_url = new URL(`https://${instance_name}/share`);
-			if (now_title){
-				instance_url.searchParams.set("text", now_title);
-			}
-			instance_url.searchParams.set("url", now_url);
+			//textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
+			//if (now_title){
+			//	instance_url.searchParams.set("text", now_title);
+			//}
+			let share_text = now_title + "\n\n" + now_url;
+			//instance_url.searchParams.set("url", encoded_now_url);
+			instance_url.searchParams.set("text",share_text);
 			window.open(instance_url.href);
 		});
 	});
