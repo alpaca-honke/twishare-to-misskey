@@ -35,7 +35,7 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 ![popup.png](images/popup.png)
 ![share.png](images/share.png)
 1. 最初にトグルスイッチにチェックを入れた場合は、画面の右下に緑のシェアボタンが出てきます。これを使えば、Twitterのシェアボタンがないページもシェアできます。  
-![floating.png](images/floationg.png)
+![floating.png](images/floating.png)
 
 ## よくある質問
 
