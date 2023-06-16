@@ -19,6 +19,7 @@ h1{
 }
 #new_ver{
 	color: #00f;
+	cursor: pointer;
 }
 .description{
 	color: #666;
