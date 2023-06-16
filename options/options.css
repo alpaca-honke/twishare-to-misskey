@@ -10,6 +10,17 @@ h1{
 #icon{
 	height: 5em;
 }
+#version{
+	color: #666;
+	/*font-size: 0.7em;*/
+}
+#installed{
+	text-decoration: underline;
+	cursor: pointer;
+}
+#installed:hover{
+	text-decoration: underline;
+}
 .description{
 	color: #666;
 }

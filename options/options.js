@@ -1,3 +1,27 @@
+document.addEventListener("DOMContentLoaded", Load);
+document.getElementById("instance_name").onkeydown = (e) => {
+	if(e.key === "Enter"){
+		Save();
+	} else {
+		Unsaved();
+	}
+};
+document.getElementById('button_visibility').addEventListener('change', () => {
+	Unsaved();
+});
+document.getElementById('button_visibility_on_misskey').addEventListener('change', () => {
+	Unsaved();
+});
+document.getElementById("sites_to_hide_button").onkeydown = (e) => {
+	if(e.key === "Enter"){
+		Save();
+	} else {
+		Unsaved();
+	}
+};
+document.getElementById("save_button").addEventListener("click", Save);
+document.getElementById('installed').addEventListener("click",showInstalled);
+
 function Save() {
     const instance_name =
         document.getElementById("instance_name").value || "misskey.io";
@@ -46,25 +70,6 @@ function Unsaved() {
 	save_status.style.color = "#ff0000"
 }
 
-document.addEventListener("DOMContentLoaded", Load);
-document.getElementById("instance_name").onkeydown = (e) => {
-	if(e.key === "Enter"){
-		Save();
-	} else {
-		Unsaved();
-	}
-};
-document.getElementById('button_visibility').addEventListener('change', () => {
-	Unsaved();
-});
-document.getElementById('button_visibility_on_misskey').addEventListener('change', () => {
-	Unsaved();
-});
-document.getElementById("sites_to_hide_button").onkeydown = (e) => {
-	if(e.key === "Enter"){
-		Save();
-	} else {
-		Unsaved();
-	}
-};
-document.getElementById("save_button").addEventListener("click", Save);
+function showInstalled() {
+	window.open('https://alpaca-honke.github.io/twishare-to-misskey/installed.html');
+}
