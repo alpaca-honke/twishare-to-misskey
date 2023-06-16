@@ -10,6 +10,13 @@ h1{
 #icon{
 	height: 5em;
 }
+.warn{
+	font-size: 1.2em;
+	color: #f00;
+}
+.bold{
+	font-weight: bold;
+}
 .description{
 	color: #666;
 }

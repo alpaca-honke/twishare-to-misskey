@@ -70,6 +70,7 @@ function setButton(){
 	body.appendChild(button);
 	button.addEventListener('click', () => {
 		browser.storage.sync.get("instance_name").then((items) => {
+			alert('⚠ これは旧版です。今後機能に関する更新は行われません。Firefox109以降のバージョンをお使いの方は、この旧版を削除してから再インストールしてください。Firefox109以前をご利用の方など、このバージョンを使い続ける必要がある方は教えてください。対処します。')
 			const instance_name = items.instance_name || "misskey.io";
 			const now_url = location.href;
 			const now_title = document.title;

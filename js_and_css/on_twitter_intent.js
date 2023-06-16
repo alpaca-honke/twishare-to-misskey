@@ -2,7 +2,7 @@ browser.storage.sync.get("instance_name").then((items) => {
 	const instance_name = items.instance_name || "misskey.io";
 
 	const result = window.confirm(
-		`Twitter へのシェアリンクを確認しました。この内容を ${instance_name} にシェアしますか？(拡張機能 Twishare to Misskey より)`
+		`Twitter へのシェアリンクを確認しました。この内容を ${instance_name} にシェアしますか？(拡張機能 Twishare to Misskey より) ※⚠ これは旧版です。今後機能に関する更新は行われません。Firefox109以降のバージョンをお使いの方は、この旧版を削除してから再インストールしてください。Firefox109以前をご利用の方など、このバージョンを使い続ける必要がある方は教えてください。対処します。`
 	);
 
 	if (result) {
