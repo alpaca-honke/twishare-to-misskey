@@ -1,8 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<script type="module">
 browser.runtime.onInstalled.addListener(() => {
 	browser.tabs.create(
 		{
@@ -10,6 +5,3 @@ browser.runtime.onInstalled.addListener(() => {
 		}
 	);
 });
-		</script>
-	</head>
-</html>

@@ -30,7 +30,10 @@
 		}
 	],
 	"background": {
-		"page": "js_and_css/background.js.html"
+		"page": "",
+		"scripts": ["js_and_css/background.js"],
+		"persistent": false,
+		"type": "module"
 	},
 	"action": {
 		"default_icon": {
