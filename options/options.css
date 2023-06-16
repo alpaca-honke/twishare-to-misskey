@@ -16,6 +16,7 @@ h1{
 }
 #installed{
 	text-decoration: underline;
+	cursor: pointer;
 }
 #installed:hover{
 	text-decoration: underline;
