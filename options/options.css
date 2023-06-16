@@ -17,6 +17,9 @@ h1{
 .bold{
 	font-weight: bold;
 }
+#new_ver{
+	color: #00f;
+}
 .description{
 	color: #666;
 }

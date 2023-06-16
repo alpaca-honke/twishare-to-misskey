@@ -45,6 +45,9 @@ function Unsaved() {
 	save_status.innerHTML = "未保存です"
 	save_status.style.color = "#ff0000"
 }
+function newVersion() {
+	window.open('https://addons.mozilla.org/ja/firefox/addon/twishare-to-misskey/');
+}
 
 document.addEventListener("DOMContentLoaded", Load);
 document.getElementById("instance_name").onkeydown = (e) => {
@@ -68,3 +71,4 @@ document.getElementById("sites_to_hide_button").onkeydown = (e) => {
 	}
 };
 document.getElementById("save_button").addEventListener("click", Save);
+document.getElementById("new_ver").addEventListener("click", newVersion);
