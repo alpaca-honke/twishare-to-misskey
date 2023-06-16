@@ -32,7 +32,6 @@
 	"background": {
 		"page": "",
 		"scripts": ["js_and_css/background.js"],
-		"persistent": false,
 		"type": "module"
 	},
 	"action": {
