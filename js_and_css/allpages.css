@@ -1,3 +1,6 @@
+button{
+    cursor: pointer;
+}
 #_twishare_to_misskey_share{
 	position: fixed;
 	right: 0;
@@ -19,4 +22,23 @@
 	height: 100%;
 	margin: 0;
 	padding: 0;
+}
+#_twishare_to_misskey_share_to_channel{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    height: 30px;
+    width: 14em;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #33a300;
+    text-align: center;
+    border: none;
+    outline: none;
+    z-index: 2147483647;
+}
+#_twishare_to_misskey_share_to_channel p{
+    margin: 0;
+    padding: 0;
 }

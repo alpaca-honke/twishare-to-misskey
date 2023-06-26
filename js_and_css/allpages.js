@@ -1,4 +1,5 @@
 setButtonIfNeeded();
+setChannnelShareButton();
 
 //以下全部関数定義（処理は以上一行）
 
@@ -86,4 +87,41 @@ function setButton(){
 			window.open(instance_url.href);
 		});
 	});
+}
+
+function setChannnelShareButton() {
+    chrome.storage.sync.get("instance_name").then((items) => {
+        const instance_name = items.instance_name || "misskey.io";
+        if (location.href === `https://${instance_name}/share`) {
+            const button = document.createElement('button');
+            const button_content = document.createElement('p');
+            const body = document.body;
+            button.id = '_twishare_to_misskey_share_to_channel';
+            button_content.innerHTML = "チャンネルにシェア";
+            button.appendChild(button_content);
+            body.appendChild(button);
+            button.addEventListener('click',() => {
+                const params = new URLSearchParams(location);
+                const title = params.get('title');
+                const text = params.get('text');
+                const url = params.get('url');
+                const share_text = `${title}\n${text}\n${url}`;
+                const sid = window.crypto.randomUUID();
+
+                const miauth = new URL(`https://${instance_name}/miauth/${sid}`);
+                const callback = new URL('https://alpaca-honke.github.io/twishare-to-misskey/to_channel.html');
+
+                callback.searchParams.set('text',share_text);
+                callback.searchParams.set('instance_name',instance_name);
+                callback.searchParams.set('sid',sid);
+
+                miauth.searchParams.set('name','Twishare to Misskey');
+                miauth.searchParams.set('icon','https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/main/assets/icon.png');
+                miauth.searchParams.set('permission','write:notes');
+                miauth.searchParams.set('callback',callback.href);
+
+                window.open(miauth.href);
+            });
+        }
+    });
 }
