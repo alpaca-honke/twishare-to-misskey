@@ -19,7 +19,7 @@ async function whetherSetButton() {
 	const items = await chrome.storage.sync.get(["button_visibility_on_misskey", "button_visibility"]);
 	if (items.button_visibility_on_misskey === false) {
 		// Misskey上でボタンを表示させない設定のとき、Misskeyにアクセスしてたらfalse
-		const is_misskey = await isMisskey();
+		const is_misskey = await isMisskeyOrCalckey();
 		if (is_misskey) {
 			return false;
 		}
@@ -30,7 +30,7 @@ async function whetherSetButton() {
 	return true;
 }
 
-async function isMisskey() {
+async function isMisskeyOrCalckey() {
 	// MisskeyやCalckeyでは、metaタグのname="application-name"にcontent="Misskey"とか"Calckey"がついてる
 	let metatags = document.getElementsByTagName('meta');
 	for (let i = 0; i < metatags.length; i++){
@@ -38,6 +38,19 @@ async function isMisskey() {
 		if (
 			metatag.getAttribute('name') === 'application-name' &&
 			(metatag.getAttribute('content') === 'Misskey' || metatag.getAttribute('content') === 'Calckey')
+		){
+			return true;
+		}
+	}
+	return false;
+}
+async function isMisskey() {
+	let metatags = document.getElementsByTagName('meta');
+	for (let i = 0; i < metatags.length; i++){
+		var metatag = metatags[i];
+		if (
+			metatag.getAttribute('name') === 'application-name' &&
+            (metatag.getAttribute('content') === 'Misskey')
 		){
 			return true;
 		}
@@ -89,39 +102,40 @@ function setButton(){
 	});
 }
 
-function setChannnelShareButton() {
-    chrome.storage.sync.get("instance_name").then((items) => {
-        const instance_name = items.instance_name || "misskey.io";
-        if (location.href === `https://${instance_name}/share`) {
-            const button = document.createElement('button');
-            const button_content = document.createElement('p');
-            const body = document.body;
-            button.id = '_twishare_to_misskey_share_to_channel';
-            button_content.innerHTML = "チャンネルにシェア";
-            button.appendChild(button_content);
-            body.appendChild(button);
-            button.addEventListener('click',() => {
-                const params = new URLSearchParams(location);
-                const title = params.get('title');
-                const text = params.get('text');
-                const url = params.get('url');
-                const share_text = `${title}\n${text}\n${url}`;
-                const sid = window.crypto.randomUUID();
+async function setChannnelShareButton() {
+    const items = await chrome.storage.sync.get("instance_name");
+    const instance_name = items.instance_name || "misskey.io";
+    //多分MiAuthはCalckeyじゃ使えない
+    const is_misskey = await isMisskey();
+    if (location.href === `https://${instance_name}/share` && is_misskey) {
+        const button = document.createElement('button');
+        const button_content = document.createElement('p');
+        const body = document.body;
+        button.id = '_twishare_to_misskey_share_to_channel';
+        button_content.innerHTML = "チャンネルにシェア";
+        button.appendChild(button_content);
+        body.appendChild(button);
+        button.addEventListener('click',() => {
+            const params = new URLSearchParams(location);
+            const title = params.get('title');
+            const text = params.get('text');
+            const url = params.get('url');
+            const share_text = `${title}\n${text}\n${url}`;
+            const sid = window.crypto.randomUUID();
 
-                const miauth = new URL(`https://${instance_name}/miauth/${sid}`);
-                const callback = new URL('https://alpaca-honke.github.io/twishare-to-misskey/to_channel.html');
+            const miauth = new URL(`https://${instance_name}/miauth/${sid}`);
+            const callback = new URL('https://alpaca-honke.github.io/twishare-to-misskey/to_channel.html');
 
-                callback.searchParams.set('text',share_text);
-                callback.searchParams.set('instance_name',instance_name);
-                callback.searchParams.set('sid',sid);
+            callback.searchParams.set('text',share_text);
+            callback.searchParams.set('instance_name',instance_name);
+            callback.searchParams.set('sid',sid);
 
-                miauth.searchParams.set('name','Twishare to Misskey');
-                miauth.searchParams.set('icon','https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/main/assets/icon.png');
-                miauth.searchParams.set('permission','write:notes');
-                miauth.searchParams.set('callback',callback.href);
+            miauth.searchParams.set('name','Twishare to Misskey');
+            miauth.searchParams.set('icon','https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/main/assets/icon.png');
+            miauth.searchParams.set('permission','write:notes');
+            miauth.searchParams.set('callback',callback.href);
 
-                window.open(miauth.href);
-            });
-        }
-    });
+            location.href = miauth.href;
+        });
+    }
 }
