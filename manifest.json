@@ -11,7 +11,7 @@
 	"content_scripts":[
 		{
 			"run_at":"document_start",
-			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*"],
+			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*","https://twitter.com/share*","http://twitter.com/share*"],
 			"js":["js_and_css/on_twitter_intent.js"]
 		},
 		{
