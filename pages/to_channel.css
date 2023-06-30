@@ -1,0 +1,107 @@
+body {
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+a {
+    color: #2bb1da;
+    text-decoration: underline;
+}
+a:hover {
+    color: #41b6da;
+}
+a:active {
+    color: #279cc0;
+}
+.main{
+    display: block;
+}
+
+div {
+    display: block;
+}
+textarea{
+    display: inline-block;
+    width: 600px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+    padding: 5px 5px 5px 15px;
+    border: solid 1px #000000;
+    outline: none;
+    height: 200px;
+}
+button {
+    height: 50px;
+    width: 300px;
+    background: #2bb1da;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 5px 5px 5px;
+}
+button:hover {
+    background: #41b6da;
+}
+button:active {
+    background: #279cc0;
+}
+
+@media screen and (max-width: 650px) {
+    .main{
+        text-align: center;
+      }
+      textarea{
+        display: flex;
+        width: 90vw;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 5px;
+        margin: 5px;
+      }
+}
+
+@media(prefers-color-scheme: dark){
+    body {
+        background: #303030;
+        color: #ffffff;
+    }
+
+    a {
+        color: #1d9bf0;
+    }
+    a:hover {
+        color: #41b6da;
+    }
+    a:active {
+        color: #279cc0;
+    }
+
+    textarea{
+        background: #303030;
+        color: #d0d0d0;
+        border: solid 1px #909090;
+    }
+    ::placeholdaer {
+    color: #a0a0a0;
+    }
+    textarea:hover{
+        background: #606060;
+    }
+    textarea:focus{
+        background: #d0d0d0;
+        color: #000000;
+    }
+    button {
+        background: #1d9bf0;
+        color: #ffffff;
+    }
+    button:hover {
+        background: #41b6da;
+    }
+    button:active {
+        background: #279cc0;
+    }
+}

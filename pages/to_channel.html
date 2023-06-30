@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>チャンネルにシェア</title>
+    <link rel="stylesheet" href="to_channel.css" />
+</head>
+<body>
+    <div class="main">
+        <div class="description">
+            <p id="page-description"><span id="instance_name"></span>のチャンネルにシェアします。シェア内容を以下のフォームで編集してね</p>
+        </div>
+        <div class="form">
+            <textarea id="edit-form" placeholder="シェア内容を編集"></textarea>
+        </div>
+        <div class="list">
+            <div class="description">
+                <p>以下のフォロー中チャンネル一覧からシェア先のチャンネルを選択しておくれ<br>シェアしたいチャンネルが出てこなかったら、フォローし直してまた戻ってきておくれ</p>
+            </div>
+            <div id="lists">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <script src="to_channel.js" charset="utf-8" />
+</body>

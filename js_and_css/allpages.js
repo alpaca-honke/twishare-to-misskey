@@ -1,7 +1,9 @@
+//右下のシェアボタン
 setButtonIfNeeded();
+//チャンネルに投稿ボタン
 setChannnelShareButton();
 
-//以下全部関数定義（処理は以上一行）
+//以下全部関数定義（処理は以上）
 
 async function setButtonIfNeeded() {
 	const whether_set_button = await whetherSetButton();
@@ -19,8 +21,8 @@ async function whetherSetButton() {
 	const items = await chrome.storage.sync.get(["button_visibility_on_misskey", "button_visibility"]);
 	if (items.button_visibility_on_misskey === false) {
 		// Misskey上でボタンを表示させない設定のとき、Misskeyにアクセスしてたらfalse
-		const is_misskey = await isMisskeyOrCalckey();
-		if (is_misskey) {
+		const is_misskey_or_calckey = await isMisskeyOrCalckey();
+		if (is_misskey_or_calckey) {
 			return false;
 		}
 	}
@@ -115,27 +117,34 @@ async function setChannnelShareButton() {
         button_content.innerHTML = "チャンネルにシェア";
         button.appendChild(button_content);
         body.appendChild(button);
-        button.addEventListener('click',() => {
+        button.addEventListener('click', async () => {
             const params = new URLSearchParams(location);
             const title = params.get('title');
             const text = params.get('text');
             const url = params.get('url');
             const share_text = `${title}\n${text}\n${url}`;
-            const sid = window.crypto.randomUUID();
-
-            const miauth = new URL(`https://${instance_name}/miauth/${sid}`);
-            const callback = new URL('https://alpaca-honke.github.io/twishare-to-misskey/to_channel.html');
-
+            const callback = new URL(chrome.runtime.getURL('pages/to_channel.html'));
             callback.searchParams.set('text',share_text);
             callback.searchParams.set('instance_name',instance_name);
-            callback.searchParams.set('sid',sid);
 
-            miauth.searchParams.set('name','Twishare to Misskey');
-            miauth.searchParams.set('icon','https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/main/assets/icon.png');
-            miauth.searchParams.set('permission','write:notes');
-            miauth.searchParams.set('callback',callback.href);
+            //トークンに紐付けられているUUIDが保存されているかどうか
+            const auth = await chrome.storage.sync.get('auth');
+            if (auth[instance_name]) {
+                callback.searchParams.set('id',auth[instance_name]);
+                location.href = callback.href;
+            } else {
+                const sid = window.crypto.randomUUID();
+                callback.searchParams.set('id',sid);
 
-            location.href = miauth.href;
+                const miauth = new URL(`https://${instance_name}/miauth/${sid}`);
+
+                miauth.searchParams.set('name','Twishare to Misskey');
+                miauth.searchParams.set('icon','https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/main/assets/icon.png');
+                miauth.searchParams.set('permission','write:notes,read:channels');
+                miauth.searchParams.set('callback',callback.href);
+
+                location.href = miauth.href;
+            }
         });
     }
 }
