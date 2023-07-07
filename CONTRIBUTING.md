@@ -26,17 +26,18 @@ Issueを開いてから作業を行ってください。（僕とかと同じ作
 
 ### 作業中
 
-基本的にChrome向けに修正、追加を行ってください。（Firefoxのみで発生している不具合の修正などはその限りではない）ただ、Firefoxに適用する際に留意すべき点がある際には、コード内にコメントを残しておいてください。
-Firefoxに適用ができない（Chrome独自の機能など。`chrome` ネームスペースを `browser` に置き換えるだけで済むものは除く）コミットはコミットメッセージの二行目以降にその旨を書いてください。
+ChromeとWebExtensions（Firefoxなど）向けの両方が同じコードで動いてることに留意してください。  
+switch_browser.shというシェルスクリプトがリポジトリルートに同梱されています。ブラウザでテストする際などにご利用ください。
+- 実行権限を付与して、引数に`chrome`と指定するとChrome向けのmanifest.jsonがルートに設置されます。
+- `webext`を指定するとWebExtensions向けのmanifest.jsonが設置されます。
+- 何も指定しないとルートから削除されます。
 
-なお、README.mdとimagesディレクトリ配下、及びCONTRIBUTING.mdはウェブストアに提出するパッケージやリリースパッケージには含まれません。
-README.mdやimagesディレクトリ配下を編集する際は、コードの編集とコミットを分けてください。また、そのコミットメッセージの二行目（またはそれ以降）に、その旨を書いてください。
+なお、README.mdとimagesディレクトリ配下、及びCONTRIBUTING.mdとswitch_browser.shはウェブストアに提出するパッケージやリリースパッケージには含まれません。
+また、`chrome`ディレクトリや`webext`ディレクトリ配下のmanifest.jsonファイルはウェブストアに提出する際にルートに移動されます。
 
 ### Pull Request
 
-`develop` ブランチにPRを行ってください。その際、上記作業中の項目にある留意点に該当する場合は書いていただけるとありがたいです。
-
-Firefox向けにPRを作成する際は、`develop_firefox` ブランチに行ってください。
+`develop` ブランチにPRを行ってください。説明を詳しめに書いていただけると嬉しいです。
 
 ## ディレクトリ構造
 
@@ -64,12 +65,14 @@ Firefox向けにPRを作成する際は、`develop_firefox` ブランチに行�
 |    |- options.html オプション画面のHTML
 |    |- options.js オプション画面のJavaScript
 |
+|- chrome/ Chromeのみで使用するファイル
+|    |- manifest.json マニフェストファイル
+|
+|- webext/ WebExtensions版でのみ使用するファイル
+|    |- manifest.json マニフェストファイル
+|
 |- CONTRIBUTING.md この文書
 |- LICENSE MITライセンス
 |- README.md 説明
-|- manifest.json マニフェストファイル
+|- switch_browser.sh マニフェストファイルを設置するシェルスクリプト
 ```
-
-## ブランチ構造
-
-[ブランチ構造](https://github.com/alpaca-honke/twishare-to-misskey/wiki/ブランチ構造)をご覧ください。
