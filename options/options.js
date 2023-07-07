@@ -1,3 +1,5 @@
+const browserAPI = chrome ? chrome : browser ;
+
 document.addEventListener("DOMContentLoaded", Load);
 document.getElementById("instance_name").onkeydown = (e) => {
 	if(e.key === "Enter"){
@@ -28,7 +30,7 @@ function Save() {
 	const button_visibility = document.getElementById("button_visibility").checked;
 	const button_visibility_on_misskey = document.getElementById("button_visibility_on_misskey").checked;
 	const sites_to_hide_button = document.getElementById("sites_to_hide_button").value;
-    chrome.storage.sync.set(
+    browserAPI.storage.sync.set(
         {
             instance_name: instance_name
 				// 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視して保存する
@@ -45,7 +47,7 @@ function Save() {
 }
 
 function Load() {
-	chrome.storage.sync.get(["instance_name","button_visibility","button_visibility_on_misskey","sites_to_hide_button"]).then((items) => {
+	browserAPI.storage.sync.get(["instance_name","button_visibility","button_visibility_on_misskey","sites_to_hide_button"]).then((items) => {
         document.getElementById("instance_name").value =
             items.instance_name || "misskey.io";
 		if (items.button_visibility !== false){

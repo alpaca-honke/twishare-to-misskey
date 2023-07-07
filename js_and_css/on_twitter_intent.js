@@ -1,4 +1,6 @@
-chrome.storage.sync.get("instance_name").then((items) => {
+const browserAPI = chrome ? chrome : browser ;
+
+browserAPI.storage.sync.get("instance_name").then((items) => {
 	const instance_name = items.instance_name || "misskey.io";
 
 	const result = window.confirm(
