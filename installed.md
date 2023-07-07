@@ -94,9 +94,10 @@ Misskeyにおいては、 **13.13.0で修正が適用されました** 。サー
 
 ## 連絡先
 
-- Misskey.io [@alpaca_honke@misskey.io](https://misskey.io/@alpaca_honke)  
 - mkkey.net [@alpaca-honke@mkkey.net](https://mkkey.net/@alpaca_honke)
-- misskey.noellab.jp [@alpaca_honke@misskey.noellab.jp](https://misskey.noellab.jp/@alpaca_honke)
+- Misskey.io [@alpaca_honke@misskey.io](https://misskey.io/@alpaca_honke)  
+- ぼすきー [@alpaca_honke@voskey.icalo.net](https://voskey.icalo.net/@alpaca_honke)
+- のえすきー [@alpaca_honke@misskey.noellab.jp](https://misskey.noellab.jp/@alpaca_honke)
 - Twitter [@alpaca_honke](https://twitter.com/alpaca_honke)  
 - メール（Googleフォームからご連絡ください） [GoogleForms](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)  
 - ホームページ的ななにか [https://alpaca-honke.github.io/](https://alpaca-hoke.github.io/)  

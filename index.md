@@ -22,8 +22,9 @@
 不明な点があれば、まずは[よくある質問](https://github.com/alpaca-honke/twishare-to-misskey/wiki/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F)を読んでみよう！  
 もしそれでもわからなければ、以下の連絡先にご連絡ください！
 
-- Misskey: [@alpaca_honke@misskey.io](https://misskey.io/@alpaca_honke)
 - もこきー: [@alpaca_honke@mkkey.net](https://mkkey.net/@alpaca_honke)
+- Misskey: [@alpaca_honke@misskey.io](https://misskey.io/@alpaca_honke)
+- ぼすきー: [@alpaca_honke@voskey.icalo.net](https://voskey.icalo.net/@alpaca_honke)
 - のえすきー: [@alpaca_honke@misskey.noellab.jp](https://misskey.noellab.jp/@alpaca_honke)
 - Twitter: [@alpaca_honke](https://twitter.com/alpaca_honke)
 - メール（Googleフォームから連絡くれればメールで返信します）: [Googleフォーム](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)
