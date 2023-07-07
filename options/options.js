@@ -1,4 +1,8 @@
-const browserAPI = chrome ? chrome : browser ;
+//chromeでも拡張機能向けAPIをbrowserネームスペースからアクセスできるようにする
+if (typeof browser === "undefined") {
+    //宣言せずに定義することでグローバル変数とする
+    browser = chrome;
+}
 
 document.addEventListener("DOMContentLoaded", Load);
 document.getElementById("instance_name").onkeydown = (e) => {
@@ -30,7 +34,7 @@ function Save() {
 	const button_visibility = document.getElementById("button_visibility").checked;
 	const button_visibility_on_misskey = document.getElementById("button_visibility_on_misskey").checked;
 	const sites_to_hide_button = document.getElementById("sites_to_hide_button").value;
-    browserAPI.storage.sync.set(
+    browser.storage.sync.set(
         {
             instance_name: instance_name
 				// 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視して保存する
@@ -47,7 +51,7 @@ function Save() {
 }
 
 function Load() {
-	browserAPI.storage.sync.get(["instance_name","button_visibility","button_visibility_on_misskey","sites_to_hide_button"]).then((items) => {
+	browser.storage.sync.get(["instance_name","button_visibility","button_visibility_on_misskey","sites_to_hide_button"]).then((items) => {
         document.getElementById("instance_name").value =
             items.instance_name || "misskey.io";
 		if (items.button_visibility !== false){

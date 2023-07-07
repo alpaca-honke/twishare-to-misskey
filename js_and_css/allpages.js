@@ -1,4 +1,8 @@
-const browserAPI = chrome ? chrome : browser ;
+//chromeでも拡張機能向けAPIをbrowserネームスペースからアクセスできるようにする
+if (typeof browser === "undefined") {
+    //宣言せずに定義することでグローバル変数とする
+    browser = chrome;
+}
 
 setButtonIfNeeded();
 
@@ -17,7 +21,7 @@ async function whetherSetButton() {
 		return false;
 	}
 	// sites_to_hide_buttonはisSiteToHideButtonで読むのでここでは読まない
-	const items = await browserAPI.storage.sync.get(["button_visibility_on_misskey", "button_visibility"]);
+	const items = await browser.storage.sync.get(["button_visibility_on_misskey", "button_visibility"]);
 	if (items.button_visibility_on_misskey === false) {
 		// Misskey上でボタンを表示させない設定のとき、Misskeyにアクセスしてたらfalse
 		const is_misskey = await isMisskey();
@@ -46,7 +50,7 @@ async function isMisskey() {
 	return false;
 }
 async function isSiteToHideButton() {
-	const items = await browserAPI.storage.sync.get("sites_to_hide_button");
+	const items = await browser.storage.sync.get("sites_to_hide_button");
 	if (items.sites_to_hide_button) {
 		// 区切りのスペースごと保存してあるので展開
 		let sites = items.sites_to_hide_button.split(' ');
@@ -66,12 +70,12 @@ function setButton(){
 	const button = document.createElement('button');
 	const share_img = document.createElement('img');
 	button.id = '_twishare_to_misskey_share';
-	share_img.src = browserAPI.runtime.getURL('assets/share.png');
+	share_img.src = browser.runtime.getURL('assets/share.png');
 	share_img.id = '_twishare_to_misskey_share_img';
 	button.appendChild(share_img);
 	body.appendChild(button);
 	button.addEventListener('click', () => {
-		browserAPI.storage.sync.get("instance_name").then((items) => {
+		browser.storage.sync.get("instance_name").then((items) => {
 			const instance_name = items.instance_name || "misskey.io";
 			//JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
 			const now_url = location.href;

@@ -1,6 +1,10 @@
-const browserAPI = chrome ? chrome : browser ;
+//chromeでも拡張機能向けAPIをbrowserネームスペースからアクセスできるようにする
+if (typeof browser === "undefined") {
+    //宣言せずに定義することでグローバル変数とする
+    browser = chrome;
+}
 
-browserAPI.storage.sync.get("instance_name").then((items) => {
+browser.storage.sync.get("instance_name").then((items) => {
 	const instance_name = items.instance_name || "misskey.io";
 
 	const result = window.confirm(
