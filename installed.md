@@ -100,3 +100,5 @@ Misskeyにおいては、 **13.13.0で修正が適用されました** 。サー
 - Twitter [@alpaca_honke](https://twitter.com/alpaca_honke)  
 - メール（Googleフォームからご連絡ください） [GoogleForms](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)  
 - ホームページ的ななにか [https://alpaca-honke.github.io/](https://alpaca-hoke.github.io/)  
+
+Copyright © あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
