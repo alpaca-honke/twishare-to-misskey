@@ -23,7 +23,7 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 
 （Firefox など）  
 
-[Firefox Addons](https://addons.firefox.org/ja/firefox/addon/twishare-to-misskey/)からインストールしてください。  
+[Firefox Addons](https://addons.mozilla.org/ja/firefox/addon/twishare-to-misskey/)からインストールしてください。  
 
 ### Safari
 
