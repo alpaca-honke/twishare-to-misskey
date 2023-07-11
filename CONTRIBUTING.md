@@ -74,5 +74,6 @@ switch_browser.shというシェルスクリプトがリポジトリルートに
 |- CONTRIBUTING.md この文書
 |- LICENSE MITライセンス
 |- README.md 説明
-|- switch_browser.sh マニフェストファイルを設置するシェルスクリプト
+|- switch_browser.bat マニフェストファイルを設置するシェルスクリプト(Windows用)
+|- switch_browser.sh マニフェストファイルを設置するシェルスクリプト(Linux用)
 ```
