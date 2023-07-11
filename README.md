@@ -81,6 +81,7 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 - [@emtkmkk](https://github.com/emtkmkk)さん
 - [@massongit](https://github.com/massongit)さん
+- [@rinjugatla](https://github.com/rinjugatla)さん
 
 ## 類似サービス
 

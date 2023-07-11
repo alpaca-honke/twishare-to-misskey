@@ -27,7 +27,7 @@ Issueを開いてから作業を行ってください。（僕とかと同じ作
 ### 作業中
 
 ChromeとWebExtensions（Firefoxなど）向けの両方が同じコードで動いてることに留意してください。  
-switch_browser.shというシェルスクリプトがリポジトリルートに同梱されています。ブラウザでテストする際などにご利用ください。
+switch_browser.shというシェルスクリプト、switch_browser.batというバッチファイルがリポジトリルートに同梱されています。ブラウザでテストする際などにご利用ください。
 - 実行権限を付与して、引数に`chrome`と指定するとChrome向けのmanifest.jsonがルートに設置されます。
 - `webext`を指定するとWebExtensions向けのmanifest.jsonが設置されます。
 - 何も指定しないとルートから削除されます。
