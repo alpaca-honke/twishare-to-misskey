@@ -30,6 +30,9 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 Safari向けには公開していませんが、多分動くんじゃないのかなぁ...。（Apple製品を持ってないからわかんない）  
 [リリースページ](https://github.com/alpaca-honke/twishare-to-misskey/releases)からWebExtensions版を取得して、よしなにやってあげてください。
 
+また、にじみす鯖の方（@wareplus@nijimiss.moeさん）が似た用途のSafariショートカットを公開してくれているようなのでぜひご利用ください！↓  
+[作成したショートカットとかCSSとかとか](https://nijimiss.moe/@wareplus/pages/made_by_wareplus)
+
 あと、ちゃんとSafariに対応させられるように、Safari向け拡張機能作れる環境ある方いたら手伝ってくれたら嬉しいです！
 
 ### その他
