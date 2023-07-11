@@ -12,6 +12,7 @@ async function setButtonIfNeeded() {
 	const whether_set_button = await whetherSetButton();
 	if (whether_set_button) {
 		setButton();
+		hideButtonOnFullscreen();
 	}
 }
 
@@ -91,5 +92,16 @@ function setButton(){
 			instance_url.searchParams.set("text",share_text);
 			window.open(instance_url.href);
 		});
+	});
+}
+
+function hideButtonOnFullscreen(){
+	document.addEventListener('fullscreenchange', () => {
+		const button = document.querySelector('#_twishare_to_misskey_share');
+		if (button == null){ return; }
+
+		const toFullscreen = document.fullscreenElement;
+		if (toFullscreen) { button.classList.add('hidden'); }
+		else { button.classList.remove('hidden'); }
 	});
 }
