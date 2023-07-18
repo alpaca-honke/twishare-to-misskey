@@ -15,12 +15,12 @@ IF "%1"=="" (
 ) ELSE (
     IF "%1"=="chrome" (
         copy /y %rootDirPath%chrome\manifest.json %rootManifestPath%
-    ) ELSE IF "%1"=="webext" (
-        copy /y %rootDirPath%webext\manifest.json %rootManifestPath%
+    ) ELSE IF "%1"=="firefox" (
+        copy /y %rootDirPath%firefox\manifest.json %rootManifestPath%
     ) ELSE (
         echo 引数に無効な値が指定されています 
         echo 引数を指定しなければリポジトリのルートからmanifest.jsonを削除します 
         echo chromeを指定すればChrome向けのマニフェストが設定されます 
-        echo webextを指定すればWebExtensions向けのマニフェストが設定されます 
+        echo firefoxを指定すればFirefox向けのマニフェストが設定されます 
     )
 )

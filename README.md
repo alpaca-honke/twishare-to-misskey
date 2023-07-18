@@ -1,4 +1,4 @@
-# Twishare to Misskey v0.2.4  
+# Twishare to Misskey v0.2.5  
 
 <div style="text-align: center;">
     <img src="assets/icon.png" style="height: 15em;">
@@ -28,9 +28,9 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 ### Safari
 
 Safari向けには公開していませんが、多分動くんじゃないのかなぁ...。（Apple製品を持ってないからわかんない）  
-[リリースページ](https://github.com/alpaca-honke/twishare-to-misskey/releases)からWebExtensions版を取得して、よしなにやってあげてください。
+[リリースページ](https://github.com/alpaca-honke/twishare-to-misskey/releases)からソースコードを取得して、chromeディレクトリ配下のmanifest.jsonをリポジトリルートにおいて、よしなにやってあげてください。
 
-また、にじみす鯖の方（@wareplus@nijimiss.moeさん）が似た用途のSafariショートカットを公開してくれているようなのでぜひご利用ください！↓  
+また、にじみす鯖の方（[@wareplus@nijimiss.moe](https://nijimiss.moe/@wareplus)さん）が似た用途のSafariショートカットを公開してくれているようなのでぜひご利用ください！↓  
 [作成したショートカットとかCSSとかとか](https://nijimiss.moe/@wareplus/pages/made_by_wareplus)
 
 あと、ちゃんとSafariに対応させられるように、Safari向け拡張機能作れる環境ある方いたら手伝ってくれたら嬉しいです！
@@ -44,15 +44,15 @@ Safari向けには公開していませんが、多分動くんじゃないの�
 
 ## 使い方
 
-1. 左上の拡張機能の一覧から、Twishare to Misskey のアイコンをクリックすると、シェア先のサーバーを保存する画面がひらくので、入力・保存してください。
+1. 左上の拡張機能の一覧から、Twishare to Misskey のアイコンをクリックすると、シェア先のサーバーを保存する画面がひらくので、入力してください。
 （Misskey.io にシェアする場合と二回目以降は不要です。）  
-また、その下のトグルスイッチも選択して保存してください。  
+また、その下のトグルスイッチも選択してください。  
 ![option_ui.png](images/option_ui.png)
 1. Twitter シェアボタンを押して、ページ遷移する際に、Misskey にシェアするか聞かれますので、 OK を押すと、 Misskey にシェアされます。  
 ![popup.png](images/popup.png)
 ![share.png](images/share.png)
 1. 最初にトグルスイッチにチェックを入れた場合は、画面の右下に緑のシェアボタンが出てきます。これを使えば、Twitterのシェアボタンがないページもシェアできます。  
-<img src="images/floating.png" alt="floating.ong" style="border: solid 1px #000">
+    <img src="images/floating.png" alt="floating.ong" style="border: solid 1px #000">
 
 ## 質問がある？
 
@@ -82,6 +82,8 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 ## Contributors
 
+
+
 - [@emtkmkk](https://github.com/emtkmkk)さん
 - [@massongit](https://github.com/massongit)さん
 - [@rinjugatla](https://github.com/rinjugatla)さん
@@ -91,15 +93,16 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 未来情報産業㈱さんから、ウェブサイトに設置するMisskey向けシェアボタンが出ています！ご自身のウェブサイトとかブログある方は是非ご利用ください！  
 [Misskey Share](https://misskeyshare.link)
 
-また、僕はこのMisskey Shareを使用してシェアするためのURLを簡単に作成するサービスも作成しました。こちらもぜひ！
+また、僕はこのMisskey Shareを使用してシェアするためのURLを簡単に作成するサービスも作成しました。こちらもぜひ！  
 [Misskey Share URL 作成簡単ツール](https://alpaca-honke.github.io/make-misskeyshare-url)
 
-## ロゴについて
+## ロゴ・画像について
 
-Twishare to Misskeyのロゴ（以下画像）は、[misskey-dev/assets](https://github.com/misskey-dev/assets)で公開されている画像に変更を加えたものです。  
+Twishare to Misskeyのロゴ（以下画像1枚目）と、シェアボタンの画像（以下画像2枚目）は、[misskey-dev/assets](https://github.com/misskey-dev/assets)で公開されている画像に変更を加えたものです。  
 CC BY-NC-SAライセンス<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="height:2em;" /></a>
 のもとで自由に使用していただけます。  
-<img src="assets/icon.png" style="height: 5em;">
+<img src="assets/icon.png" style="height: 5em;">  
+<img src="assets/share.png" style="height: 5em;">
 
 ## License
 
