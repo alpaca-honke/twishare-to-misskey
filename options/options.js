@@ -14,8 +14,7 @@ document.getElementById('installed').addEventListener("click",showInstalled);
 function Save() {
     //呼び出し後速攻実行されると不具合が出ることがある
     setTimeout( () => {
-        const instance_name =
-            document.getElementById("instance_name").value || "misskey.io";
+        const instance_name = document.getElementById("instance_name").value || "misskey.io";
         const button_visibility = document.getElementById("button_visibility").checked;
         const button_visibility_on_misskey = document.getElementById("button_visibility_on_misskey").checked;
         const sites_to_hide_button = document.getElementById("sites_to_hide_button").value;
