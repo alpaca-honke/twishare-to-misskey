@@ -76,12 +76,11 @@ function setButton(){
 	button.appendChild(share_img);
 	body.appendChild(button);
 	button.addEventListener('click', () => {
-		browser.storage.sync.get(["instance_name", "whether_share_tweet_content"]).then((items) => {
+		browser.storage.sync.get(["instance_name"]).then((items) => {
 			const instance_name = items.instance_name || "misskey.io";
-            const whether_share_tweet_content = items.whether_share_tweet_content;
             const tweet_regex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+$/;
 
-            if (tweet_regex.test(location.href) && whether_share_tweet_content !== false){
+            if (tweet_regex.test(location.href)){
                 const tweet_text = document.querySelector('article div[data-testid="tweetText"]').textContent;
                 const tweet_username = document.querySelector('article div[data-testid="User-Name"]').textContent;
                 //MFMの引用型に変換処理（謎にワンライナーで書いたのはゆるして）
