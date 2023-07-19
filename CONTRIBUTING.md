@@ -22,17 +22,19 @@ Issueはいつでも大歓迎です。以下のことを守って作成してく
 
 ### 作業前
 
-Issueを開いてから作業を行ってください。（僕とかと同じ作業で重複するのを防ぐため。）その際、上記のIssueの項目を守ってください。
+新規Issue、もしくは既存のIssueに「私がやります」的なコメントをしてから作業を行ってください。（僕とかと同じ作業で重複するのを防ぐため。）
+その際、上記のIssueの項目を守ってください。
 
 ### 作業中
 
 ChromeとWebExtensions（Firefoxなど）向けの両方が同じコードで動いてることに留意してください。  
-switch_browser.shというシェルスクリプトがリポジトリルートに同梱されています。ブラウザでテストする際などにご利用ください。
+switch_browser.shというシェルスクリプト、switch_browser.batというバッチファイルがリポジトリルートに同梱されています。
+ブラウザでテストする際などにご利用ください。
 - 実行権限を付与して、引数に`chrome`と指定するとChrome向けのmanifest.jsonがルートに設置されます。
-- `webext`を指定するとWebExtensions向けのmanifest.jsonが設置されます。
+- `firefox`を指定するとFirefox向けのmanifest.jsonが設置されます。
 - 何も指定しないとルートから削除されます。
 
-なお、README.mdとimagesディレクトリ配下、及びCONTRIBUTING.mdとswitch_browser.shはウェブストアに提出するパッケージやリリースパッケージには含まれません。
+なお、README.mdとimagesディレクトリ配下、及びCONTRIBUTING.mdとswitch_browserスクリプトはウェブストアに提出するパッケージやリリースパッケージには含まれません。
 また、`chrome`ディレクトリや`webext`ディレクトリ配下のmanifest.jsonファイルはウェブストアに提出する際にルートに移動されます。
 
 ### Pull Request
@@ -74,5 +76,7 @@ switch_browser.shというシェルスクリプトがリポジトリルートに
 |- CONTRIBUTING.md この文書
 |- LICENSE MITライセンス
 |- README.md 説明
-|- switch_browser.sh マニフェストファイルを設置するシェルスクリプト
+|- switch_browser.bat マニフェストファイルを設置するシェルスクリプト(Windows用)
+|- switch_browser.sh マニフェストファイルを設置するシェルスクリプト(Linux用)
+|-.gitignore Git管理から除外するファイルのリスト
 ```

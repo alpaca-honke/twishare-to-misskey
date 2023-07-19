@@ -12,6 +12,7 @@ async function setButtonIfNeeded() {
 	const whether_set_button = await whetherSetButton();
 	if (whether_set_button) {
 		setButton();
+		hideButtonOnFullscreen();
 	}
 }
 
@@ -75,21 +76,47 @@ function setButton(){
 	button.appendChild(share_img);
 	body.appendChild(button);
 	button.addEventListener('click', () => {
-		browser.storage.sync.get("instance_name").then((items) => {
+		browser.storage.sync.get(["instance_name"]).then((items) => {
 			const instance_name = items.instance_name || "misskey.io";
-			//JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
-			const now_url = location.href;
-			const now_title = document.title;
+            const tweet_regex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+$/;
 
-			const instance_url = new URL(`https://${instance_name}/share`);
-			//textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
-			//if (now_title){
-			//	instance_url.searchParams.set("text", now_title);
-			//}
-			let share_text = now_title + "\n\n" + now_url;
-			//instance_url.searchParams.set("url", encoded_now_url);
-			instance_url.searchParams.set("text",share_text);
-			window.open(instance_url.href);
+            if (tweet_regex.test(location.href)){
+                const tweet_text = document.querySelector('article div[data-testid="tweetText"]').textContent;
+                const tweet_username = document.querySelector('article div[data-testid="User-Name"]').textContent;
+                //MFMの引用型に変換処理（謎にワンライナーで書いたのはゆるして）
+                const replaced_tweet_text = tweet_text.split("\n").map(line => line ? "><plain>" + line + "</plain>" : ">").join("\n");
+                const now_url = location.href;
+                const instance_url = new URL(`https://${instance_name}/share`);
+                let share_text = `${replaced_tweet_text}\n>by <plain>${tweet_username}</plain>\n\n${now_url}`;
+                instance_url.searchParams.set("text",share_text);
+                window.open(instance_url.href);
+            } else {
+                //JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
+                const now_url = location.href;
+                const now_title = document.title;
+
+                const instance_url = new URL(`https://${instance_name}/share`);
+                //textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
+                //if (now_title){
+                //	instance_url.searchParams.set("text", now_title);
+                //}
+                let share_text = now_title + "\n\n" + now_url;
+                //instance_url.searchParams.set("url", encoded_now_url);
+                instance_url.searchParams.set("text",share_text);
+                window.open(instance_url.href);
+            }
+
 		});
+	});
+}
+
+function hideButtonOnFullscreen(){
+	document.addEventListener('fullscreenchange', () => {
+		const button = document.querySelector('#_twishare_to_misskey_share');
+		if (button == null){ return; }
+
+		const toFullscreen = document.fullscreenElement;
+		if (toFullscreen) { button.classList.add('hidden'); }
+		else { button.classList.remove('hidden'); }
 	});
 }
