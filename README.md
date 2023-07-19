@@ -27,13 +27,15 @@ Android スマートフォンでは Kiwi Browser などで使用ができます�
 
 ### Safari
 
-Safari向けには公開していませんが、多分動くんじゃないのかなぁ...。（Apple製品を持ってないからわかんない）  
+Safari向けには公開していませんが、動くかもしれない...。（Apple製品を持ってないからわかんない）  
+（Safariは`browser.storage.sync`非対応らしいので、これを使っているこの拡張は動かないかも）  
 [リリースページ](https://github.com/alpaca-honke/twishare-to-misskey/releases)からソースコードを取得して、chromeディレクトリ配下のmanifest.jsonをリポジトリルートにおいて、よしなにやってあげてください。
 
 また、にじみす鯖の方（[@wareplus@nijimiss.moe](https://nijimiss.moe/@wareplus)さん）が似た用途のSafariショートカットを公開してくれているようなのでぜひご利用ください！↓  
 [作成したショートカットとかCSSとかとか](https://nijimiss.moe/@wareplus/pages/made_by_wareplus)
 
 あと、ちゃんとSafariに対応させられるように、Safari向け拡張機能作れる環境ある方いたら手伝ってくれたら嬉しいです！
+（がんばればできないこともなさそうだけど、動作確認が取れないので...。）
 
 ### その他
 
@@ -44,6 +46,7 @@ Safari向けには公開していませんが、多分動くんじゃないの�
 
 ## 使い方
 
+1. インストールしたら、[拡張機能の管理画面](about:extensions)から、各種権限が許可されているか確認して、適宜許可してください。  
 1. 左上の拡張機能の一覧から、Twishare to Misskey のアイコンをクリックすると、シェア先のサーバーを保存する画面がひらくので、入力してください。
 （Misskey.io にシェアする場合と二回目以降は不要です。）  
 また、その下のトグルスイッチも選択してください。  
