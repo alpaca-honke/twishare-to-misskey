@@ -43,7 +43,8 @@ async function isMisskey() {
 		var metatag = metatags[i];
 		if (
 			metatag.getAttribute('name') === 'application-name' &&
-			(metatag.getAttribute('content') === 'Misskey' || metatag.getAttribute('content') === 'Calckey')
+			(metatag.getAttribute('content') === 'Misskey' || metatag.getAttribute('content') === 'Calckey' || metatag.getAttribute('content') === 'Firefish'
+    )
 		){
 			return true;
 		}
