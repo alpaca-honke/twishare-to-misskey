@@ -24,7 +24,7 @@ browser.storage.sync.get("instance_name").then((items) => {
 		//let share_url;
 
 		if (params.has("text")) {
-			text = params.get("text");
+            text = params.get("text").replace( /(@\w{1,15})/g ,'<plain>$1</plain>');
 		}
 		if (params.has("url")) {
 			url = params.get("url");
