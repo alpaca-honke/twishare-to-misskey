@@ -79,10 +79,19 @@ function setButton(){
 	button.addEventListener('click', () => {
 		browser.storage.sync.get(["instance_name"]).then((items) => {
 			const instance_name = items.instance_name || "misskey.io";
-            const tweet_regex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+$/;
+            const tweet_regex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
 
             if (tweet_regex.test(location.href)){
-                const tweet_text = document.querySelector('article div[data-testid="tweetText"]').textContent;
+                const tweet = document.querySelector('article div[data-testid="tweetText"]');
+                //TwemojiのUnicode絵文字化
+                const twemojis = tweet.querySelectorAll("img");
+                for (const twemoji of twemojis) {
+                    const emoji = twemoji.alt;
+                    const emojiTextNode = document.createTextNode(emoji);
+                    tweet.replaceChild(emojiTextNode, twemoji);
+                }
+                const tweet_text = tweet.textContent;
+
                 const tweet_username = document.querySelector('article div[data-testid="User-Name"]').textContent;
                 //MFMの引用型に変換処理（謎にワンライナーで書いたのはゆるして）
                 const replaced_tweet_text = tweet_text.split("\n").map(line => line ? "><plain>" + line + "</plain>" : ">").join("\n");
