@@ -90,7 +90,7 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 ## Contribution
 
-問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。  
+問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](https://github.io/alpaca-honke/twishare-to-misskey/blob/develop/docs/CONTRIBUTING.md)をご覧ください。  
 
 ## Contributors
 
