@@ -1,13 +1,13 @@
 # Twishare to Misskey v0.2.5  
 
 <div style="text-align: center;">
-    <img src="/assets/icon.png" style="height: 15em;">
+    <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 15em;">
 </div>
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/alpaca-honke/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fbaifpppndnlbbjcbjdfgbdkoibnipjb?style=flat-square) ![Mozilla Add-on](https://img.shields.io/amo/v/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=users%20count%20%28chrome%20web%20store%29&style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=rating%20%28chrome%20web%20store%29&style=flat-square) ![GitHub](https://img.shields.io/github/license/alpaca-honke/twishare-to-misskey?style=flat-square)
 ## 概要
 
-[Twitter](https://twitter.com/) のシェアボタンから Misskey （またはその派生 SNS）にシェアできるようになる Chrome拡張 です。  
+Twitterのシェアボタンから Misskey （またはその派生 SNS）にシェアできるようになる Chrome拡張 です。  
 気分で更新します。  
 
 ## 特徴
@@ -59,12 +59,12 @@ Safari向けには公開していませんが、動くかもしれない...。�
 1. 左上の拡張機能の一覧から、Twishare to Misskey のアイコンをクリックすると、シェア先のサーバーを保存する画面がひらくので、入力してください。
 （Misskey.io にシェアする場合と二回目以降は不要です。）  
 また、その下のトグルスイッチも選択してください。  
-![option_ui.png](/images/option_ui.png)
+![option_ui.png](images/option_ui.png)
 1. Twitter シェアボタンを押して、ページ遷移する際に、Misskey にシェアするか聞かれますので、 OK を押すと、 Misskey にシェアされます。  
-![popup.png](/images/popup.png)
-![share.png](/images/share.png)
+![popup.png](images/popup.png)
+![share.png](images/share.png)
 1. 最初にトグルスイッチにチェックを入れた場合は、画面の右下に緑のシェアボタンが出てきます。これを使えば、Twitterのシェアボタンがないページもシェアできます。  
-    <img src="/images/floating.png" alt="floating.ong" style="border: solid 1px #000">
+    <img src="images/floating.png" alt="floating.ong" style="border: solid 1px #000">
 
 ## 質問がある？
 
@@ -110,11 +110,11 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 ## ロゴ・画像について
 
-Twishare to Misskeyのロゴ（以下画像1枚目）と、シェアボタンの画像（以下画像2枚目）は、[misskey-dev/assets](https://github.com/misskey-dev/assets)で公開されている画像に変更を加えたものです。  
+Twishare to Misskeyのロゴ（以下画像1枚目）と、シェアボタンの画像（以下画像2枚目）は、[misskey-devhttps://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets](https://github.com/misskey-devhttps://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets)で公開されている画像に変更を加えたものです。  
 CC BY-NC-SAライセンス<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="height:2em;" /></a>
 のもとで自由に使用していただけます。  
-<img src="/assets/icon.png" style="height: 5em;">  
-<img src="/assets/share.png" style="height: 5em;">
+<img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 5em;">  
+<img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/share.png" style="height: 5em;">
 
 ## License
 
