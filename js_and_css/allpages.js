@@ -79,7 +79,7 @@ function setButton(){
 	button.addEventListener('click', () => {
 		browser.storage.sync.get(["instance_name"]).then((items) => {
 			const instance_name = items.instance_name || "misskey.io";
-            const tweet_regex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
+            const tweet_regex = /^https?:\/\/(twitter|x)\.com\/\w+\/status\/\d+.*$/;
 
             if (tweet_regex.test(location.href)){
                 const tweet = document.querySelector('article div[data-testid="tweetText"]');

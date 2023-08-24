@@ -19,7 +19,7 @@
 	"content_scripts":[
 		{
 			"run_at":"document_start",
-			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*"],
+			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*","https://x.com/intent/tweet*","http://x.com/intent/tweet*"],
 			"js":["js_and_css/on_twitter_intent.js"]
 		},
 		{
