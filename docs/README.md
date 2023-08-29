@@ -78,6 +78,7 @@ Safari向けには公開していませんが、動くかもしれない...。�
 - [Misskey.io (@alpaca_honke@misskey.io)](https://misskey.io/@alpaca_honke)
 - [ぼすきー @alpaca_honke@voskey.icalo.net](https://voskey.icalo.net/@alpaca_honke)
 - [のえすきー (@alpaca_honke@misskey.noellabo.jp)](https://misskey.noellabo.jp/@alpaca_honke)
+- Discord @alpaca_honke
 - [Twitter (@alpaca_honke)](https://twitter.com/alpaca_honke)
 - [GoogleForms （Eメールでのやり取りをご希望の方はこちら）](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)
 - [その他](https://alpaca-honke.github.io/)
