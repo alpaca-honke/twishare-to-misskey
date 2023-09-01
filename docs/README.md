@@ -1,14 +1,26 @@
-# Twishare to Misskey v0.2.5  
+# Twishare to Misskey v0.2.6  
 
 <div style="text-align: center;">
-    <img src="assets/icon.png" style="height: 15em;">
+    <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 15em;">
 </div>
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/alpaca-honke/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fbaifpppndnlbbjcbjdfgbdkoibnipjb?style=flat-square) ![Mozilla Add-on](https://img.shields.io/amo/v/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=users%20count%20%28chrome%20web%20store%29&style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=rating%20%28chrome%20web%20store%29&style=flat-square) ![GitHub](https://img.shields.io/github/license/alpaca-honke/twishare-to-misskey?style=flat-square)
 ## 概要
 
-[Twitter](https://twitter.com/) のシェアボタンから Misskey （またはその派生 SNS）にシェアできるようになる Chrome拡張 です。  
+Twitterのシェアボタンから Misskey （またはその派生 SNS）にシェアできるようになる Chrome拡張 です。  
 気分で更新します。  
+
+[公式サイト](https://alpaca-honke.github.io/twishare-to-misskey)  
+[リポジトリ](https://github.com/alpaca-honke/twishare-to-misskey)  
+
+## 特徴
+
+- Twitterのシェアボタンを押したときに確認画面が出てきてMisskeyにシェアできるか選択できる
+- もちろんキャンセルすればTwitterにもシェアできる
+- Twitterシェアボタンがなくても右下に出るシェアボタンからMisskeyにシェアできる
+- ほぼすべてのMisskey（v12以降）とFirefish（旧Calckey）に対応
+- ツイートをシェアする際に、ツイート内容がノートに引用として貼り付けられる
+- 認証情報を保存しないためセキュリティ的に安全
 
 ## インストール
 
@@ -69,6 +81,7 @@ Safari向けには公開していませんが、動くかもしれない...。�
 - [Misskey.io (@alpaca_honke@misskey.io)](https://misskey.io/@alpaca_honke)
 - [ぼすきー @alpaca_honke@voskey.icalo.net](https://voskey.icalo.net/@alpaca_honke)
 - [のえすきー (@alpaca_honke@misskey.noellabo.jp)](https://misskey.noellabo.jp/@alpaca_honke)
+- Discord @alpaca_honke
 - [Twitter (@alpaca_honke)](https://twitter.com/alpaca_honke)
 - [GoogleForms （Eメールでのやり取りをご希望の方はこちら）](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)
 - [その他](https://alpaca-honke.github.io/)
@@ -81,7 +94,7 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 ## Contribution
 
-問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](CONTRIBUTING.md)をご覧ください。  
+問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](https://github.io/alpaca-honke/twishare-to-misskey/blob/develop/docs/CONTRIBUTING.md)をご覧ください。  
 
 ## Contributors
 
@@ -101,11 +114,11 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 ## ロゴ・画像について
 
-Twishare to Misskeyのロゴ（以下画像1枚目）と、シェアボタンの画像（以下画像2枚目）は、[misskey-dev/assets](https://github.com/misskey-dev/assets)で公開されている画像に変更を加えたものです。  
+Twishare to Misskeyのロゴ（以下画像1枚目）と、シェアボタンの画像（以下画像2枚目）は、[misskey-dev/assets](https://github.com/misskey-devhttps://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets)で公開されている画像に変更を加えたものです。  
 CC BY-NC-SAライセンス<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="height:2em;" /></a>
 のもとで自由に使用していただけます。  
-<img src="assets/icon.png" style="height: 5em;">  
-<img src="assets/share.png" style="height: 5em;">
+<img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 5em;">  
+<img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/share.png" style="height: 5em;">
 
 ## License
 

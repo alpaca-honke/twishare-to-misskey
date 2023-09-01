@@ -1,7 +1,7 @@
 {
 	"manifest_version": 3,
 	"name":"Twishare to Misskey",
-	"version":"0.2.5",
+	"version":"0.2.6",
 	"description":"Twitter のシェアボタンから Misskey にシェアすることができるようにします。",
 	"browser_specific_settings": {
 		"gecko": {
