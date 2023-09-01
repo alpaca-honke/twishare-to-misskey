@@ -1,4 +1,4 @@
-# Twishare to Misskey v0.2.5  
+# Twishare to Misskey v0.2.6  
 
 <div style="text-align: center;">
     <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 15em;">
@@ -9,6 +9,9 @@
 
 Twitterのシェアボタンから Misskey （またはその派生 SNS）にシェアできるようになる Chrome拡張 です。  
 気分で更新します。  
+
+[公式サイト](https://alpaca-honke.github.io/twishare-to-misskey)  
+[リポジトリ](https://github.com/alpaca-honke/twishare-to-misskey)  
 
 ## 特徴
 
