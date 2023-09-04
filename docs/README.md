@@ -4,14 +4,16 @@
     <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 15em;">
 </div>
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/alpaca-honke/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fbaifpppndnlbbjcbjdfgbdkoibnipjb?style=flat-square) ![Mozilla Add-on](https://img.shields.io/amo/v/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=users%20count%20%28chrome%20web%20store%29&style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=rating%20%28chrome%20web%20store%29&style=flat-square) ![GitHub](https://img.shields.io/github/license/alpaca-honke/twishare-to-misskey?style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/alpaca-honke/twishare-to-misskey?style=flat-square) ![Chrome Web Store version](https://img.shields.io/chrome-web-store/v/fbaifpppndnlbbjcbjdfgbdkoibnipjb?style=flat-square) ![Mozilla Add-on version](https://img.shields.io/amo/v/twishare-to-misskey?style=flat-square) ![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=users20%28chrome%20web%20store%29&style=flat-square) ![Mozilla Add-on Users](https://img.shields.io/amo/users/twishare-to-misskey?style=flat-square&label=users%20(mozilla%20add-on)) ![Chrome Web Store Rationg](https://img.shields.io/chrome-web-store/stars/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=rating%20%28chrome%20web%20store%29&style=flat-square) ![GitHub License](https://img.shields.io/github/license/alpaca-honke/twishare-to-misskey?style=flat-square)
 ## 概要
 
 Twitterのシェアボタンから Misskey （またはその派生 SNS）にシェアできるようになる Chrome拡張 です。  
 気分で更新します。  
 
-[公式サイト](https://alpaca-honke.github.io/twishare-to-misskey)  
-[リポジトリ](https://github.com/alpaca-honke/twishare-to-misskey)  
+- [公式サイト](https://alpaca-honke.github.io/twishare-to-misskey)  
+- [リポジトリ](https://github.com/alpaca-honke/twishare-to-misskey)  
+- [Chrome Web Store](https://chrome.google.com/webstore/detail/twishare-to-misskey/fbaifpppndnlbbjcbjdfgbdkoibnipjb)
+- [Firefox Addons](https://addons.mozilla.org/ja/firefox/addon/twishare-to-misskey/)
 
 ## 特徴
 
@@ -58,7 +60,7 @@ Safari向けには公開していませんが、動くかもしれない...。�
 
 ## 使い方
 
-1. インストールしたら、[拡張機能の管理画面](about:extensions)から、各種権限が許可されているか確認して、適宜許可してください。  
+1. インストールしたら、拡張機能の管理画面から、各種権限が許可されているか確認して、適宜許可してください。  
 1. 左上の拡張機能の一覧から、Twishare to Misskey のアイコンをクリックすると、シェア先のサーバーを保存する画面がひらくので、入力してください。
 （Misskey.io にシェアする場合と二回目以降は不要です。）  
 また、その下のトグルスイッチも選択してください。  
@@ -94,7 +96,7 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 ## Contribution
 
-問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](https://github.io/alpaca-honke/twishare-to-misskey/blob/develop/docs/CONTRIBUTING.md)をご覧ください。  
+問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/docs/CONTRIBUTING.md)をご覧ください。  
 
 ## Contributors
 
@@ -122,6 +124,6 @@ CC BY-NC-SAライセンス<a rel="license" href="http://creativecommons.org/lice
 
 ## License
 
-この拡張機能は、 MIT ライセンスで頒布されています。詳しくは、[LICENSE](LICENSE) をご覧ください。  
+この拡張機能は、 MIT ライセンスで頒布されています。詳しくは、[LICENSE](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/LICENSE) をご覧ください。  
 
 Copyright © あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
