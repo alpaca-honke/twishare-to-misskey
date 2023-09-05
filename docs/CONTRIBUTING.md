@@ -29,12 +29,13 @@ Issueはいつでも大歓迎です。以下のことを守って作成してく
 
 ### 作業中
 
-ChromeとWebExtensions（Firefoxなど）向けの両方が同じコードで動いてることに留意してください。  
-switch_browser.shというシェルスクリプト、switch_browser.batというバッチファイルがリポジトリルートに同梱されています。
+- セキュリティを担保できないため、アクセストークンを含む認証情報などの機密情報を拡張機能内に保存するような変更は行わないでください。
+- ChromeとWebExtensions（Firefoxなど）向けの両方が同じコードで動いてることに留意してください。  
+- switch_browser.shというシェルスクリプト、switch_browser.batというバッチファイルがリポジトリルートに同梱されています。
 ブラウザでテストする際などにご利用ください。
-- 実行権限を付与して、引数に`chrome`と指定するとChrome向けのmanifest.jsonがルートに設置されます。
-- `firefox`を指定するとFirefox向けのmanifest.jsonが設置されます。
-- 何も指定しないとルートから削除されます。
+    - 実行権限を付与して、引数に`chrome`と指定するとChrome向けのmanifest.jsonがルートに設置されます。
+    - `firefox`を指定するとFirefox向けのmanifest.jsonが設置されます。
+    - 何も指定しないとルートから削除されます。
 
 なお、docsディレクトリ配下とswitch_browserスクリプトはウェブストアに提出するパッケージやリリースパッケージには含まれません。
 また、`chrome`ディレクトリや`webext`ディレクトリ配下のmanifest.jsonファイルはウェブストアに提出する際にルートに移動されます。
