@@ -76,48 +76,88 @@ function setButton(){
 	share_img.id = '_twishare_to_misskey_share_img';
 	button.appendChild(share_img);
 	body.appendChild(button);
-	button.addEventListener('click', () => {
-		browser.storage.sync.get(["instance_name"]).then((items) => {
-			const instance_name = items.instance_name || "misskey.io";
-            const tweet_regex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
+    //以下クリックorドラッグ時
+    //ブラウザーデフォルトのドラッグを無効化しておく
+    button.ondragstart = () => {
+        return false;
+    };
+    //変数の定義
+    let isDragging = false;
+    let isClickEnabled = true;
+    let cursorX;
+    let cursorY;
+    //挙動を設定
+    button.addEventListener('mousedown',(event) => {
+        if (event.button === 0) {isDragging = true};
+    });
+    button.addEventListener('mousemove',(event) => {
+        if (isDragging && event.button === 0) {
+            //ドラッグ
+            isClickEnabled = false;
+            cursorX = event.clientX;
+            cursorY = event.clientY;
+            //なんか配置がうまく行かなかったので要素幅の3/4倍がちょうどよかった
+            button.style.top = (cursorY-3*button.getBoundingClientRect().height/4) + "px";
+            button.style.left = (cursorX-3*button.getBoundingClientRect().width/4) + "px";
+        } else {
+            return;
+        };
+    });
+    button.addEventListener('mouseup',(event) => {
+        if (event.button === 0) {
+            isDragging = false;
+            if (isClickEnabled) buttonClicked();
+            isClickEnabled = true;
+        };
+    });
+    //予期せずボタン外でマウスアップされてもドラッグっをオフにする
+    window.addEventListener('mouseup',() => {
+        isDragging = false;
+        isClickEnabled = true;
+    });
+}
 
-            if (tweet_regex.test(location.href)){
-                const tweet = document.querySelector('article div[data-testid="tweetText"]');
-                //TwemojiのUnicode絵文字化
-                const twemojis = tweet.querySelectorAll("img");
-                for (const twemoji of twemojis) {
-                    const emoji = twemoji.alt;
-                    const emojiTextNode = document.createTextNode(emoji);
-                    tweet.replaceChild(emojiTextNode, twemoji);
-                }
-                const tweet_text = tweet.textContent;
+function buttonClicked() {
+    browser.storage.sync.get(["instance_name"]).then((items) => {
+        const instance_name = items.instance_name || "misskey.io";
+        const tweet_regex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
 
-                const tweet_username = document.querySelector('article div[data-testid="User-Name"]').textContent;
-                //MFMの引用型に変換処理（謎にワンライナーで書いたのはゆるして）
-                const replaced_tweet_text = tweet_text.split("\n").map(line => line ? "><plain>" + line + "</plain>" : ">").join("\n");
-                const now_url = location.href;
-                const instance_url = new URL(`https://${instance_name}/share`);
-                let share_text = `${replaced_tweet_text}\n>by <plain>${tweet_username}</plain>\n\n${now_url}`;
-                instance_url.searchParams.set("text",share_text);
-                window.open(instance_url.href);
-            } else {
-                //JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
-                const now_url = location.href;
-                const now_title = document.title;
-
-                const instance_url = new URL(`https://${instance_name}/share`);
-                //textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
-                //if (now_title){
-                //	instance_url.searchParams.set("text", now_title);
-                //}
-                let share_text = now_title + "\n\n" + now_url;
-                //instance_url.searchParams.set("url", encoded_now_url);
-                instance_url.searchParams.set("text",share_text);
-                window.open(instance_url.href);
+        if (tweet_regex.test(location.href)){
+            const tweet = document.querySelector('article div[data-testid="tweetText"]');
+            //TwemojiのUnicode絵文字化
+            const twemojis = tweet.querySelectorAll("img");
+            for (const twemoji of twemojis) {
+                const emoji = twemoji.alt;
+                const emojiTextNode = document.createTextNode(emoji);
+                tweet.replaceChild(emojiTextNode, twemoji);
             }
+            const tweet_text = tweet.textContent;
 
-		});
-	});
+            const tweet_username = document.querySelector('article div[data-testid="User-Name"]').textContent;
+            //MFMの引用型に変換処理（謎にワンライナーで書いたのはゆるして）
+            const replaced_tweet_text = tweet_text.split("\n").map(line => line ? "><plain>" + line + "</plain>" : ">").join("\n");
+            const now_url = location.href;
+            const instance_url = new URL(`https://${instance_name}/share`);
+            let share_text = `${replaced_tweet_text}\n>by <plain>${tweet_username}</plain>\n\n${now_url}`;
+            instance_url.searchParams.set("text",share_text);
+            window.open(instance_url.href);
+        } else {
+            //JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
+            const now_url = location.href;
+            const now_title = document.title;
+
+            const instance_url = new URL(`https://${instance_name}/share`);
+            //textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
+            //if (now_title){
+            //	instance_url.searchParams.set("text", now_title);
+            //}
+            let share_text = now_title + "\n\n" + now_url;
+            //instance_url.searchParams.set("url", encoded_now_url);
+            instance_url.searchParams.set("text",share_text);
+            window.open(instance_url.href);
+        }
+
+    });
 }
 
 function hideButtonOnFullscreen(){
