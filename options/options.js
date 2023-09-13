@@ -4,6 +4,16 @@ if (typeof browser === "undefined") {
     browser = chrome;
 }
 
+//表示をロケールによって変えるjs
+document.getElementById('version').innerHTML = "v" + browser.i18n.getMessage('Version') + " ";
+document.getElementById('installed').innerHTML = browser.i18n.getMessage('ShowUpdateLogLink');
+document.getElementById('InstanceNameFormLabel').innerHTML = browser.i18n.getMessage('InstanceNameFormLabel');
+document.getElementById('instance_name').placeholder = browser.i18n.getMessage('InstanceNameFormPlaceHolder');
+document.getElementById('ShareButtonToggleLabel').innerHTML = browser.i18n.getMessage('ShareButtonToggleLabel');
+document.getElementById('ShareButtonOnMisskeyToggleLabel').innerHTML = browser.i18n.getMessage('ShareButtonOnMisskeyToggleLabel');
+document.getElementById('ShareButtonHideFormLabel').innerHTML = browser.i18n.getMessage('ShareButtonHideFormLabel');
+document.getElementById('sites_to_hide_button').placeholder = browser.i18n.getMessage('ShareButtonHideFormPlaceHolder');
+
 document.addEventListener("DOMContentLoaded", Load);
 document.getElementById("instance_name").onkeydown = () => {Save();};
 document.getElementById('button_visibility').addEventListener('change', Save);
@@ -52,14 +62,9 @@ function Load() {
 
 function SucceedSave() {
 	const save_status = document.getElementById("save_status");
-	save_status.innerHTML = "保存されました！";
+	save_status.innerHTML = browser.i18n.getMessage('SavedMassage');
 	save_status.style.color = "#55c500"
 }
-//function Unsaved() {
-//	const save_status = document.getElementById("save_status");
-//	save_status.innerHTML = "未保存です"
-//	save_status.style.color = "#ff0000"
-//}
 
 function showInstalled() {
 	window.open('https://alpaca-honke.github.io/twishare-to-misskey/installed.html');

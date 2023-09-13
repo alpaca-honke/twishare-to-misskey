@@ -15,6 +15,7 @@ h1{
 	/*font-size: 0.7em;*/
 }
 #installed{
+	color: #666;
 	text-decoration: underline;
 	cursor: pointer;
 }
