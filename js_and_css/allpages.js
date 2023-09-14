@@ -39,12 +39,11 @@ async function whetherSetButton() {
 async function isMisskey() {
 	// MisskeyやCalckeyでは、metaタグのname="application-name"にcontent="Misskey"とか"Calckey"がついてる
 	let metatags = document.getElementsByTagName('meta');
-	for (let i = 0; i < metatags.length; i++){
-		var metatag = metatags[i];
+    const misskeys = ['Misskey','Calckey','Firefish'];
+	for (const metatag of metatags){
 		if (
 			metatag.getAttribute('name') === 'application-name' &&
-			(metatag.getAttribute('content') === 'Misskey' || metatag.getAttribute('content') === 'Calckey' || metatag.getAttribute('content') === 'Firefish'
-    )
+            misskeys.includes(metatag.getAttribute('content'))
 		){
 			return true;
 		}
