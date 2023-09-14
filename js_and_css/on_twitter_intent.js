@@ -47,7 +47,6 @@ browser.storage.sync.get("instance_name").then((items) => {
 			const tagged_hashtags = " #" + hashtags.replace(/\,/g, " #");
 			share_text = tagged_hashtags;
 			//share_textにURLも含めるためここではまだsetしない
-			//instance_url.searchParams.set("text", share_text);
 		}
 
 		if (url) {
@@ -63,11 +62,14 @@ browser.storage.sync.get("instance_name").then((items) => {
 					break;
 				}
 			}
+            //YouTube動画の末尾のトラッキングID（と思われる）パラメータを削除
+            const youtube = /^https?:\/\/youtu\.?be(\.com)?/;
+            if (youtube.test(decoded_url)) {
+                decoded_url = decoded_url.replace(/[\?&]si=\w+&?/,'');
+            }
 
-			//share_url = url;
-			const encoded_url = encodeURI(decoded_url);
-			share_text = (share_text || "") + "\n\n" + (encoded_url || "");
-			//instance_url.searchParams.set("url", share_url);
+            const encoded_url = encodeURI(decoded_url);
+            share_text = (share_text || "") + "\n\n" + (encoded_url || "");
 		}
 		instance_url.searchParams.set('text',share_text);
 
