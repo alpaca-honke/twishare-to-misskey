@@ -76,17 +76,19 @@ function setButton(){
 	share_img.id = '_twishare_to_misskey_share_img';
 	button.appendChild(share_img);
 	body.appendChild(button);
+
     //以下クリックorドラッグ時
-    //ブラウザーデフォルトのドラッグを無効化しておく
-    button.ondragstart = () => {
-        return false;
-    };
     //変数の定義
     let isDragging = false;
     let isClickEnabled = true;
     let cursorX;
     let cursorY;
-    //挙動を設定
+
+    //挙動を設定:マウスドラッグ
+    //ブラウザーデフォルトのドラッグを無効化しておく
+    button.ondragstart = () => {
+        return false;
+    };
     button.addEventListener('mousedown',(event) => {
         if (event.button === 0) {isDragging = true};
     });
@@ -110,8 +112,40 @@ function setButton(){
             isClickEnabled = true;
         };
     });
-    //予期せずボタン外でマウスアップされてもドラッグっをオフにする
+    //予期せずボタン外でマウスアップされてもドラッグをオフにする
     window.addEventListener('mouseup',() => {
+        isDragging = false;
+        isClickEnabled = true;
+    });
+
+    //挙動を設定:スワイプ
+    button.addEventListener('touchstart',(event) => {
+        //画面スクロールを止める
+        event.preventDefault();
+        isDragging = true;
+    });
+    button.addEventListener('touchmove',(event) => {
+        if (isDragging) {
+            event.preventDefault();
+            //スワイプ
+            isClickEnabled = false;
+            cursorX = event.changedTouches[0].clientX;
+            cursorY = event.changedTouches[0].clientY;
+            //なんか配置がうまく行かなかったので要素幅の3/4倍がちょうどよかった
+            button.style.top = (cursorY-3*button.getBoundingClientRect().height/4) + "px";
+            button.style.left = (cursorX-3*button.getBoundingClientRect().width/4) + "px";
+        } else {
+            return;
+        };
+    });
+    button.addEventListener('touchend',(event) => {
+        event.preventDefault();
+        isDragging = false;
+        if (isClickEnabled) buttonClicked();
+        isClickEnabled = true;
+    });
+    //予期せずボタン外でタッチエンドされてもドラッグをオフにする
+    window.addEventListener('touchend',() => {
         isDragging = false;
         isClickEnabled = true;
     });
