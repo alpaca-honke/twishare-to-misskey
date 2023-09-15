@@ -61,14 +61,16 @@ browser.storage.sync.get('instanceName').then((items) => {
 					break;
 				}
 			}
-            //YouTube動画の末尾のトラッキングID（と思われる）パラメータを削除
-            const youtube = /^https?:\/\/youtu\.?be(\.com)?/;
-            if (youtube.test(decodedUrl)) {
-                decodedUrl = decodedUrl.replace(/[\?&]si=\w+&?/,'');
-            }
 
             const encodedUrl = encodeURI(decodedUrl);
-            shareText = (shareText || '') + '\n\n' + (encodedUrl || '');
+            //YouTube動画の末尾のトラッキングID（と思われる）パラメータを削除
+            const urlToShare = new URL(encodedUrl);
+            const youtube = /^(www\.)?youtu\.?be(\.com)?$/;
+            if (youtube.test(urlToShare.hostname)) {
+                urlToShare.searchParams.delete('si');
+            }
+
+            shareText = (shareText || '') + '\n\n' + (urlToShare.href || '');
 		}
 		instanceUrl.searchParams.set('text',shareText);
 

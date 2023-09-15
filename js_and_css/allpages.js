@@ -168,9 +168,11 @@ function buttonClicked() {
             const replacedTweetText = tweetText.split('\n').map(line => line ? '><plain>' + line + '</plain>' : '>').join('\n');
             let nowUrl = location.href;
             //シェア用リンクが生成されたときに付与される、端末タイプの判別IDを除去
-            nowUrl = nowUrl.replace(/[\?&]s=\w+&?/,'');
+            const urlToShare = new URL(nowUrl);
+            urlToShare.searchParams.delete('s');
+
             const instanceUrl = new URL(`https://${instanceName}/share`);
-            let shareText = `${replacedTweetText}\n>by <plain>${tweetUsername}</plain>\n\n${nowUrl}`;
+            let shareText = `${replacedTweetText}\n>by <plain>${tweetUsername}</plain>\n\n${urlToShare.href}`;
             instanceUrl.searchParams.set('text',shareText);
             window.open(instanceUrl.href);
         } else {
