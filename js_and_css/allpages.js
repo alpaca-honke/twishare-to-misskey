@@ -1,5 +1,5 @@
 //chromeでも拡張機能向けAPIをbrowserネームスペースからアクセスできるようにする
-if (typeof browser === "undefined") {
+if (typeof browser === 'undefined') {
     //宣言せずに定義することでグローバル変数とする
     browser = chrome;
 }
@@ -20,7 +20,7 @@ async function whetherSetButton() {
 		return false;
 	}
 	// sitesToHideButtonはisSiteToHideButtonで読むのでここでは読まない
-	const items = await browser.storage.sync.get(["buttonVisibilityOnMisskey", "buttonVisibility"]);
+	const items = await browser.storage.sync.get(['buttonVisibilityOnMisskey', 'buttonVisibility']);
 	if (items.buttonVisibilityOnMisskey === false) {
 		// Misskey上でボタンを表示させない設定のとき、Misskeyにアクセスしてたらfalse
 		if (await isMisskey()) {
@@ -34,7 +34,7 @@ async function whetherSetButton() {
 }
 
 async function isMisskey() {
-	// MisskeyやCalckeyでは、metaタグのname="application-name"にcontent="Misskey"とか"Calckey"がついてる
+	// MisskeyやCalckeyでは、metaタグのname='application-name'にcontent='Misskey'とか'Calckey'がついてる
 	let metatags = document.getElementsByTagName('meta');
     const misskeys = ['Misskey','Calckey','Firefish'];
 	for (const metatag of metatags){
@@ -48,15 +48,15 @@ async function isMisskey() {
 	return false;
 }
 async function isSiteToHideButton() {
-	const items = await browser.storage.sync.get("sitesToHideButton");
+	const items = await browser.storage.sync.get('sitesToHideButton');
 	if (items.sitesToHideButton) {
 		// 区切りのスペースごと保存してあるので展開
 		let sites = items.sitesToHideButton.split(' ');
 		return sites.some((value) => {
 			return value
 				// 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視
-				.replace(/^https?:\/\//, "")
-				.replace(/\/(.*)$/, "")
+				.replace(/^https?:\/\//, '')
+				.replace(/\/(.*)$/, '')
 				=== location.hostname;
 		});
 	}
@@ -95,8 +95,8 @@ function setButton(){
             cursorX = event.clientX;
             cursorY = event.clientY;
             //なんか配置がうまく行かなかったので要素幅の3/4倍がちょうどよかった
-            button.style.top = (cursorY-3*button.getBoundingClientRect().height/4) + "px";
-            button.style.left = (cursorX-3*button.getBoundingClientRect().width/4) + "px";
+            button.style.top = (cursorY-3*button.getBoundingClientRect().height/4) + 'px';
+            button.style.left = (cursorX-3*button.getBoundingClientRect().width/4) + 'px';
         } else {
             return;
         };
@@ -128,8 +128,8 @@ function setButton(){
             cursorX = event.changedTouches[0].clientX;
             cursorY = event.changedTouches[0].clientY;
             //なんか配置がうまく行かなかったので要素幅の3/4倍がちょうどよかった
-            button.style.top = (cursorY-3*button.getBoundingClientRect().height/4) + "px";
-            button.style.left = (cursorX-3*button.getBoundingClientRect().width/4) + "px";
+            button.style.top = (cursorY-3*button.getBoundingClientRect().height/4) + 'px';
+            button.style.left = (cursorX-3*button.getBoundingClientRect().width/4) + 'px';
         } else {
             return;
         };
@@ -148,14 +148,14 @@ function setButton(){
 }
 
 function buttonClicked() {
-    browser.storage.sync.get(["instanceName"]).then((items) => {
-        const instanceName = items.instanceName || "misskey.io";
+    browser.storage.sync.get(['instanceName']).then((items) => {
+        const instanceName = items.instanceName || 'misskey.io';
         const tweetRegex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
 
         if (tweetRegex.test(location.href)){
             const tweet = document.querySelector('article div[data-testid="tweetText"]');
             //TwemojiのUnicode絵文字化
-            const twemojis = tweet.querySelectorAll("img");
+            const twemojis = tweet.querySelectorAll('img');
             for (const twemoji of twemojis) {
                 const emoji = twemoji.alt;
                 const emojiTextNode = document.createTextNode(emoji);
@@ -165,13 +165,13 @@ function buttonClicked() {
 
             const tweetUsername = document.querySelector('article div[data-testid="User-Name"]').textContent;
             //MFMの引用型に変換処理（謎にワンライナーで書いたのはゆるして）
-            const replacedTweetText = tweetText.split("\n").map(line => line ? "><plain>" + line + "</plain>" : ">").join("\n");
+            const replacedTweetText = tweetText.split('\n').map(line => line ? '><plain>' + line + '</plain>' : '>').join('\n');
             let nowUrl = location.href;
             //シェア用リンクが生成されたときに付与される、端末タイプの判別IDを除去
             nowUrl = nowUrl.replace(/[\?&]s=\w+&?/,'');
             const instanceUrl = new URL(`https://${instanceName}/share`);
             let shareText = `${replacedTweetText}\n>by <plain>${tweetUsername}</plain>\n\n${nowUrl}`;
-            instanceUrl.searchParams.set("text",shareText);
+            instanceUrl.searchParams.set('text',shareText);
             window.open(instanceUrl.href);
         } else {
             //JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
@@ -180,8 +180,8 @@ function buttonClicked() {
 
             const instanceUrl = new URL(`https://${instanceName}/share`);
             //textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
-            let shareText = nowTitle + "\n\n" + nowUrl;
-            instanceUrl.searchParams.set("text",shareText);
+            let shareText = nowTitle + '\n\n' + nowUrl;
+            instanceUrl.searchParams.set('text',shareText);
             window.open(instanceUrl.href);
         }
 
