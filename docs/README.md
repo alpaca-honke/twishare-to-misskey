@@ -15,13 +15,18 @@ Twitterのシェアボタンから Misskey （またはその派生 SNS）にシ
 - [Chrome Web Store](https://chrome.google.com/webstore/detail/twishare-to-misskey/fbaifpppndnlbbjcbjdfgbdkoibnipjb)
 - [Firefox Addons](https://addons.mozilla.org/ja/firefox/addon/twishare-to-misskey/)
 
-## 特徴
+## 機能/特徴
 
 - Twitterのシェアボタンを押したときに確認画面が出てきてMisskeyにシェアできるか選択できる
-- もちろんキャンセルすればTwitterにもシェアできる
+    - もちろんキャンセルすればTwitterにもシェアできる
 - Twitterシェアボタンがなくても右下に出るシェアボタンからMisskeyにシェアできる
+    - 動かしてどかすことができる
+    - 非表示にすることができる
 - ほぼすべてのMisskey（v12以降）とFirefish（旧Calckey）に対応
 - ツイートをシェアする際に、ツイート内容がノートに引用として貼り付けられる
+- 特定のサイトでURLにつけられる不要な情報を削除してからシェアする
+    - YouTube: トラッキングに関わると思われるIDを削除
+    - Twitter: シェアリンクを生成するときに付与される、端末の種類を意味すると思われる数字を削除
 - 認証情報を保存しないためセキュリティ的に安全
 
 ## インストール
