@@ -9,28 +9,25 @@ setButtonIfNeeded();
 //以下全部関数定義（処理は以上一行）
 
 async function setButtonIfNeeded() {
-	const whether_set_button = await whetherSetButton();
-	if (whether_set_button) {
+	if (await whetherSetButton()) {
 		setButton();
 		hideButtonOnFullscreen();
 	}
 }
 
 async function whetherSetButton() {
-	const is_site_to_hide_button = await isSiteToHideButton();
-	if (is_site_to_hide_button) {
+	if (await isSiteToHideButton()) {
 		return false;
 	}
-	// sites_to_hide_buttonはisSiteToHideButtonで読むのでここでは読まない
-	const items = await browser.storage.sync.get(["button_visibility_on_misskey", "button_visibility"]);
-	if (items.button_visibility_on_misskey === false) {
+	// sitesToHideButtonはisSiteToHideButtonで読むのでここでは読まない
+	const items = await browser.storage.sync.get(["buttonVisibilityOnMisskey", "buttonVisibility"]);
+	if (items.buttonVisibilityOnMisskey === false) {
 		// Misskey上でボタンを表示させない設定のとき、Misskeyにアクセスしてたらfalse
-		const is_misskey = await isMisskey();
-		if (is_misskey) {
+		if (await isMisskey()) {
 			return false;
 		}
 	}
-	if (items.button_visibility === false) {
+	if (items.buttonVisibility === false) {
 		return false;
 	}
 	return true;
@@ -51,10 +48,10 @@ async function isMisskey() {
 	return false;
 }
 async function isSiteToHideButton() {
-	const items = await browser.storage.sync.get("sites_to_hide_button");
-	if (items.sites_to_hide_button) {
+	const items = await browser.storage.sync.get("sitesToHideButton");
+	if (items.sitesToHideButton) {
 		// 区切りのスペースごと保存してあるので展開
-		let sites = items.sites_to_hide_button.split(' ');
+		let sites = items.sitesToHideButton.split(' ');
 		return sites.some((value) => {
 			return value
 				// 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視
@@ -69,11 +66,11 @@ async function isSiteToHideButton() {
 function setButton(){
 	const body = document.body;
 	const button = document.createElement('button');
-	const share_img = document.createElement('img');
+	const shareImg = document.createElement('img');
 	button.id = '_twishare_to_misskey_share';
-	share_img.src = browser.runtime.getURL('assets/share.png');
-	share_img.id = '_twishare_to_misskey_share_img';
-	button.appendChild(share_img);
+	shareImg.src = browser.runtime.getURL('assets/share.png');
+	shareImg.id = '_twishare_to_misskey_share_img';
+	button.appendChild(shareImg);
 	body.appendChild(button);
 
     //以下クリックorドラッグ時
@@ -151,11 +148,11 @@ function setButton(){
 }
 
 function buttonClicked() {
-    browser.storage.sync.get(["instance_name"]).then((items) => {
-        const instance_name = items.instance_name || "misskey.io";
-        const tweet_regex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
+    browser.storage.sync.get(["instanceName"]).then((items) => {
+        const instanceName = items.instanceName || "misskey.io";
+        const tweetRegex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
 
-        if (tweet_regex.test(location.href)){
+        if (tweetRegex.test(location.href)){
             const tweet = document.querySelector('article div[data-testid="tweetText"]');
             //TwemojiのUnicode絵文字化
             const twemojis = tweet.querySelectorAll("img");
@@ -164,28 +161,28 @@ function buttonClicked() {
                 const emojiTextNode = document.createTextNode(emoji);
                 tweet.replaceChild(emojiTextNode, twemoji);
             }
-            const tweet_text = tweet.textContent;
+            const tweetText = tweet.textContent;
 
-            const tweet_username = document.querySelector('article div[data-testid="User-Name"]').textContent;
+            const tweetUsername = document.querySelector('article div[data-testid="User-Name"]').textContent;
             //MFMの引用型に変換処理（謎にワンライナーで書いたのはゆるして）
-            const replaced_tweet_text = tweet_text.split("\n").map(line => line ? "><plain>" + line + "</plain>" : ">").join("\n");
-            let now_url = location.href;
+            const replacedTweetText = tweetText.split("\n").map(line => line ? "><plain>" + line + "</plain>" : ">").join("\n");
+            let nowUrl = location.href;
             //シェア用リンクが生成されたときに付与される、端末タイプの判別IDを除去
-            now_url = now_url.replace(/[\?&]s=\w+&?/,'');
-            const instance_url = new URL(`https://${instance_name}/share`);
-            let share_text = `${replaced_tweet_text}\n>by <plain>${tweet_username}</plain>\n\n${now_url}`;
-            instance_url.searchParams.set("text",share_text);
-            window.open(instance_url.href);
+            nowUrl = nowUrl.replace(/[\?&]s=\w+&?/,'');
+            const instanceUrl = new URL(`https://${instanceName}/share`);
+            let shareText = `${replacedTweetText}\n>by <plain>${tweetUsername}</plain>\n\n${nowUrl}`;
+            instanceUrl.searchParams.set("text",shareText);
+            window.open(instanceUrl.href);
         } else {
             //JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
-            const now_url = location.href;
-            const now_title = document.title;
+            const nowUrl = location.href;
+            const nowTitle = document.title;
 
-            const instance_url = new URL(`https://${instance_name}/share`);
+            const instanceUrl = new URL(`https://${instanceName}/share`);
             //textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
-            let share_text = now_title + "\n\n" + now_url;
-            instance_url.searchParams.set("text",share_text);
-            window.open(instance_url.href);
+            let shareText = nowTitle + "\n\n" + nowUrl;
+            instanceUrl.searchParams.set("text",shareText);
+            window.open(instanceUrl.href);
         }
 
     });
