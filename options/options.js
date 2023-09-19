@@ -7,6 +7,8 @@ if (typeof browser === 'undefined') {
 //表示をロケールによって変えるjs
 document.getElementById('version').innerHTML = 'v' + browser.i18n.getMessage('Version') + ' ';
 document.getElementById('installed').innerHTML = browser.i18n.getMessage('ShowUpdateLogLink');
+document.getElementById('settings_title').innerHTML = browser.i18n.getMessage('Settings');
+document.getElementById('share_button_label').innerHTML = browser.i18n.getMessage('ShareButtonLabel');
 document.getElementById('instance_name_form_label').innerHTML = browser.i18n.getMessage('InstanceNameFormLabel');
 document.getElementById('instance_name').placeholder = browser.i18n.getMessage('InstanceNameFormPlaceHolder');
 document.getElementById('share_button_toggle_label').innerHTML = browser.i18n.getMessage('ShareButtonToggleLabel');
@@ -15,12 +17,19 @@ document.getElementById('share_button_hide_form_label').innerHTML = browser.i18n
 document.getElementById('sites_to_hide_button').placeholder = browser.i18n.getMessage('ShareButtonHideFormPlaceHolder');
 
 document.addEventListener('DOMContentLoaded', Load);
+document.getElementById('share_button').addEventListener('click',share);
 document.getElementById('instance_name').onkeydown = () => {Save();};
 document.getElementById('button_visibility').addEventListener('change', Save);
 document.getElementById('button_visibility_on_misskey').addEventListener('change', Save);
 document.getElementById('sites_to_hide_button').onkeydown = () => {Save();};
 document.getElementById('installed').addEventListener('click',showInstalled);
 
+async function share() {
+    //シェア画面に遷移するのはallpages.jsの役割なので託す
+    const tabs = await browser.tabs.query({active:true, lastFocusedWindow:true});
+    const tabId = tabs[0].id;
+    browser.tabs.sendMessage(tabId,{content:"share"});
+}
 function Save() {
     //呼び出し後速攻実行されると不具合が出ることがある
     setTimeout( () => {

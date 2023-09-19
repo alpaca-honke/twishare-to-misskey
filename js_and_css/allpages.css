@@ -13,6 +13,10 @@
 	border: none !important;
 	z-index: 2147483647 !important;
 }
+#_twishare_to_misskey_share:hover{
+    background-color: #259500 !important;
+    cursor: pointer !important;
+}
 #_twishare_to_misskey_share_img{
 	height: 100% !important;
 	margin: 0 !important;
