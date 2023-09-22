@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2YX1PLXRJE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2YX1PLXRJE');
+    </script>
+    <meta property="og:url" content="https://alpaca-honke.github.io/twishare-to-misskey/bookmarklet.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Twishare to Misskey Bookmarklet" />
+    <meta property="og:description" content="Twishare to Misskey の機能を利用できるブックマークレットを作成します。" />
+    <meta property="og:site_name" content="あるかっぱ/アルパカ本家 Alkappa/alpaca-honke" />
+    <meta property="og:image" content="https://alpaca-honke.github.io/GitHubMarkForOGP.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@alpaca_honke" />
+    <link rel="canonical" href="https://alpaca-honke.github.io/twishare-to-misskey/bookmarklet.html">
+    <meta charset="UTF-8">
+    <meta name="description" content="Misskeky ShareのURLを簡単に作成できるサイトです。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twishare to Misskey Bookmarklet</title>
+</head>
+<body>
+    <div class="all">
+        <header>
+            <a id="header_link" href="https://alpaca-honke.github.io/twishare-to-misskey">twishare-to-misskey</a>
+        </header>
+        <h1>Twishare to Misskey Bookmarklet</h1>
+        <p class="description">Twishare to Misskey が提供するMisskeyにシェアする機能を、拡張機能を経由せずに利用できるようにするブックマークレットを作成します。</p>
+        <div class="container">
+            <div class="instance_name_box">
+                <h2>サーバーの指定</h2>
+                <p class="formtitle">シェア先のインスタンスのドメインを入力</p>
+                <form onsubmit="done(); return false;">
+                    <input id="instance_name" type="text" placeholder="ドメインを入力">
+                </form>
+                <button class="done" onclick="done()">作成</button>
+            </div>
+            <div id="result" style="display: none;">
+                <div>
+                    <h2>完成品</h2>
+                    <p>以下のリンクをブックマークバーにドラッグアンドドロップしてください。今後このブックマークレットをクリックすることでMisskeyにシェアすることができます。</p>
+                    <a id="result_bookmarklet"></a>
+                </div>
+            </div>
+        </div>
+        <p>© Copyright 2023 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke</p>
+    </div>
+</body>
+<style>
+    /*CSSは汎用のを埋め込んだだけなんで不要なセレクタがいくつかあったりする。textareaとかこのページにないしね*/
+    :root{
+        scroll-behavior: smooth;
+    }
+    body {
+        background: #ffffff;
+        color: #000000;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    header{
+        text-align: justify;
+    }
+    #header_link{
+        text-decoration: none;
+        color: #0366d6;
+        font-weight: 600;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    h1{
+        color: #226E93;
+        font-family: Lato, sans-serif;
+        font-size: 34pt;
+        font-weight: 300;
+    }
+    h2{
+        color: #226E93;
+        font-family: Lato, sans-serif;
+        font-size: 16pt;
+        font-weight: 500;
+    }
+    a {
+        color: #2bb1da;
+        text-decoration: underline;
+        &:hover{
+            color: #41b6da;
+        }
+        &active{
+            color: #279cc0;
+        }
+    }
+    .container {
+        display: block;
+    }
+
+    div {
+        display: block;
+    }
+    p.formtitle {
+        padding: 0px;
+        margin: 0px;
+    }
+    form {
+    display: block;
+    }
+    input,textarea{
+        display: inline-block;
+        width: 600px;
+        background: #ffffff;
+        border-radius: 5px;
+        margin: 10px 0 10px 0;
+        padding: 5px 5px 5px 15px;
+        border: solid 1px #000000;
+        outline: none;
+        &:hover{
+            background: #e0ffff;
+        }
+        &:focus{
+            background: #d0eeff;
+        }
+    }
+    textarea{
+        height: 100px;
+    }
+    input[type="url"],input[type="text"]{
+        height: 40px;
+    }
+    button {
+        height: 50px;
+        width: 300px;
+        background: #2bb1da;
+        color: #ffffff;
+        border-radius: 5px;
+        border: none;
+        margin: 10px 5px 5px 5px;
+        &:hover{
+            background: #41b6da;
+        }
+        &:active{
+            background: #279cc0;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .container {
+            text-align: center;
+        }
+        input,textarea{
+            display: flex;
+            width: 90vw;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    }
+
+    @media(prefers-color-scheme: dark){
+        body {
+            background: #303030;
+            color: #ffffff;
+        }
+
+        h1{
+            color: #48b0e4;
+        }
+        a {
+            color: #1d9bf0;
+            &:hover{
+                color: #41b6da;
+            }
+            &:active{
+                color: #279cc0;
+            }
+        }
+
+        input,textarea{
+            background: #303030;
+            color: #d0d0d0;
+            border: solid 1px #909090;
+            &:hover{
+                background: #606060;
+            }
+            &:focus{
+                background: #d0d0d0;
+                color: #000000;
+            }
+        }
+        ::placeholdaer {
+        color: #a0a0a0;
+        }
+        button {
+            background: #1d9bf0;
+            color: #ffffff;
+            &:hover{
+                background: #41b6da;
+            }
+            &:active{
+                background: #279cc0;
+            }
+        }
+    }
+</style>
+<script type="text/javascript" language="javascript">
+    //更新時の留意点:正規表現のエスケープ等のバックスラッシュは二重に重ねる必要があるが
+    //クオートのエスケープ（このコード内では今の所ツイート内容取得のとこのquerySelector引数のみ）は二重にしてはいけない
+    //ほんとはallpages.jsからimportしてやりたかったんだけど、いろいろめんどくさくてやめた
+    const code = "const tweetRegex = /^https?:\\/\\/twitter\\.com\\/\\w+\\/status\\/\\d+.*$/; if (tweetRegex.test(location.href)){ const tweet = document.querySelector('article div[data-testid=\"tweetText\"]'); const twemojis = tweet.querySelectorAll('img'); for (const twemoji of twemojis) { const emoji = twemoji.alt; const emojiTextNode = document.createTextNode(emoji); tweet.replaceChild(emojiTextNode, twemoji); } const tweetText = tweet.textContent; const tweetUsername = document.querySelector('article div[data-testid=\"User-Name\"]').textContent; const replacedTweetText = tweetText.split('\\n').map(line => line ? '><plain>' + line + '</plain>' : '>').join('\\n'); let nowUrl = location.href; const urlToShare = new URL(nowUrl); urlToShare.searchParams.delete('s'); const instanceUrl = new URL(`https://${instanceName}/share`); let shareText = `${replacedTweetText}\\n>by <plain>${tweetUsername}</plain>\\n\\n${urlToShare.href}`; instanceUrl.searchParams.set('text',shareText); window.open(instanceUrl.href); } else { const nowUrl = location.href; const nowTitle = document.title; const instanceUrl = new URL(`https://${instanceName}/share`); let shareText = nowTitle + '\\n\\n' + nowUrl; instanceUrl.searchParams.set('text',shareText); window.open(instanceUrl.href); }";
+    function done() {
+        const instanceName = document.getElementById('instance_name').value;
+        if (instanceName !== "") {
+            //インスタンス名を文字列型にするためのクオートのエスケープを忘れない
+            const content = "javascript: const instanceName = \"" + instanceName + "\";" + code;
+            const bookmarkletLink = document.getElementById('result_bookmarklet');
+            bookmarkletLink.href = content;
+            bookmarkletLink.textContent = instanceName + "にシェア(Twishare to Misskey)";
+            document.getElementById('result').style.display = "block";
+            location.href = location.href + "#result";
+        } else {
+            alert('何も入力されていません');
+        }
+    }
+</script>
+</html>
+
+
+        
