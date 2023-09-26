@@ -28,6 +28,7 @@ Twitterのシェアボタンから Misskey （またはその派生 SNS）にシ
     - YouTube: トラッキングに関わると思われるIDを削除
     - Twitter: シェアリンクを生成するときに付与される、端末の種類を意味すると思われる数字を削除
 - 認証情報を保存しないためセキュリティ的に安全
+- 拡張機能の一部の機能と同等の機能を有するブックマークレットを配布
 
 ## インストール
 
@@ -50,6 +51,8 @@ Safari向けには公開していませんが、動くかもしれない...。�
 （Safariは`browser.storage.sync`非対応らしいので、これを使っているこの拡張は動かないかも）  
 [リリースページ](https://github.com/alpaca-honke/twishare-to-misskey/releases)からソースコードを取得して、chromeディレクトリ配下のmanifest.jsonをリポジトリルートにおいて、よしなにやってあげてください。
 
+[Twishare to Misskey Bookamrklet](https://alpaca-honke.github.io/twishare-to-misskey/bookmarklet.html)では、Twishare to Misskeyのシェアボタンの機能を提供するブックマークレットを配布していますので、ぜひご利用ください。
+
 また、にじみす鯖の方（[@wareplus@nijimiss.moe](https://nijimiss.moe/@wareplus)さん）が似た用途のSafariショートカットを公開してくれているようなのでぜひご利用ください！↓  
 [作成したショートカットとかCSSとかとか](https://nijimiss.moe/@wareplus/pages/made_by_wareplus)
 
@@ -62,6 +65,8 @@ Safari向けには公開していませんが、動くかもしれない...。�
 
 公式ではありませんが、非公式でUserScriptがあるようです。（旧バージョンです。これに関するお問い合わせはUserScript公開者さんにお願いします。）
 [UserScript](https://greasyfork.org/js/scripts/466136-twishare-to-misskey)
+
+[Twishare to Misskey Bookamrklet](https://alpaca-honke.github.io/twishare-to-misskey/bookmarklet.html)では、Twishare to Misskeyのシェアボタンの機能を提供するブックマークレットを配布していますので、ぜひご利用ください。
 
 ## 使い方
 
