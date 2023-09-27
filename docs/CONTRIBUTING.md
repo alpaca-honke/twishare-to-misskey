@@ -1,3 +1,5 @@
+**There is an [English version](CONTRIBUTING-en.md).**
+
 # Contribution Guide
 
 このブラウザ拡張に対するコントリビュートのガイドラインです。あまり堅苦しいものではないですが、コントリビュート前に必ずお読みください。（見る人いるのかなぁ）  
