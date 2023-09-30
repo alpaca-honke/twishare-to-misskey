@@ -52,6 +52,10 @@ Also, the manifest.json files under the `chrome` or `webext` directories will be
 
 Please submit a PR on the `develop` branch. I would appreciate a detailed description.
 
+## Others
+
+Other items of special note are on [Wiki Page](https://github.com/alpaca-honke/twishare-to-misskey/wiki/Supplement-of-CONTRIBUTING.md). Please be sure to read it.
+
 ## Directory structure.
 
 ````

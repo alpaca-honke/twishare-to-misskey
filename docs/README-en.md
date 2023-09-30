@@ -1,4 +1,4 @@
-# Twishare to Misskey v0.2.6  
+# Twishare to Misskey
 
 <div style="text-align: center;">
     <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 15em;">

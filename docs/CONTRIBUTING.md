@@ -52,6 +52,10 @@ Issueはいつでも大歓迎です。以下のことを守って作成してく
 
 `develop` ブランチにPRを行ってください。説明を詳しめに書いていただけると嬉しいです。
 
+## その他
+
+その他、特筆すべき事項は[Wikiページ](https://github.com/alpaca-honke/twishare-to-misskey/wiki/Supplement-of-CONTRIBUTING.md)に書いてあります。必ずお読みください。
+
 ## ディレクトリ構造
 
 ```
