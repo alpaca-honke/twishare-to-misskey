@@ -1,76 +1,79 @@
 //chromeでも拡張機能向けAPIをbrowserネームスペースからアクセスできるようにする
-if (typeof browser === "undefined") {
+if (typeof browser === 'undefined') {
     //宣言せずに定義することでグローバル変数とする
     browser = chrome;
 }
 
-browser.storage.sync.get("instance_name").then((items) => {
-	const instance_name = items.instance_name || "misskey.io";
+browser.storage.sync.get('instanceName').then((items) => {
+	const instanceName = items.instanceName || 'misskey.io';
 
 	const result = window.confirm(
-		`Twitter へのシェアリンクを確認しました。この内容を ${instance_name} にシェアしますか？(拡張機能 Twishare to Misskey より)`
+        browser.i18n.getMessage('ConfirmShareMessage',instanceName)
 	);
 
 	if (result) {
-		let tw_url = new URL(window.location.href);
-		let params = tw_url.searchParams;
+		let urlFromTweet = new URL(window.location.href);
+		let params = urlFromTweet.searchParams;
 		let text;
 		let url;
 		let hashtags;
-		let share_text;
+		let shareText;
 		//2重エンコードをurlパラメータにわたすことで正常動作しているものが、
 		//今後のMisskeyの更新でうまく動かない可能性がある(1重エンコードを渡す仕様になるかも)ため
 		//urlパラメータは当分使わない (twishare-to-misskey issue #14)
-		//let share_url;
 
-		if (params.has("text")) {
-            text = params.get("text").replace( /(@\w{1,15})/g ,'<plain>$1</plain>');
+		if (params.has('text')) {
+            text = params.get('text').replace( /(@\w{1,15})/g ,'<plain>$1</plain>');
 		}
-		if (params.has("url")) {
-			url = params.get("url");
+		if (params.has('url')) {
+			url = params.get('url');
 		}
-		if (params.has("hashtags")) {
-			hashtags = params.get("hashtags");
+		if (params.has('hashtags')) {
+			hashtags = params.get('hashtags');
 		}
 
-		let instance_url = new URL(`https://${instance_name}/share`);
+		let instanceUrl = new URL(`https://${instanceName}/share`);
 
 		if (text) {
 			if (hashtags) {
-				const tagged_hashtags = "#" + hashtags.replace(/\,/g, " #");
-				share_text = text + "\n" + tagged_hashtags;
+				const taggedHashtags = '#' + hashtags.replace(/\,/g, ' #');
+				shareText = text + '\n' + taggedHashtags;
 			} else {
-				share_text = text;
+				shareText = text;
 			}
-			instance_url.searchParams.set("text", share_text);
+			instanceUrl.searchParams.set('text', shareText);
 		} else if (hashtags) {
-			const tagged_hashtags = " #" + hashtags.replace(/\,/g, " #");
-			share_text = tagged_hashtags;
-			//share_textにURLも含めるためここではまだsetしない
-			//instance_url.searchParams.set("text", share_text);
+			const taggedHashtags = ' #' + hashtags.replace(/\,/g, ' #');
+			shareText = taggedHashtags;
+			//shareTextにURLも含めるためここではまだsetしない
 		}
 
 		if (url) {
 			//デコード前と後に変化がなくなるまでデコードを繰り返す
-			let before_decode_url = url;
-			let decoded_url = "";
+			let beforeDecodeUrl = url;
+			let decodedUrl = '';
 			//予期せぬ無限ループ対策として4ループまでしかしないことにする
 			for (let i=0 ; i<4 ; i++) {
-				//2周目以降ならdecoded_urlには値が入ってるのでそれをbefore_decode_urlに代入
-				before_decode_url = decoded_url ? decoded_url : before_decode_url ;
-				decoded_url = decodeURIComponent(before_decode_url);
-				if (decoded_url === before_decode_url) {
+				//2周目以降ならdecodedUrlには値が入ってるのでそれをbeforeDecodeUrlに代入
+				beforeDecodeUrl = decodedUrl ? decodedUrl : beforeDecodeUrl ;
+				decodedUrl = decodeURIComponent(beforeDecodeUrl);
+				if (decodedUrl === beforeDecodeUrl) {
 					break;
 				}
 			}
 
-			//share_url = url;
-			const encoded_url = encodeURI(decoded_url);
-			share_text = (share_text || "") + "\n\n" + (encoded_url || "");
-			//instance_url.searchParams.set("url", share_url);
-		}
-		instance_url.searchParams.set('text',share_text);
+            const encodedUrl = encodeURI(decodedUrl);
+            //YouTube動画の末尾のトラッキングID（と思われる）パラメータを削除
+            const urlToShare = new URL(encodedUrl);
+            const youtube = /^(www\.)?youtu\.?be(\.com)?$/;
+            if (youtube.test(urlToShare.hostname)) {
+                urlToShare.searchParams.delete('si');
+            }
 
-		location.href = instance_url.href;
+            shareText = (shareText || '') + '\n\n' + (urlToShare.href || '');
+		}
+		instanceUrl.searchParams.set('text',shareText);
+
+		location.href = instanceUrl.href;
 	}
 });

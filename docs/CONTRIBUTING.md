@@ -1,3 +1,5 @@
+**There is an [English version](CONTRIBUTING-en.md).**
+
 # Contribution Guide
 
 このブラウザ拡張に対するコントリビュートのガイドラインです。あまり堅苦しいものではないですが、コントリビュート前に必ずお読みください。（見る人いるのかなぁ）  
@@ -29,12 +31,19 @@ Issueはいつでも大歓迎です。以下のことを守って作成してく
 
 ### 作業中
 
-ChromeとWebExtensions（Firefoxなど）向けの両方が同じコードで動いてることに留意してください。  
-switch_browser.shというシェルスクリプト、switch_browser.batというバッチファイルがリポジトリルートに同梱されています。
+- セキュリティを担保できないため、アクセストークンを含む認証情報などの機密情報を拡張機能内に保存するような変更は行わないでください。
+- ポップアップなどで表示される文字列は、HTMLに直接書き込まず、_localesディレクトリ内の各messages.jsonから変更してください。
+また、HTMLを読みやすくするため、HTMLにはダミーの文字列を書いておいていただけると嬉しいです。
+- ChromeとWebExtensions（Firefoxなど）向けの両方が同じコードで動いてることに留意してください。  
+- switch_browser.shというシェルスクリプト、switch_browser.batというバッチファイルがリポジトリルートに同梱されています。
 ブラウザでテストする際などにご利用ください。
-- 実行権限を付与して、引数に`chrome`と指定するとChrome向けのmanifest.jsonがルートに設置されます。
-- `firefox`を指定するとFirefox向けのmanifest.jsonが設置されます。
-- 何も指定しないとルートから削除されます。
+    - 実行権限を付与して、引数に`chrome`と指定するとChrome向けのmanifest.jsonがルートに設置されます。
+    - `firefox`を指定するとFirefox向けのmanifest.jsonが設置されます。
+    - 何も指定しないとルートから削除されます。
+- 記法はできる限り以下に従ってください。（そんな堅苦しくはないからハチャメチャな書き方じゃない限り怒りませんけど、従っていただけると嬉しいです）
+    - 変数や関数の命名はキャメルケース
+    - HTMLのidやclassはスネークケース
+    - クオートは、基本シングルクオートを使用。可読性が悪くなる可能性がある場合はダブルクオートでも構いません。
 
 なお、docsディレクトリ配下とswitch_browserスクリプトはウェブストアに提出するパッケージやリリースパッケージには含まれません。
 また、`chrome`ディレクトリや`webext`ディレクトリ配下のmanifest.jsonファイルはウェブストアに提出する際にルートに移動されます。
@@ -43,11 +52,19 @@ switch_browser.shというシェルスクリプト、switch_browser.batという
 
 `develop` ブランチにPRを行ってください。説明を詳しめに書いていただけると嬉しいです。
 
+## その他
+
+その他、特筆すべき事項は[Wikiページ](https://github.com/alpaca-honke/twishare-to-misskey/wiki/Supplement-of-CONTRIBUTING.md)に書いてあります。必ずお読みください。
+
 ## ディレクトリ構造
 
 ```
 ├── .gitignore
-├── LICENSE
+├── _locales ロケールごとの翻訳
+│   ├── en
+│   │   └── messages.json 英語の翻訳済み文字列
+│   └── ja
+│        └── messages.json 日本語の翻訳済み文字列
 ├── assets 拡張機能内部で使用するファイルを格納
 │   ├── icon.png 右下のフローティングシェアボタンの画像
 │   └── share.png 高画質のTwishare to Misskeyのアイコン（画質がいいとは言ってない）

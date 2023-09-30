@@ -1,8 +1,9 @@
 {
 	"manifest_version": 3,
+    "default_locale": "en",
 	"name":"Twishare to Misskey",
-	"version":"0.2.6",
-	"description":"Twitter のシェアボタンから Misskey にシェアすることができるようにします。",
+	"version":"0.3.0",
+	"description":"__MSG_Description__",
 	"icons":{
 		"16":"icons/16.png", 
 		"48":"icons/48.png",
@@ -11,7 +12,7 @@
 	"content_scripts":[
 		{
 			"run_at":"document_start",
-			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*","https://twitter.com/share*","http://twitter.com/share*"],
+			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*"],
 			"js":["js_and_css/on_twitter_intent.js"]
 		},
 		{
@@ -30,7 +31,7 @@
 			"48": "icons/48.png",
 			"128": "icons/128.png"
 		},
-		"default_title": "Twishare to Misskeyの設定",
+		"default_title": "__MSG_PopupTitle__",
 		"default_popup": "options/options.html"
 	},
 	"options_ui": {

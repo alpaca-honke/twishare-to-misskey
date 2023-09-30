@@ -1,26 +1,37 @@
-# Twishare to Misskey v0.2.6  
+# Twishare to Misskey
 
 <div style="text-align: center;">
     <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 15em;">
 </div>
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/alpaca-honke/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fbaifpppndnlbbjcbjdfgbdkoibnipjb?style=flat-square) ![Mozilla Add-on](https://img.shields.io/amo/v/twishare-to-misskey?style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=users%20count%20%28chrome%20web%20store%29&style=flat-square) ![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=rating%20%28chrome%20web%20store%29&style=flat-square) ![GitHub](https://img.shields.io/github/license/alpaca-honke/twishare-to-misskey?style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/alpaca-honke/twishare-to-misskey?style=flat-square) ![Chrome Web Store version](https://img.shields.io/chrome-web-store/v/fbaifpppndnlbbjcbjdfgbdkoibnipjb?style=flat-square) ![Mozilla Add-on version](https://img.shields.io/amo/v/twishare-to-misskey?style=flat-square) ![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=users%20%28chrome%20web%20store%29&style=flat-square) ![Mozilla Add-on Users](https://img.shields.io/amo/users/twishare-to-misskey?style=flat-square&label=users%20(mozilla%20add-on)) ![Chrome Web Store Rationg](https://img.shields.io/chrome-web-store/stars/fbaifpppndnlbbjcbjdfgbdkoibnipjb?label=rating%20%28chrome%20web%20store%29&style=flat-square) ![GitHub License](https://img.shields.io/github/license/alpaca-honke/twishare-to-misskey?style=flat-square)
+
+**There is an [English version](README-en.md) of this document.**
+
 ## 概要
 
 Twitterのシェアボタンから Misskey （またはその派生 SNS）にシェアできるようになる Chrome拡張 です。  
 気分で更新します。  
 
-[公式サイト](https://alpaca-honke.github.io/twishare-to-misskey)  
-[リポジトリ](https://github.com/alpaca-honke/twishare-to-misskey)  
+- [公式サイト](https://alpaca-honke.github.io/twishare-to-misskey)  
+- [リポジトリ](https://github.com/alpaca-honke/twishare-to-misskey)  
+- [Chrome Web Store](https://chrome.google.com/webstore/detail/twishare-to-misskey/fbaifpppndnlbbjcbjdfgbdkoibnipjb)
+- [Firefox Addons](https://addons.mozilla.org/ja/firefox/addon/twishare-to-misskey/)
 
-## 特徴
+## 機能/特徴
 
 - Twitterのシェアボタンを押したときに確認画面が出てきてMisskeyにシェアできるか選択できる
-- もちろんキャンセルすればTwitterにもシェアできる
+    - もちろんキャンセルすればTwitterにもシェアできる
 - Twitterシェアボタンがなくても右下に出るシェアボタンからMisskeyにシェアできる
+    - 動かしてどかすことができる
+    - 非表示にすることができる
 - ほぼすべてのMisskey（v12以降）とFirefish（旧Calckey）に対応
 - ツイートをシェアする際に、ツイート内容がノートに引用として貼り付けられる
+- 特定のサイトでURLにつけられる不要な情報を削除してからシェアする
+    - YouTube: トラッキングに関わると思われるIDを削除
+    - Twitter: シェアリンクを生成するときに付与される、端末の種類を意味すると思われる数字を削除
 - 認証情報を保存しないためセキュリティ的に安全
+- 拡張機能の一部の機能と同等の機能を有するブックマークレットを配布
 
 ## インストール
 
@@ -43,6 +54,8 @@ Safari向けには公開していませんが、動くかもしれない...。�
 （Safariは`browser.storage.sync`非対応らしいので、これを使っているこの拡張は動かないかも）  
 [リリースページ](https://github.com/alpaca-honke/twishare-to-misskey/releases)からソースコードを取得して、chromeディレクトリ配下のmanifest.jsonをリポジトリルートにおいて、よしなにやってあげてください。
 
+[Twishare to Misskey Bookamrklet](https://alpaca-honke.github.io/twishare-to-misskey/bookmarklet.html)では、Twishare to Misskeyのシェアボタンの機能を提供するブックマークレットを配布していますので、ぜひご利用ください。
+
 また、にじみす鯖の方（[@wareplus@nijimiss.moe](https://nijimiss.moe/@wareplus)さん）が似た用途のSafariショートカットを公開してくれているようなのでぜひご利用ください！↓  
 [作成したショートカットとかCSSとかとか](https://nijimiss.moe/@wareplus/pages/made_by_wareplus)
 
@@ -56,9 +69,11 @@ Safari向けには公開していませんが、動くかもしれない...。�
 公式ではありませんが、非公式でUserScriptがあるようです。（旧バージョンです。これに関するお問い合わせはUserScript公開者さんにお願いします。）
 [UserScript](https://greasyfork.org/js/scripts/466136-twishare-to-misskey)
 
+[Twishare to Misskey Bookamrklet](https://alpaca-honke.github.io/twishare-to-misskey/bookmarklet.html)では、Twishare to Misskeyのシェアボタンの機能を提供するブックマークレットを配布していますので、ぜひご利用ください。
+
 ## 使い方
 
-1. インストールしたら、[拡張機能の管理画面](about:extensions)から、各種権限が許可されているか確認して、適宜許可してください。  
+1. インストールしたら、拡張機能の管理画面から、各種権限が許可されているか確認して、適宜許可してください。  
 1. 左上の拡張機能の一覧から、Twishare to Misskey のアイコンをクリックすると、シェア先のサーバーを保存する画面がひらくので、入力してください。
 （Misskey.io にシェアする場合と二回目以降は不要です。）  
 また、その下のトグルスイッチも選択してください。  
@@ -94,7 +109,7 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 ## Contribution
 
-問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](https://github.io/alpaca-honke/twishare-to-misskey/blob/develop/docs/CONTRIBUTING.md)をご覧ください。  
+問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/docs/CONTRIBUTING.md)をご覧ください。  
 
 ## Contributors
 
@@ -122,6 +137,6 @@ CC BY-NC-SAライセンス<a rel="license" href="http://creativecommons.org/lice
 
 ## License
 
-この拡張機能は、 MIT ライセンスで頒布されています。詳しくは、[LICENSE](LICENSE) をご覧ください。  
+この拡張機能は、 MIT ライセンスで頒布されています。詳しくは、[LICENSE](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/LICENSE) をご覧ください。  
 
 Copyright © あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors

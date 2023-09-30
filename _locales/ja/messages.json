@@ -1,0 +1,23 @@
+{
+    "Name":{"message": "Twishare to Misskey"},
+    "Description":{"message": "Twitter のシェアボタンから Misskey にシェアすることができるようにします。"},
+    "Version":{"message": "0.3.0"},
+    "ConfirmShareMessage":{
+        "message":"Twitter へのシェアリンクを確認しました。この内容を $INSTANCE_NAME$ にシェアしますか？(拡張機能 Twishare to Misskey より)",
+        "placeholders": {
+            "instance_name":{
+                "content": "$1",
+                "example": "Misskey"
+            }
+        }
+    },
+    "PopupTitle":{"message": "Twishare to Misskeyの設定"},
+    "ShowUpdateLogLink":{"message": "更新内容/お知らせはこちら"},
+    "InstanceNameFormLabel":{"message": "共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey.ioです。"},
+    "InstanceNameFormPlaceHolder":{"message": "共有先のサーバーのURLを入力"},
+    "ShareButtonToggleLabel":{"message": "Misskey系SNS以外のページで画面右下にシェアボタンを表示"},
+    "ShareButtonOnMisskeyToggleLabel":{"message": "Misskey系SNS上で右下にシェアボタン表示"},
+    "ShareButtonHideFormLabel":{"message": "その他、右下のボタンを表示させないドメイン(URLの「https://」のあとから「/」まで)を入力<br>（スペース区切りで複数指定）"},
+    "ShareButtonHideFormPlaceHolder":{"message": "ドメインをスペース区切りで入力"},
+    "SavedMassage":{"message": "保存されました！"}
+}
