@@ -1,7 +1,7 @@
 {
     "Name":{"message": "Twishare to Misskey"},
     "Description":{"message": "Allow users to share to Misskey from Twitter share button."},
-    "Version":{"message": "0.3.0"},
+    "Version":{"message": "0.4.0"},
     "ConfirmShareMessage":{
         "message":"We detected a Twitter share link. Do you want to share this with $INSTANCE_NAME$ ? (via browser extension Twishare to Misskey)",
         "placeholders": {
@@ -13,6 +13,8 @@
     },
     "PopupTitle":{"message": "Twishare to Misskey settings"},
     "ShowUpdateLogLink":{"message": "update log and notifications"},
+    "ShareButtonLabel":{"message": "Share this page"},
+    "Settings":{"message": "Settings"},
     "InstanceNameFormLabel":{"message": "Enter the server domain you want to share with. (Default is misskey.io .)"},
     "InstanceNameFormPlaceHolder":{"message": "Enter the domain"},
     "ShareButtonToggleLabel":{"message": "Display a share button in the lower right corner on non-Misskey sites"},
