@@ -4,9 +4,15 @@ if (typeof browser === 'undefined') {
     browser = chrome;
 }
 
+//ポップアップから、シェアボタンが押されたときに通知が来る
+browser.runtime.onMessage.addListener((request) => {
+    if (request.content === "share"){
+        buttonClicked();
+    }
+});
 setButtonIfNeeded();
 
-//以下全部関数定義（処理は以上一行）
+//以下全部関数定義
 
 async function setButtonIfNeeded() {
 	if (await whetherSetButton()) {

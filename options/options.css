@@ -22,6 +22,33 @@ h1{
 #installed:hover{
 	text-decoration: underline;
 }
+button{
+    display: table-cell;
+    background-color: #33a300;
+    color: #ffffff;
+    height: 50px;
+    width: 300px;
+    border-radius: 25px;
+    margin: 5px;
+    border: none;
+}
+button:hover{
+    background-color: #259500;
+    cursor: pointer;
+}
+button>img,
+button>span{
+    display: inline-block;
+    vertical-align: middle;
+}
+button>span{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+h2{
+    font-size: 1.2em;
+    font-weight: 500;
+}
 .description{
 	color: #666;
 }

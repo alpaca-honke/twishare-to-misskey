@@ -13,6 +13,8 @@
     },
     "PopupTitle":{"message": "Twishare to Misskey settings"},
     "ShowUpdateLogLink":{"message": "update log and notifications"},
+    "ShareButtonLabel":{"message": "Share this page"},
+    "Settings":{"message": "Settings"},
     "InstanceNameFormLabel":{"message": "Enter the server domain you want to share with. (Default is misskey.io .)"},
     "InstanceNameFormPlaceHolder":{"message": "Enter the domain"},
     "ShareButtonToggleLabel":{"message": "Display a share button in the lower right corner on non-Misskey sites"},

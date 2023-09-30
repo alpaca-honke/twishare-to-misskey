@@ -9,26 +9,35 @@
 		<div>
 			<h1><img src="../assets/icon.png" id="icon" /></h1>
 			<span id="version">v[バージョン番号] </span><a id="installed">更新内容/お知らせはこちら</a>
-			<p class="description" id="instance_name_form_label">共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey.ioです。</p>
-			<input type="text" placeholder="共有先のサーバーのURLを入力" id="instance_name" />
-			<div id="checkboxes">
-				<div>
-					<label for="button_visibility">
-						<input type="checkbox" id="button_visibility" class="check" />
-                        <span id="share_button_toggle_label">Misskey系SNS以外のページで画面右下にシェアボタンを表示</span>
-					</label>
-				</div>
-				<div>
-					<label for="button_visibility_on_misskey">
-						<input type="checkbox" id="button_visibility_on_misskey" class="check" />
-                        <span id="share_button_on_misskey_toggle_label">Misskey系SNS上で右下にシェアボタン表示</span>
-					</label>
-				</div>
-			</div>
-			<p class="description" id="share_button_hide_form_label">その他、右下のボタンを表示させないドメイン(URLの「https://」のあとから「/」まで)を入力<br>（スペース区切りで複数指定）</p>
-			<input type="text" placeholder="ドメインをスペース区切りで入力" id="sites_to_hide_button" />
-            <p id="save_status"></p>
+            <div class="share">
+                <button id="share_button">
+                    <img src="../assets/share.png" height="45px">
+                    <span id="share_button_label">現在のページをシェア</span>
+                </button>
+            </div>
+            <div class="settings">
+                <h2 id="settings_title">設定</h2>
+                <p class="description" id="instance_name_form_label">共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey.ioです。</p>
+                <input type="text" placeholder="共有先のサーバーのURLを入力" id="instance_name" />
+                <div id="checkboxes">
+                    <div>
+                        <label for="button_visibility">
+                            <input type="checkbox" id="button_visibility" class="check" />
+                            <span id="share_button_toggle_label">Misskey系SNS以外のページで画面右下にシェアボタンを表示</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="button_visibility_on_misskey">
+                            <input type="checkbox" id="button_visibility_on_misskey" class="check" />
+                            <span id="share_button_on_misskey_toggle_label">Misskey系SNS上で右下にシェアボタン表示</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="description" id="share_button_hide_form_label">その他、右下のボタンを表示させないドメイン(URLの「https://」のあとから「/」まで)を入力<br>（スペース区切りで複数指定）</p>
+                <input type="text" placeholder="ドメインをスペース区切りで入力" id="sites_to_hide_button" />
+                <p id="save_status"></p>
+            </div>
 		</div>
-		<script src="options.js"></script>
+		<script src="options.js""></script>
 	</body>
 </html>
