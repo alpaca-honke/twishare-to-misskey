@@ -142,8 +142,8 @@ function setButton(){
         const moveRadius = Math.sqrt((event.clientX - dragStartCursor[1])**2 + (event.clientY - dragStartCursor[2])**2);
         event.preventDefault();
         isDragging = false;
-        //移動距離が10px以下のみドラッグと判定
-        if (isClickEnabled || moveRadius > 10) {
+        //移動距離が20px以下のみドラッグと判定
+        if (isClickEnabled || moveRadius > 20) {
             button.style.top = (dragStartCursor[2]-3*button.getBoundingClientRect().height/4) + 'px';
             button.style.left = (dragStartCursor[1]-3*button.getBoundingClientRect().width/4) + 'px';
             buttonClicked();
