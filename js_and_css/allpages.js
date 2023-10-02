@@ -77,6 +77,7 @@ function setButton(){
     //変数の定義
     let isDragging = false;
     let isClickEnabled = true;
+    let dragStartCursor;//スワイプ時のみ使用
     let cursorX;
     let cursorY;
 
@@ -86,7 +87,9 @@ function setButton(){
         return false;
     };
     button.addEventListener('mousedown',(event) => {
-        if (event.button === 0) {isDragging = true};
+        if (event.button === 0) {
+            isDragging = true;
+        };
     });
     button.addEventListener('mousemove',(event) => {
         if (isDragging && event.button === 0) {
@@ -119,6 +122,7 @@ function setButton(){
         //画面スクロールを止める
         event.preventDefault();
         isDragging = true;
+        dragStartCursor = [event.clientX, event.clientY];
     });
     button.addEventListener('touchmove',(event) => {
         if (isDragging) {
@@ -135,9 +139,15 @@ function setButton(){
         };
     });
     button.addEventListener('touchend',(event) => {
+        const moveRadius = Math.sqrt((event.clientX - dragStartCursor[1])**2 + (event.clientY - dragStartCursor[2])**2);
         event.preventDefault();
         isDragging = false;
-        if (isClickEnabled) buttonClicked();
+        //移動距離が10px以下のみドラッグと判定
+        if (isClickEnabled || moveRadius > 10) {
+            button.style.top = (dragStartCursor[2]-3*button.getBoundingClientRect().height/4) + 'px';
+            button.style.left = (dragStartCursor[1]-3*button.getBoundingClientRect().width/4) + 'px';
+            buttonClicked();
+        };
         isClickEnabled = true;
     });
     //予期せずボタン外でタッチエンドされてもドラッグをオフにする
