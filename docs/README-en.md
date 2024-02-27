@@ -96,11 +96,9 @@ If you have any requests, bug reports, etc., **please feel free** (this is impor
 
 - [Mkkey (@alpaca_honke@mkkey.net)](https://mkkey.net/@alpaca_honke)
 - [Misskey.io (@alpaca_honke@misskey.io)](https://misskey.io/@alpaca_honke)
-- [Voskey @alpaca_honke@voskey.icalo.net](https://voskey.icalo.net/@alpaca_honke)
-- [Noeskey (@alpaca_honke@misskey.noellabo.jp)](https://misskey.noellabo.jp/@alpaca_honke)
 - Discord @alpaca_honke
 - [Twitter (@alpaca_honke)](https://twitter.com/alpaca_honke)
-- [GoogleForms (if you prefer to communicate via email)](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)
+- [Email (akp@ymail.ne.jp)](mailto:akp@ymail.ne.jp)
 - [More](https://alpaca-honke.github.io/)
 
 ## Update History
@@ -136,4 +134,4 @@ You are free to use it under the CC BY-NC-SA license. <a rel="license" href="htt
 
 This extension is distributed under the MIT License. See [LICENSE](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/LICENSE) for more information.  
 
-Copyright © あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
+Copyright © 2023-2024 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
