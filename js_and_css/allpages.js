@@ -139,10 +139,11 @@ function setButton(){
         };
     });
     button.addEventListener('touchend',(event) => {
+        //移動半径を三平方から算出し一定以下の場合下記のドラッグ無効判定を適用
         const moveRadius = Math.sqrt((event.clientX - dragStartCursor[1])**2 + (event.clientY - dragStartCursor[2])**2);
         event.preventDefault();
         isDragging = false;
-        //移動距離が20px以下のみドラッグと判定
+        //移動距離が20px以下のみドラッグと判定（うまくいってないかも）
         if (isClickEnabled || moveRadius > 20) {
             button.style.top = (dragStartCursor[2]-3*button.getBoundingClientRect().height/4) + 'px';
             button.style.left = (dragStartCursor[1]-3*button.getBoundingClientRect().width/4) + 'px';
