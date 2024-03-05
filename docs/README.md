@@ -20,8 +20,9 @@ Twitterのシェアボタンから Misskey （またはその派生 SNS）にシ
 
 ## 機能/特徴
 
-- Twitterのシェアボタンを押したときに確認画面が出てきてMisskeyにシェアできるか選択できる
-    - もちろんキャンセルすればTwitterにもシェアできる
+- Twitterのシェアボタンを押したときに確認画面が出てきてTwtterではなくMisskeyにシェアできるか選択できる
+    - もちろんキャンセルすればMisskeyではなくTwitterにもシェアできる
+    - 全画面表示の動画等があるときは隠される
 - Twitterシェアボタンがなくても右下に出るシェアボタンからMisskeyにシェアできる
     - 動かしてどかすことができる
     - 非表示にすることができる
@@ -68,7 +69,7 @@ Safari向けには公開していませんが、動くかもしれない...。�
 署名済みパッケージなどは[リリースページ](https://github.com/alpaca-honke/twishare-to-misskey/releases)からダウンロードしてください。
 
 公式ではありませんが、非公式でUserScriptがあるようです。（旧バージョンです。これに関するお問い合わせはUserScript公開者さんにお願いします。）
-[UserScript](https://greasyfork.org/js/scripts/466136-twishare-to-misskey)
+[UserScript](https://greasyfork.org/ja/scripts/466136-twishare-to-misskey)
 
 [Twishare to Misskey Bookamrklet](https://alpaca-honke.github.io/twishare-to-misskey/bookmarklet.html)では、Twishare to Misskeyのシェアボタンの機能を提供するブックマークレットを配布していますので、ぜひご利用ください。
 
@@ -125,6 +126,9 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 
 また、僕はこのMisskey Shareを使用してシェアするためのURLを簡単に作成するサービスも作成しました。こちらもぜひ！  
 [Misskey Share URL 作成簡単ツール](https://alpaca-honke.github.io/make-misskeyshare-url)
+
+Misskey開発チームから公式にもWebサイトに設置するシェアボタンが公開されました！  
+[Misskey Hub 共有フォーム中継サービス](https://misskey-hub.net/ja/docs/for-users/features/share-form/#misskey-hub%E3%81%AE%E5%85%B1%E6%9C%89%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%AD%E7%B6%99%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
 
 ## ロゴ・画像について
 

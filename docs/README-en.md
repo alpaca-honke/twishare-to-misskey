@@ -20,8 +20,9 @@ I'll update it as I feel like it.
 
 ## Features
 
-- When you click the share button on Twitter, a confirmation screen appears and you can choose whether you want to share to Misskey or not.
+- When you click the share button for Twitter, a confirmation screen appears and you can choose whether you want to share to Misskey (not Twitter) or not.
     - Of course, you can also share to Twitter if you cancel.
+    - It will be hidden when there are some full-screend something such as videos.
 - If there's no Twitter share button, you can still share to Misskey by clicking the share button in the lower right corner.
     - Can be moved and moved out of the way
     - You can hide it.
@@ -68,7 +69,7 @@ Also, if there are people who can create extensions for Safari so that we can pr
 Please download signed packages and other information from the [release page](https://github.com/alpaca-honke/twishare-to-misskey/releases).
 
 Although not official, there seems to be an unofficial UserScript. (This is an older version. If you have any questions about this, please contact the UserScript publisher.)
-[UserScript](https://greasyfork.org/js/scripts/466136-twishare-to-misskey)
+[UserScript](https://greasyfork.org/ja/scripts/466136-twishare-to-misskey)
 
 [Twishare to Misskey Bookamrklet](https://alpaca-honke.github.io/twishare-to-misskey/bookmarklet.html) is distributing a bookmarklet that provides the functionality of the Twishare to Misskey share button. Please use the bookmarklet that provides the function of Twishare to Misskey's share button.
 
@@ -76,7 +77,7 @@ Although not official, there seems to be an unofficial UserScript. (This is an o
 
 1. after installation, go to the extension's administration screen and check if various permissions are allowed, and grant them as appropriate.  
 1. click the Twishare to Misskey icon in the list of extensions on the top left, and enter the server name you want to share to.
-(This is not necessary if you are sharing to Misskey.io or after the second share.)  
+(This is not necessary if you are sharing to Misskey.io or second time share and after.)  
 Also, select the toggle switch below it.  
 ![option_ui.png](images/option_ui.png)
 1. when you press the Twitter share button and go to the next page, you will be asked if you want to share to Misskey.  
@@ -123,10 +124,13 @@ Mirai Corporation Co., Ltd. has released a share button for Misskey to be instal
 I have also created a service that makes it easy to create a URL to share using Misskey Share. Please check it out too!  
 [Misskey Share URL Creator Tool](https://alpaca-honke.github.io/make-misskeyshare-url)
 
+The Misskey development team has also officially released a share button to be placed on your website!  
+[Misskey Hub 共有フォーム中継サービス](https://misskey-hub.net/en/docs/for-users/features/share-form/#misskey-hub%E3%81%AE%E5%85%B1%E6%9C%89%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%AD%E7%B6%99%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+
 ## About Logo/ images
 
-The Twishare to Misskey logo (first image below) and the share button image (second image below) were created by modifying images published at [misskey-dev/assets](https://github.com/misskey-devhttps://raw. githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets) with modifications. 
-You are free to use it under the CC BY-NC-SA license. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="height:2em;" /></a>
+The Twishare to Misskey logo (first image below) and the share button image (second image below) were created by modifying images published at [misskey-dev/assets](https://github.com/misskey-devhttps://raw. githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets). 
+You are free to use it under the CC BY-NC-SA 4.0 license. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="height:2em;" /></a>  
 <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 5em;">  
 <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/share.png" style="height: 5em;">
 
