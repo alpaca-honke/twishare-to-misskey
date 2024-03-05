@@ -1,49 +1,49 @@
 {
-	"manifest_version": 3,
+    "manifest_version": 3,
     "default_locale": "en",
-	"name":"Twishare to Misskey",
-	"version":"0.4.0",
-	"description":"__MSG_Description__",
-	"icons":{
-		"16":"icons/16.png", 
-		"48":"icons/48.png",
-		"128":"icons/128.png"
-	},
-	"content_scripts":[
-		{
-			"run_at":"document_start",
-			"matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*","https://twitter.com/share","http://twitter.com/share"],
-			"js":["js_and_css/on_twitter_intent.js"]
-		},
-		{
-			"run_at": "document_end",
-			"matches": ["<all_urls>"],
-			"js": ["js_and_css/allpages.js"],
-			"css": ["js_and_css/allpages.css"]
-		}
-	],
-	"background": {
-		"service_worker": "js_and_css/background.js"
-	},
-	"action": {
-		"default_icon": {
-			"16": "icons/16.png",
-			"48": "icons/48.png",
-			"128": "icons/128.png"
-		},
-		"default_title": "__MSG_PopupTitle__",
-		"default_popup": "options/options.html"
-	},
-	"options_ui": {
-		"page": "options/options.html"
-	},
-	"web_accessible_resources": [
-		{
-			"resources": ["assets/share.png"],
-			"matches": ["<all_urls>"]
-		}
-	],
-	"permissions": ["storage"],
-	"author":"Alkappa/alpaca-honke",
-	"homepage_url":"https://github.com/alpaca-honke/twishare-to-misskey/"
+    "name":"Twishare to Misskey",
+    "version":"0.4.0",
+    "description":"__MSG_Description__",
+    "icons":{
+        "16":"icons/16.png", 
+        "48":"icons/48.png",
+        "128":"icons/128.png"
+    },
+    "content_scripts":[
+        {
+            "run_at":"document_start",
+            "matches":["https://twitter.com/intent/tweet*","http://twitter.com/intent/tweet*","https://twitter.com/share","http://twitter.com/share"],
+            "js":["js_and_css/on_twitter_intent.js"]
+        },
+        {
+            "run_at": "document_end",
+            "matches": ["<all_urls>"],
+            "js": ["js_and_css/allpages.js"],
+            "css": ["js_and_css/allpages.css"]
+        }
+    ],
+    "background": {
+        "service_worker": "js_and_css/background.js"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icons/16.png",
+            "48": "icons/48.png",
+            "128": "icons/128.png"
+        },
+        "default_title": "__MSG_PopupTitle__",
+        "default_popup": "options/options.html"
+    },
+    "options_ui": {
+        "page": "options/options.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["assets/share.png"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "permissions": ["storage"],
+    "author":"Alkappa/alpaca-honke",
+    "homepage_url":"https://github.com/alpaca-honke/twishare-to-misskey/"
 }

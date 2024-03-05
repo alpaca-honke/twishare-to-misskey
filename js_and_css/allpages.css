@@ -1,24 +1,24 @@
 #_twishare_to_misskey_share{
-	position: fixed !important;
+    position: fixed !important;
     /*JSから操作するときに競合を防ぐためtopとleftで指定*/
-	top: calc(100% - 60px);
-	left: calc(100% - 60px);
-	margin: 10px !important;
-	padding: 0 !important;
-	height: 40px !important;
-	width: 40px !important;
-	background-color: #33a300 !important;
-	text-align: center !important;
-	border-radius: 20em !important;
-	border: none !important;
-	z-index: 2147483647 !important;
+    top: calc(100% - 60px);
+    left: calc(100% - 60px);
+    margin: 10px !important;
+    padding: 0 !important;
+    height: 40px !important;
+    width: 40px !important;
+    background-color: #33a300 !important;
+    text-align: center !important;
+    border-radius: 20em !important;
+    border: none !important;
+    z-index: 2147483647 !important;
 }
 #_twishare_to_misskey_share:hover{
     background-color: #259500 !important;
     cursor: pointer !important;
 }
 #_twishare_to_misskey_share_img{
-	height: 100% !important;
-	margin: 0 !important;
-	padding: 0 !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }

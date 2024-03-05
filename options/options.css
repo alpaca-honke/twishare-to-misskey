@@ -1,26 +1,26 @@
 body{
-	background-color: #f2f2f2;
-	text-align: center;
-	box-sizing: border-box;
+    background-color: #f2f2f2;
+    text-align: center;
+    box-sizing: border-box;
 }
 h1{
-	margin: 10px;
-	padding: 0;
+    margin: 10px;
+    padding: 0;
 }
 #icon{
-	height: 5em;
+    height: 5em;
 }
 #version{
-	color: #666;
-	/*font-size: 0.7em;*/
+    color: #666;
+    /*font-size: 0.7em;*/
 }
 #installed{
-	color: #666;
-	text-decoration: underline;
-	cursor: pointer;
+    color: #666;
+    text-decoration: underline;
+    cursor: pointer;
 }
 #installed:hover{
-	text-decoration: underline;
+    text-decoration: underline;
 }
 button{
     display: table-cell;
@@ -50,45 +50,45 @@ h2{
     font-weight: 500;
 }
 .description{
-	color: #666;
+    color: #666;
 }
 input[type="text"]{
-	outline: none;
-	padding: 10px;
-	margin: 5px;
-	width: 300px;
-	border: 2px solid #ccc;
-	border-radius: 18px;
-	font-size: 16px;
+    outline: none;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 18px;
+    font-size: 16px;
 }
 #checkboxes{
-	margin-top: 15px;
+    margin-top: 15px;
 }
 
 /*楕円*/
 input[type="checkbox"]{
-	position: relative;
-	top: 8px;/*そのまんまだと上に8pxずれちゃうので直す*/
-	margin-right: 10px;
-	appearance: none;
-	background-color: #0c0c0d1a;
-	border-radius: 8px;
-	height: 16px;
-	width: 32px;
+    position: relative;
+    top: 8px;/*そのまんまだと上に8pxずれちゃうので直す*/
+    margin-right: 10px;
+    appearance: none;
+    background-color: #0c0c0d1a;
+    border-radius: 8px;
+    height: 16px;
+    width: 32px;
 }
 input[type="checkbox"]:hover{
-	background-color: #0c0c0d33;
-	border-color: #0c0c0d7f;
+    background-color: #0c0c0d33;
+    border-color: #0c0c0d7f;
 }
 input[type="checkbox"]:active{
-	background-color: #0c0c0d4d;
+    background-color: #0c0c0d4d;
 }
 input[type="checkbox"]:checked{
-	background-color: #55c500;
-	border-color: #55c500;
+    background-color: #55c500;
+    border-color: #55c500;
 }
 input[type="checkbox"]:checked:hover{
-	background-color: #44b400;
+    background-color: #44b400;
 }
 
 /*丸*/
@@ -110,21 +110,21 @@ input[type="checkbox"]:checked::before {
 }
 
 label{
-	color: #333;
-	font-size: 14px;
+    color: #333;
+    font-size: 14px;
 }
 #save_button{
-	color: #ffffff;
-	background-color: #4169e1;
-	margin: 5px;
-	height: 40px;
-	width: 100px;
-	border: 0;
-	border-radius: 25px;
+    color: #ffffff;
+    background-color: #4169e1;
+    margin: 5px;
+    height: 40px;
+    width: 100px;
+    border: 0;
+    border-radius: 25px;
 }
 #save_button:hover{
-	background-color: #3058d0;
+    background-color: #3058d0;
 }
 #save_status{
-	font-weight: bold;
+    font-weight: bold;
 }

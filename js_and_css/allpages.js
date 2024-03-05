@@ -15,69 +15,69 @@ setButtonIfNeeded();
 //以下全部関数定義
 
 async function setButtonIfNeeded() {
-	if (await whetherSetButton()) {
-		setButton();
-		hideButtonOnFullscreen();
-	}
+    if (await whetherSetButton()) {
+        setButton();
+        hideButtonOnFullscreen();
+    }
 }
 
 async function whetherSetButton() {
-	if (await isSiteToHideButton()) {
-		return false;
-	}
-	// sitesToHideButtonはisSiteToHideButtonで読むのでここでは読まない
-	const items = await browser.storage.sync.get(['buttonVisibilityOnMisskey', 'buttonVisibility']);
-	if (items.buttonVisibilityOnMisskey === false) {
-		// Misskey上でボタンを表示させない設定のとき、Misskeyにアクセスしてたらfalse
-		if (await isMisskey()) {
-			return false;
-		}
-	}
-	if (items.buttonVisibility === false) {
-		return false;
-	}
-	return true;
+    if (await isSiteToHideButton()) {
+        return false;
+    }
+    // sitesToHideButtonはisSiteToHideButtonで読むのでここでは読まない
+    const items = await browser.storage.sync.get(['buttonVisibilityOnMisskey', 'buttonVisibility']);
+    if (items.buttonVisibilityOnMisskey === false) {
+        // Misskey上でボタンを表示させない設定のとき、Misskeyにアクセスしてたらfalse
+        if (await isMisskey()) {
+            return false;
+        }
+    }
+    if (items.buttonVisibility === false) {
+        return false;
+    }
+    return true;
 }
 
 async function isMisskey() {
-	// MisskeyやCalckeyでは、metaタグのname='application-name'にcontent='Misskey'とか'Calckey'がついてる
-	let metatags = document.getElementsByTagName('meta');
+    // MisskeyやCalckeyでは、metaタグのname='application-name'にcontent='Misskey'とか'Calckey'がついてる
+    let metatags = document.getElementsByTagName('meta');
     const misskeys = ['Misskey','Calckey','Firefish'];
-	for (const metatag of metatags){
-		if (
-			metatag.getAttribute('name') === 'application-name' &&
+    for (const metatag of metatags){
+        if (
+            metatag.getAttribute('name') === 'application-name' &&
             misskeys.includes(metatag.getAttribute('content'))
-		){
-			return true;
-		}
-	}
-	return false;
+        ){
+            return true;
+        }
+    }
+    return false;
 }
 async function isSiteToHideButton() {
-	const items = await browser.storage.sync.get('sitesToHideButton');
-	if (items.sitesToHideButton) {
-		// 区切りのスペースごと保存してあるので展開
-		let sites = items.sitesToHideButton.split(' ');
-		return sites.some((value) => {
-			return value
-				// 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視
-				.replace(/^https?:\/\//, '')
-				.replace(/\/(.*)$/, '')
-				=== location.hostname;
-		});
-	}
-	return false;
+    const items = await browser.storage.sync.get('sitesToHideButton');
+    if (items.sitesToHideButton) {
+        // 区切りのスペースごと保存してあるので展開
+        let sites = items.sitesToHideButton.split(' ');
+        return sites.some((value) => {
+            return value
+                // 文頭のhttps://と/が出た以降から文末までの文字 がある場合、その文字列を無視
+                .replace(/^https?:\/\//, '')
+                .replace(/\/(.*)$/, '')
+                === location.hostname;
+        });
+    }
+    return false;
 }
 
 function setButton(){
-	const body = document.body;
-	const button = document.createElement('button');
-	const shareImg = document.createElement('img');
-	button.id = '_twishare_to_misskey_share';
-	shareImg.src = browser.runtime.getURL('assets/share.png');
-	shareImg.id = '_twishare_to_misskey_share_img';
-	button.appendChild(shareImg);
-	body.appendChild(button);
+    const body = document.body;
+    const button = document.createElement('button');
+    const shareImg = document.createElement('img');
+    button.id = '_twishare_to_misskey_share';
+    shareImg.src = browser.runtime.getURL('assets/share.png');
+    shareImg.id = '_twishare_to_misskey_share_img';
+    button.appendChild(shareImg);
+    body.appendChild(button);
 
     //以下クリックorドラッグ時
     //変数の定義
@@ -208,12 +208,12 @@ function buttonClicked() {
 }
 
 function hideButtonOnFullscreen(){
-	document.addEventListener('fullscreenchange', () => {
-		const button = document.querySelector('#_twishare_to_misskey_share');
-		if (button == null){ return; }
+    document.addEventListener('fullscreenchange', () => {
+        const button = document.querySelector('#_twishare_to_misskey_share');
+        if (button == null){ return; }
 
-		const toFullscreen = document.fullscreenElement;
-		if (toFullscreen) { button.classList.add('hidden'); }
-		else { button.classList.remove('hidden'); }
-	});
+        const toFullscreen = document.fullscreenElement;
+        if (toFullscreen) { button.classList.add('hidden'); }
+        else { button.classList.remove('hidden'); }
+    });
 }

@@ -56,25 +56,25 @@ function Save() {
 }
 
 function Load() {
-	browser.storage.sync.get(['instanceName','buttonVisibility','buttonVisibilityOnMisskey','sitesToHideButton']).then((items) => {
+    browser.storage.sync.get(['instanceName','buttonVisibility','buttonVisibilityOnMisskey','sitesToHideButton']).then((items) => {
         document.getElementById('instance_name').value =
             items.instanceName || 'misskey.io';
-		if (items.buttonVisibility !== false){
-			document.getElementById('button_visibility').checked = true;
-		}
-		if (items.buttonVisibilityOnMisskey !== false){
-			document.getElementById('button_visibility_on_misskey').checked = true;
-		}
+        if (items.buttonVisibility !== false){
+            document.getElementById('button_visibility').checked = true;
+        }
+        if (items.buttonVisibilityOnMisskey !== false){
+            document.getElementById('button_visibility_on_misskey').checked = true;
+        }
         document.getElementById('sites_to_hide_button').value = items.sitesToHideButton || null; 
     });
 }
 
 function SucceedSave() {
-	const saveStatus = document.getElementById('save_status');
-	saveStatus.innerHTML = browser.i18n.getMessage('SavedMassage');
-	saveStatus.style.color = '#55c500'
+    const saveStatus = document.getElementById('save_status');
+    saveStatus.innerHTML = browser.i18n.getMessage('SavedMassage');
+    saveStatus.style.color = '#55c500'
 }
 
 function showInstalled() {
-	window.open('https://alpaca-honke.github.io/twishare-to-misskey/installed.html');
+    window.open('https://alpaca-honke.github.io/twishare-to-misskey/installed.html');
 }

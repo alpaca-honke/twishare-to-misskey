@@ -5,12 +5,12 @@ if (typeof browser === 'undefined') {
 }
 
 browser.runtime.onInstalled.addListener((details) => {
-	if (details.reason === 'install' || details.reason === 'update') {
-		browser.tabs.create(
-			{
-				"url":"https://alpaca-honke.github.io/twishare-to-misskey/installed.html"
-			}
-		);
-	}
+    if (details.reason === 'install' || details.reason === 'update') {
+        browser.tabs.create(
+            {
+                "url":"https://alpaca-honke.github.io/twishare-to-misskey/installed.html"
+            }
+        );
+    }
 });
 
