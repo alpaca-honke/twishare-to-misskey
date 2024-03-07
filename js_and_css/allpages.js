@@ -211,7 +211,8 @@ function buttonClicked() {
 
             const instanceUrl = new URL(`https://${instanceName}/share`);
             //textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
-            let shareText = nowTitle + '\n\n' + nowUrl;
+            //ついでにリンクテキストにページタイトルをつける
+            let shareText = `[${nowTitle}](${nowUrl})`;
             instanceUrl.searchParams.set('text',shareText);
             window.open(instanceUrl.href);
         }
