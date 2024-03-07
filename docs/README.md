@@ -138,6 +138,10 @@ CC BY-NC-SAライセンス<a rel="license" href="http://creativecommons.org/lice
 <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 5em;">  
 <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/share.png" style="height: 5em;">
 
+なお、カスタム絵文字に使用する際は、余白を切り落とした以下の画像を使用することをおすすめします。
+<img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/docs/images/logo_for_emoji.png" style="height: 5em;">  
+
+
 ## License
 
 この拡張機能は、 MIT ライセンスで頒布されています。詳しくは、[LICENSE](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/LICENSE) をご覧ください。  

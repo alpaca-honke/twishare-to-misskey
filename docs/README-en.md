@@ -134,6 +134,9 @@ You are free to use it under the CC BY-NC-SA 4.0 license. <a rel="license" href=
 <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 5em;">  
 <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/share.png" style="height: 5em;">
 
+If you want to use as a custom-Emoji, I recommend using one that has been cut off blanks below.  
+<img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/docs/images/logo_for_emoji.png" style="height: 5em;">  
+
 ## License
 
 This extension is distributed under the MIT License. See [LICENSE](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/LICENSE) for more information.  
