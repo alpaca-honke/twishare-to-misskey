@@ -187,6 +187,8 @@ function buttonClicked() {
             //シェア用リンクが生成されたときに付与される、端末タイプの判別IDを除去
             const urlToShare = new URL(nowUrl);
             urlToShare.searchParams.delete('s');
+            //同様にtパラメータ（用途不明）も削除
+            urlToShare.searchParams.delete('t');
 
             const instanceUrl = new URL(`https://${instanceName}/share`);
             let shareText = `${replacedTweetText}\n>by <plain>${tweetUsername}</plain>\n\n${urlToShare.href}`;
