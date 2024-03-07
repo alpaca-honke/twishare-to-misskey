@@ -168,6 +168,8 @@ function buttonClicked() {
     browser.storage.sync.get(['instanceName']).then((items) => {
         const instanceName = items.instanceName || 'misskey.io';
         const tweetRegex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
+        const threadsPostRegex = /^https?:\/\/www.threads\.net\/@\w+\/post\/\w+.*$/;
+
 
         if (tweetRegex.test(location.href)){
             const tweet = document.querySelector('article div[data-testid="tweetText"]');
@@ -197,7 +199,15 @@ function buttonClicked() {
         } else {
             //JSが取得するURLは、マルチバイト文字がエンコードされた状態になっている
             const nowUrl = location.href;
-            const nowTitle = document.title;
+            const urlToShare = new URL(nowUrl);
+            let nowTitle = document.title;
+
+            if(threadsPostRegex.test(location.href)){
+                nowTitle = nowTitle.replace( /(@\w{1,30})/g ,'<plain>$1@threads.net</plain>');
+                urlToShare.searchParams.delete('igshid');
+            } else {
+                nowTitle = nowTitle.replace( /(@\w{1,20})/g ,'<plain>$1</plain>');
+            }
 
             const instanceUrl = new URL(`https://${instanceName}/share`);
             //textパラメータにタイトルと2重エンコードしたURLの両方を渡す仕様に変更 issue #14
