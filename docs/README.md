@@ -31,7 +31,8 @@ Twitterのシェアボタンから Misskey （またはその派生 SNS）にシ
 - ツイートをシェアする際に、ツイート内容がノートに引用として貼り付けられる
 - 特定のサイトでURLにつけられる不要な情報を削除してからシェアする
     - YouTube: トラッキングに関わると思われるIDを削除
-    - Twitter: シェアリンクを生成するときに付与される、端末の種類を意味すると思われる数字を削除
+    - Twitter: ２種類の不要な情報を削除
+- Threadsからシェアする際の予期せぬメンションを回避
 - 認証情報を保存しないためセキュリティ的に安全
 - 拡張機能の一部の機能と同等の機能を有するブックマークレットを配布
 
@@ -101,8 +102,6 @@ Safari向けには公開していませんが、動くかもしれない...。�
 - [電子メール (akp@ymail.ne.jp)](mailto:akp@ymail.ne.jp)
 - [その他](https://alpaca-honke.github.io/)
 
-Misskey.io の Discord にもいるとかいないとか。（いるんで見つけたらそこから連絡していただいても構いません）  
-
 ## 更新履歴
 
 [更新されたときに見るページ](https://alpaca-honke.github.io/twishare-to-misskey/installed.html)みてね
@@ -112,8 +111,6 @@ Misskey.io の Discord にもいるとかいないとか。（いるんで見つ
 問題の修正、新機能の追加など、開発に協力してくださる方がいましたら大歓迎です。[CONTRIBUTING.md](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/docs/CONTRIBUTING.md)をご覧ください。  
 
 ## Contributors
-
-
 
 - [@emtkmkk](https://github.com/emtkmkk)さん
 - [@massongit](https://github.com/massongit)さん

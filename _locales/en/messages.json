@@ -1,7 +1,7 @@
 {
     "Name":{"message": "Twishare to Misskey"},
     "Description":{"message": "Allow users to share to Misskey from Twitter share button."},
-    "Version":{"message": "0.4.0"},
+    "Version":{"message": "0.4.1"},
     "ConfirmShareMessage":{
         "message":"We detected a Twitter share link. Do you want to share this with $INSTANCE_NAME$ ? (via browser extension Twishare to Misskey)",
         "placeholders": {
