@@ -32,6 +32,8 @@ Twishare to Misskeyをインストールできないブラウザでもぜひご�
 #### General
 
 - twitter.com/share再対応
+- Threadsのシェアをする際のメンション回避
+- ツイートシェアの際の余分な情報の排除
 
 #### General
 
