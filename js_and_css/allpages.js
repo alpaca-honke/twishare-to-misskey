@@ -167,7 +167,7 @@ function setButton(){
 function buttonClicked() {
     browser.storage.sync.get(['instanceName']).then((items) => {
         const instanceName = items.instanceName || 'misskey.io';
-        const tweetRegex = /^https?:\/\/twitter\.com\/\w+\/status\/\d+.*$/;
+        const tweetRegex = /^https?:\/\/(twitter|x)\.com\/\w+\/status\/\d+.*$/;
         const threadsPostRegex = /^https?:\/\/www.threads\.net\/@\w+\/post\/\w+.*$/;
 
 
