@@ -31,7 +31,8 @@ I'll update it as I feel like it.
 - When sharing a tweet, the content of the tweet can be pasted as a quote in the note
 - Remove unnecessary information attached to URLs on certain sites before sharing
     - YouTube: remove IDs that may be involved in tracking
-    - Twitter: Remove numbers assigned when generating share links that may indicate the type of device.
+    - Twitter: Delete 2 types of unnecessary information
+- Avoid unexpected mention on shared post from Threads
 - Secure because it does not store authentication information
 - Distribute bookmarklets that have the same functionality as some of the extensions
 
