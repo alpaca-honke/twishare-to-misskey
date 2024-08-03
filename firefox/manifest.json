@@ -31,9 +31,7 @@
         }
     ],
     "background": {
-        "page": "",
-        "scripts": ["js_and_css/background.js"],
-        "type": "module"
+        "scripts": ["js_and_css/background.js"]
     },
     "action": {
         "default_icon": {
