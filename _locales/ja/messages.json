@@ -14,6 +14,7 @@
     "PopupTitle":{"message": "Twishare to Misskeyの設定"},
     "ShowUpdateLogLink":{"message": "更新内容/お知らせはこちら"},
     "ShareButtonLabel":{"message": "現在のページをシェア"},
+    "ShareButtonCaution":{"message": "Firefoxでは使用できません"},
     "Settings":{"message": "設定"},
     "InstanceNameFormLabel":{"message": "共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey.ioです。"},
     "InstanceNameFormPlaceHolder":{"message": "共有先のサーバーのURLを入力"},

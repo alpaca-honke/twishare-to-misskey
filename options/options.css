@@ -51,6 +51,7 @@ h2{
 }
 .description{
     color: #666;
+    display: block;
 }
 input[type="text"]{
     outline: none;
