@@ -26,7 +26,7 @@ I'll update it as I feel like it.
 - If there's no Twitter share button, you can still share to Misskey by clicking the share button in the lower right corner.
     - Can be moved and moved out of the way
     - You can hide it.
-- There is a share button in the extension popup (only for Chrome)
+- There is a share button in the extension popup
 - Almost all Misskey (v12 or later) and Firefish (formerly Calckey) are supported
 - When sharing a tweet, the content of the tweet can be pasted as a quote in the note
 - Remove unnecessary information attached to URLs on certain sites before sharing
