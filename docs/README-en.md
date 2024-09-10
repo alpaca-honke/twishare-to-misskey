@@ -22,11 +22,11 @@ I'll update it as I feel like it.
 
 - When you click the share button for Twitter, a confirmation screen appears and you can choose whether you want to share to Misskey (not Twitter) or not.
     - Of course, you can also share to Twitter if you cancel.
-    - It will be hidden when there are some full-screend something such as videos.
 - If there's no Twitter share button, you can still share to Misskey by clicking the share button in the lower right corner.
     - Can be moved and moved out of the way
     - You can hide it.
-- There is a share button in the extension popup (only for Chrome)
+    - It will be hidden when there are some full-screend something such as videos.
+- A share button in the extension popup (only for Chrome)
 - Almost all Misskey (v12 or later) and Firefish (formerly Calckey) are supported
 - When sharing a tweet, the content of the tweet can be pasted as a quote in the note
 - Remove unnecessary information attached to URLs on certain sites before sharing
@@ -41,15 +41,15 @@ I'll update it as I feel like it.
 ### Chrome Compatible Browsers
 
 (Chrome, Chromium, Edge, Vivaldi, Brave, Opera, etc.)  
-Android smartphones can use Kiwi Browser, etc.  
+You can use Kiwi Browser on Android smartohone.  
 
-Please visit [Chrome Web Store](https://chrome.google.com/webstore/detail/twishare-to-misskey/fbaifpppndnlbbjcbjdfgbdkoibnipjb) to install.  
+Visit [Chrome Web Store](https://chrome.google.com/webstore/detail/twishare-to-misskey/fbaifpppndnlbbjcbjdfgbdkoibnipjb) and install.  
 
 ### Firefox Compatible Browsers  
 
 (Firefox etc.)  
 
-Go to [Firefox Addons](https://addons.mozilla.org/ja/firefox/addon/twishare-to-misskey/) and install.  
+Visit [Firefox Addons](https://addons.mozilla.org/ja/firefox/addon/twishare-to-misskey/) and install.  
 
 ### Safari
 
@@ -87,6 +87,10 @@ Click OK to share the page to Misskey.
 ![share.png](images/share.png)
 1. if you checked the toggle switch first, a green share button will appear in the lower right corner of the screen. This allows you to share pages that do not have a Twitter share button.  
     <img src="images/floating.png" alt="floating.ong" style="border: solid 1px #000">
+
+## Privacy Policy
+This extension is developed and distributed under the below privacy pilicy.
+[Privacy Policy of browser extension Twishare to Misskey(Japanese document)](https://alpaca-honke.github.io/twishare-to-misskey/privacy.html)
 
 ## Have a question?
 
@@ -130,7 +134,7 @@ The Misskey development team has also officially released a share button to be p
 
 ## About Logo/ images
 
-The Twishare to Misskey logo (first image below) and the share button image (second image below) were created by modifying images published at [misskey-dev/assets](https://github.com/misskey-devhttps://raw. githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets). 
+The Twishare to Misskey logo (first image below) and the share button image (second image below) were created by modifying images published at [misskey-dev/assets](https://github.com/misskey-dev). 
 You are free to use it under the CC BY-NC-SA 4.0 license. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="height:2em;" /></a>  
 <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/icon.png" style="height: 5em;">  
 <img src="https://raw.githubusercontent.com/alpaca-honke/twishare-to-misskey/develop/assets/share.png" style="height: 5em;">

@@ -22,10 +22,10 @@ Twitterのシェアボタンから Misskey （またはその派生 SNS）にシ
 
 - Twitterのシェアボタンを押したときに確認画面が出てきてTwtterではなくMisskeyにシェアできるか選択できる
     - もちろんキャンセルすればMisskeyではなくTwitterにもシェアできる
-    - 全画面表示の動画等があるときは隠される
 - Twitterシェアボタンがなくても右下に出るシェアボタンからMisskeyにシェアできる
     - 動かしてどかすことができる
     - 非表示にすることができる
+    - 全画面表示の動画等があるときは隠される
 - 右上のポップアップ画面にもシェアボタンがある（現在はChromeのみ）
 - ほぼすべてのMisskey（v12以降）とFirefish（旧Calckey）に対応
 - ツイートをシェアする際に、ツイート内容がノートに引用として貼り付けられる
@@ -86,6 +86,11 @@ Safari向けには公開していませんが、動くかもしれない...。�
 ![share.png](images/share.png)
 1. 最初にトグルスイッチにチェックを入れた場合は、画面の右下に緑のシェアボタンが出てきます。これを使えば、Twitterのシェアボタンがないページもシェアできます。  
     <img src="images/floating.png" alt="floating.ong" style="border: solid 1px #000">
+
+## プライバシーポリシー
+
+この拡張機能は以下のプライバシーポリシーの下開発・公開されています。
+[ブラウザ拡張Twishare to Misskeyにおけるプライバシーポリシー(個人情報保護方針)](https://alpaca-honke.github.io/twishare-to-misskey/privacy.html)
 
 ## 質問がある？
 
