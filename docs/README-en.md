@@ -26,7 +26,7 @@ I'll update it as I feel like it.
     - Can be moved and moved out of the way
     - You can hide it.
     - It will be hidden when there are some full-screend something such as videos.
-- A share button in the extension popup (only for Chrome)
+- A share button in the extension popup
 - Almost all Misskey (v12 or later) and Firefish (formerly Calckey) are supported
 - When sharing a tweet, the content of the tweet can be pasted as a quote in the note
 - Remove unnecessary information attached to URLs on certain sites before sharing
