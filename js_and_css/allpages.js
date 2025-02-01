@@ -4,6 +4,17 @@ if (typeof browser === 'undefined') {
     browser = chrome;
 }
 
+//browser.permissions.request(
+//    {
+//        permissions: ["storage"],
+//        host_permissions: ["<all_urls>"]
+//    }
+//).then((response) => {
+//    if (!response.permissions[0] === "storage" || !response.host_permissions[0] === "<all_urls>") {
+//        window.alert(browser.i18n.getMessage('RequestPermissions', ));
+//    }
+//});
+
 //ポップアップから、シェアボタンが押されたときに通知が来る
 browser.runtime.onMessage.addListener((request) => {
     if (request.content === "share"){

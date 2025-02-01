@@ -52,6 +52,7 @@
         }
     ],
     "permissions": ["storage"],
+    "host_permissions": ["<all_urls>"],
     "author":"Alkappa/alpaca-honke",
-    "homepage_url":"https://github.com/alpaca-honke/twishare-to-misskey/"
+    "homepage_url":"https://alpaca-honke.github.io/twishare-to-misskey/"
 }
