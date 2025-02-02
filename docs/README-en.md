@@ -146,4 +146,4 @@ If you want to use as a custom-Emoji, I recommend using one that has been cut of
 
 This extension is distributed under the MIT License. See [LICENSE](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/LICENSE) for more information.  
 
-Copyright © 2023-2024 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
+Copyright © 2023-2025 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors

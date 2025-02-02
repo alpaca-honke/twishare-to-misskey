@@ -65,4 +65,4 @@
 本拡張機能関連Webサイトへのリンクは、自由に設置していただいて構いません。ただし、Webサイトの内容等によってはリンクの設置をお断りすることがあります。
 
 
-Copyright © 2023-2024 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
+Copyright © 2023-2025 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors

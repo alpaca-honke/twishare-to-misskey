@@ -148,4 +148,4 @@ CC BY-NC-SAライセンス<a rel="license" href="http://creativecommons.org/lice
 
 この拡張機能は、 MIT ライセンスで頒布されています。詳しくは、[LICENSE](https://github.com/alpaca-honke/twishare-to-misskey/blob/develop/LICENSE) をご覧ください。  
 
-Copyright © 2023-2024 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
+Copyright © 2023-2025 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors

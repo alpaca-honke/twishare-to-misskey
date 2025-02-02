@@ -6,9 +6,8 @@
 
 ## お知らせ
 
-- 【 **Firefoxでもv0.4.x系が使用できるようになりました！** 】  
-    ポップアップからシェアできるようになりました！
-    ただ、今までどうやっても動かなかったのに、突然なんもいじってないのにFirefoxでも使えるようになったため、こわいです。
+- 【 **引き続き問題の報告や機能のリクエストを受け付けています！** 】  
+    [公式サイト](https://alpaca-honke.github.io/twishare-to-misskey/)に記載の連絡先や[リポジトリ](https://github.com/alpaca-honke/twishare-to-misskey)のIssuesから受け付けています！
 
 ## 更新履歴
 
@@ -174,4 +173,4 @@
 - メール（Googleフォームからご連絡ください） [GoogleForms](https://docs.google.com/forms/d/e/1FAIpQLSdRuzAmGEqDV4RRd-70JKXD0lAHE6xjEp8Qp5-Jfut-ysQMYQ/viewform)  
 - ホームページ的ななにか [https://alpaca-honke.github.io/](https://alpaca-hoke.github.io/)  
 
-Copyright © 2023-2024 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
+Copyright © 2023-2025 あるかっぱ/アルパカ本家 Alkappa/alpaca-honke, and other contributors
