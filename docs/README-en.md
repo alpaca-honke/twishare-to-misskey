@@ -78,7 +78,7 @@ Although not official, there seems to be an unofficial UserScript. (This is an o
 
 1. after installation, go to the extension's administration screen and check if various permissions are allowed, and grant them as appropriate.  
 1. click the Twishare to Misskey icon in the list of extensions on the top left, and enter the server name you want to share to.
-(This is not necessary if you are sharing to Misskey.io or second time share and after.)  
+(This is not necessary if you are sharing via Misskey Hub or second time share and after.)  
 Also, select the toggle switch below it.  
 ![option_ui.png](images/option_ui.png)
 1. when you press the Twitter share button and go to the next page, you will be asked if you want to share to Misskey.  
