@@ -16,7 +16,7 @@
     "ShareButtonLabel":{"message": "現在のページをシェア"},
     "ShareButtonCaution":{"message": "Firefoxでは使用できません"},
     "Settings":{"message": "設定"},
-    "InstanceNameFormLabel":{"message": "共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey.ioです。"},
+    "InstanceNameFormLabel":{"message": "共有先のサーバー名(URLのhttps://のあとに続く文字列)を設定してください。デフォルト値はmisskey-hub.netです。"},
     "InstanceNameFormPlaceHolder":{"message": "共有先のサーバーのURLを入力"},
     "ShareButtonToggleLabel":{"message": "Misskey系SNS以外のページで画面右下にシェアボタンを表示"},
     "ShareButtonOnMisskeyToggleLabel":{"message": "Misskey系SNS上で右下にシェアボタン表示"},

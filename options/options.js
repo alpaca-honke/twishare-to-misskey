@@ -58,7 +58,7 @@ function Save() {
 function Load() {
     browser.storage.sync.get(['instanceName','buttonVisibility','buttonVisibilityOnMisskey','sitesToHideButton']).then((items) => {
         document.getElementById('instance_name').value =
-            items.instanceName || 'misskey.io';
+            items.instanceName || 'misskey-hub.net';
         if (items.buttonVisibility !== false){
             document.getElementById('button_visibility').checked = true;
         }

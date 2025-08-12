@@ -5,7 +5,7 @@ if (typeof browser === 'undefined') {
 }
 
 browser.storage.sync.get('instanceName').then((items) => {
-    const instanceName = items.instanceName || 'misskey.io';
+    const instanceName = items.instanceName || 'misskey-hub.net';
 
     const result = window.confirm(
         browser.i18n.getMessage('ConfirmShareMessage',instanceName)

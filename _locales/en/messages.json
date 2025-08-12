@@ -16,7 +16,7 @@
     "ShareButtonLabel":{"message": "Share this page"},
     "ShareButtonCaution":{"message": "You can't use this button on Firefox."},
     "Settings":{"message": "Settings"},
-    "InstanceNameFormLabel":{"message": "Enter the server domain you want to share with. (Default is misskey.io .)"},
+    "InstanceNameFormLabel":{"message": "Enter the server domain you want to share with. (Default is misskey-hub.net .)"},
     "InstanceNameFormPlaceHolder":{"message": "Enter the domain"},
     "ShareButtonToggleLabel":{"message": "Display a share button in the lower right corner on non-Misskey sites"},
     "ShareButtonOnMisskeyToggleLabel":{"message": "Display a share button in the lower right corner on Misskey sites"},
